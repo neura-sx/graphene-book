@@ -21,11 +21,11 @@ h2 {
   border-bottom: 1px solid #eee;
 }
 
-.markdown-body code {
+code {
   background-color: rgba(0,0,0,0.44);
 }
 
-.markdown-body kbd {
+kbd {
   color: #f00;
   background-color: #000;
 }
