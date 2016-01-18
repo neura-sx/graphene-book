@@ -1,15 +1,15 @@
-.book .book-body .page-wrapper .page-inner section.normal {
+
 .highlight pre, pre {
   color: #f00;
   background-color: #000;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.book .book-body .page-wrapper .page-inner section.normal h1,
+.book .book-body .page-wrapper .page-inner section.normal h2,
+.book .book-body .page-wrapper .page-inner section.normal h3,
+.book .book-body .page-wrapper .page-inner section.normal h4,
+.book .book-body .page-wrapper .page-inner section.normal h5,
+.book .book-body .page-wrapper .page-inner section.normal h6 {
   font-weight: normal;
   color: blue;
 }
@@ -29,5 +29,4 @@ code {
 kbd {
   color: #f00;
   background-color: #000;
-}
 }
