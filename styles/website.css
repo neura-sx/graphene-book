@@ -26,5 +26,5 @@
 
 .book .book-body .page-wrapper .page-inner section.normal pre code,
 .book .book-body .page-wrapper .page-inner section.normal .highlight pre {
-  color: blue;
+  color: #000;
 }
