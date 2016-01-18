@@ -18,6 +18,7 @@ Complete documentation is available at [help.gitbook.com](http://help.gitbook.co
 
 ## How to use it:
 
+
 GitBook can be installed from **NPM** using:
 
 ```
