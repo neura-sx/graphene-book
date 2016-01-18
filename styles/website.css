@@ -24,5 +24,7 @@
   color: #c7254e;
 }
 
-
-
+.book .book-body .page-wrapper .page-inner section.normal pre,
+.book .book-body .page-wrapper .page-inner section.normal .highlight pre {
+  color: blue;
+}
