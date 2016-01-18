@@ -1,5 +1,6 @@
 
-.highlight pre, pre {
+.book .book-body .page-wrapper .page-inner section.normal .highlight pre,
+.book .book-body .page-wrapper .page-inner section.normal pre {
   color: #f00;
   background-color: #000;
 }
@@ -14,19 +15,19 @@
   color: blue;
 }
 
-h1 {
+.book .book-body .page-wrapper .page-inner section.normal h1 {
   border-bottom: 1px solid #eee;
 }
 
-h2 {
+.book .book-body .page-wrapper .page-inner section.normal h2 {
   border-bottom: 1px solid #eee;
 }
 
-code {
+.book .book-body .page-wrapper .page-inner section.normal code {
   background-color: rgba(0,0,0,0.44);
 }
 
-kbd {
+.book .book-body .page-wrapper .page-inner section.normal kbd {
   color: #f00;
   background-color: #000;
 }
