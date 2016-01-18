@@ -9,7 +9,7 @@
 }
 
 .book .book-body .page-wrapper .page-inner section.normal {
-  font-size: 100%;
+  font-size: 110%;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1 {
@@ -24,7 +24,7 @@
   color: #c7254e;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal pre,
+.book .book-body .page-wrapper .page-inner section.normal pre code,
 .book .book-body .page-wrapper .page-inner section.normal .highlight pre {
   color: blue;
 }
