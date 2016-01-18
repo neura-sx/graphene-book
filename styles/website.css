@@ -8,8 +8,8 @@
   line-height: 1.4;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal p {
-  font-size: 80%;
+.book .book-body .page-wrapper .page-inner section.normal {
+  font-size: 90%;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1 {
@@ -24,7 +24,10 @@
   color: #c7254e;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal kbd {
+.book .book-body .page-wrapper .page-inner section.normal kbd,
+.book .book-body .page-wrapper .page-inner section.normal pre,
+.book .book-body .page-wrapper .page-inner section.normal .highlight pre,
+.book .book-body .page-wrapper .page-inner section.normal sample {
   color: blue;
 }
 
