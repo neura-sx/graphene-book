@@ -12,7 +12,8 @@
 .book .book-body .page-wrapper .page-inner section.normal h5,
 .book .book-body .page-wrapper .page-inner section.normal h6 {
   font-weight: normal;
-  color: blue;
+  color: #333;
+  line-height: 1;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1 {
