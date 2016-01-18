@@ -21,5 +21,8 @@
 .book .book-body .page-wrapper .page-inner section.normal code {
   color: red;
 }
+.book .book-body .page-wrapper .page-inner section.normal pre {
+  color: blue;
+}
 
 
