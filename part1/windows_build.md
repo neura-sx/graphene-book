@@ -64,12 +64,12 @@ Open your power shell console. Normally it is located here:
 `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe`  
 but this location can differ depending on your OS settings.  
 In the power shell console run the following commands:  
----
+```
 cd [Graphene-Main]
 git clone https://github.com/bitshares/bitshares-2.git
 cd bitshares-2
 git submodule update --init --recursive
----
+```
 As a result, you should have the folder `[Graphene-Main]\bitshares-2` populated with BitShares2 source code.  
 You can close the powershell console now.
 
