@@ -1,5 +1,2 @@
-Updated from desktop editor.
-* sa
-* sad
-* asdsd
+Creating the workspace
 
