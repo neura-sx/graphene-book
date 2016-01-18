@@ -3,10 +3,13 @@
 .book .book-body .page-wrapper .page-inner section.normal h3,
 .book .book-body .page-wrapper .page-inner section.normal h4,
 .book .book-body .page-wrapper .page-inner section.normal h5,
-.book .book-body .page-wrapper .page-inner section.normal h6,
-.book .book-body .page-wrapper .page-inner section.normal p {
+.book .book-body .page-wrapper .page-inner section.normal h6 {
   font-weight: normal;
   line-height: 1.4;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal p {
+  font-size: 80%;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1 {
