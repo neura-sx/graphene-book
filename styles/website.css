@@ -1,8 +1,7 @@
 
 .book .book-body .page-wrapper .page-inner section.normal .highlight pre,
 .book .book-body .page-wrapper .page-inner section.normal pre {
-  color: #f00;
-  background-color: #000;
+  color: #ff0;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1,
@@ -13,7 +12,7 @@
 .book .book-body .page-wrapper .page-inner section.normal h6 {
   font-weight: normal;
   color: #333;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1 {
@@ -25,10 +24,8 @@
 }
 
 .book .book-body .page-wrapper .page-inner section.normal code {
-  background-color: rgba(0,0,0,0.44);
+  color: hsl(204, 40%, 80%);
+  background-color: rgba(0,0,0,0.04);
 }
 
-.book .book-body .page-wrapper .page-inner section.normal kbd {
-  color: #f00;
-  background-color: #000;
-}
+
