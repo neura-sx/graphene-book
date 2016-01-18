@@ -1,3 +1,4 @@
+.book .book-body .page-wrapper .page-inner section.normal {
 .highlight pre, pre {
   color: #f00;
   background-color: #000;
@@ -10,7 +11,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  color: red;
+  color: blue;
 }
 
 h1 {
@@ -28,4 +29,5 @@ code {
 kbd {
   color: #f00;
   background-color: #000;
+}
 }
