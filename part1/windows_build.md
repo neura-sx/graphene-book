@@ -90,7 +90,7 @@ Line 133:
 `set(${_var} "GIT-NOTFOUND" PARENT_SCOPE)` (i.e. within the `get_git_unix_timestamp` function)  
 needs to be changed to something like this:  
 `set(${_var} "888" PARENT_SCOPE)`  
-> `888` is just a random number, it could  be anything e.g. `123` - it just needs to be a number (enclosed by double inverted commas), not text.  
+> The value `888` is just a random number, it could  be anything e.g. `123` - it just needs to be a number (enclosed by double inverted commas), not text.  
 Make sure you don't confuse line 133 with line 89 which looks the same but it's within the `git_describe` function.
 
 ### Run CMake
