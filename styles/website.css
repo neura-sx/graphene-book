@@ -28,8 +28,8 @@
 
 .book .book-body .page-wrapper .page-inner section.normal code {
   color: #c7254e;
-  line-height: 0.5;
-  font-size:90%;
+  line-height: 1;
+  font-size:85%;
   padding:0;
 }
 
