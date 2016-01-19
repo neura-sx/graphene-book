@@ -30,8 +30,9 @@ instead of something like this:
 We will use a precompiled version available here:  
 http://netcologne.dl.sourceforge.net/project/boost/boost-binaries/1.60.0/boost_1_60_0-msvc-14.0-64.exe  
 Run the downloaded exe file and when prompted choose the deployment location as `[Graphene-Aux]\boost_1_60_0`.  
-Once Boost is successfully deployed, you should end up with `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0` containing compiled 64-bit Boost libraries.  
-> *(If you don't trust this exe file, get the Boost compilation from elsewhere (or compile it from source) and make sure that the 64-bit compiled libraries are located in* `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0`*.*)
+Once Boost is successfully deployed, you should end up with `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0` containing compiled 64-bit Boost libraries.
+
+> *If you don't trust this exe file, get the Boost compilation from elsewhere (or compile it from source) and make sure that the 64-bit compiled libraries are located in* `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0`*.*
 
 * **OpenSSL**  
 We will use a precompiled version available here:  
@@ -44,8 +45,9 @@ instead of something like this:
 Inside the `[Graphene-Aux]\openssl-1.0.1q-vs2015` folder we need to do some renaming:  
 -- rename `bin` to `bin32` and then `bin64` to `bin`  
 -- rename `include` to `include32` and then `include64` to `include`  
--- rename `lib` to `lib32` and then `lib64` to `lib`  
-> (*Again, if you don't trust this precompiled version, get the OpenSSL compilation from elsewhere (or compile it from source) and make sure that the 64-bit binaries, includes and libraries are located in* `bin`*,*`lib` *and* `include` *folders. The important thing is that OpenSSL needs to be compiled in MSVC 2015 because previous compilations are incompatible with VS 2015 as described [here](http://stackoverflow.com/questions/30412951/unresolved-external-symbol-imp-fprintf-and-imp-iob-func-sdl2).*)
+-- rename `lib` to `lib32` and then `lib64` to `lib`
+
+> *Again, if you don't trust this precompiled version, get the OpenSSL compilation from elsewhere (or compile it from source) and make sure that the 64-bit binaries, includes and libraries are located in* `bin`*,*`lib` *and* `include` *folders. The important thing is that OpenSSL needs to be compiled in MSVC 2015 because previous compilations are incompatible with VS 2015 as described [here](http://stackoverflow.com/questions/30412951/unresolved-external-symbol-imp-fprintf-and-imp-iob-func-sdl2).*
 
 As a result, you should end up with these three folders inside `[Graphene-Aux]`:
 ```
@@ -91,8 +93,9 @@ needs to be changed to something like this:
 The purpose of CMake is to create a Visual Studio solution for the BitShares source code.  
 The `[Visual-Studio-Home]` placeholder stands for Visual Studio 2015 home folder, e.g.  
 `C:\Program Files (x86)\Microsoft Visual Studio 14.0`  
-Open a standard command prompt console and run the following commands:  
-> (*Make sure you replace all placeholders with appropriate paths*)
+Open a standard command prompt console and run the following commands:
+
+> *Make sure you replace all placeholders with appropriate paths*
 
 ```
 cd [Graphene-Main]
