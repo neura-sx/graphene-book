@@ -73,25 +73,22 @@ CLI and WEB wallet are two separated applications. They use separated ways to re
 > I'd like to create and register a new account in my CLI wallet and pay for the registration from an existing account in the web GUI. How do I do this?
 
 It doesn't work that way with the current implementation.  
-But you can work around it by importing an active key of a `Lifetime Member` account that has funds:
-1. In the gui, go to the permissions tab of an account that is funded and has a LTM status.
-
-2. Click on the BTS public key on the ACTIVE tab and copy the private key.
-
-3. In the cli-wallet run:  
+But you can work around it by importing from the GUI to the CLI an active key of a `Lifetime Member` account that has funds:
+1. In the GUI, go to the permissions tab of an account that is funded and has a `Lifetime Member` status.  
+Click on the BTS public key on the `Active` tab and copy the private key.
+2. Import this private key into the CLI wallet by running this command:
 ```
 import_key <account_name> <private_key>
 ```
-4. Then run:  
+3. Create a new brain key with this command:
 ```
 suggest_brain_key
 ```
-And copy the brain key. You might want to make a backup of your brain key somewhere.
+4. With the new brain key (i.e. `<brainkey>`) we will now create a new account (called `<new_account_name>`) and set the registrar and referrer to the account we've just imported from the GUI (i.e. `<imported_account_name>`):
+```
+create_account_with_brain_key <brainkey> <new_account_name> <imported_account_name> <imported_account_name> true
+```
+  
 
-5. Create a new account with this command:  
-```
-create_account_with_brain_key <brainkey> <new_account_name> <imported_name> <imported_name> true
-```
-This will create a new account called `<new_account_name>` and set the registrar and referrer to `<imported_name>`.  
-The brainkey can be used to regenerate the account (even in the GUI wallet).  
-When the process is complete, you might want to manually delete the other active key from the `wallet.json` file.
+> The brainkey can be used to regenerate the account (even in the GUI wallet) so you might want to make a backup of your brain key somewhere.  
+Also, when the process is complete, you might want to manually delete the imported active key from your wallet (i.e. the `wallet.json` file).
