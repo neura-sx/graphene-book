@@ -31,6 +31,7 @@
   color: #c7254e;
   line-height: 0.5;
   font-size:90%;
+  padding:0;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal pre code,
