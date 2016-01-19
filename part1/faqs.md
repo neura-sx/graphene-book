@@ -84,9 +84,9 @@ import_key <account_name> <private_key>
 ```
 suggest_brain_key
 ```
-4. With the new-brain key (i.e. `<brain_key>`) we will now create a new account (i.e. `<new_account_name>`) and set the registrar and referrer to the account we've just imported from the GUI (i.e. `<imported_account_name>`):
+4. With the new-brain key (i.e. `<brain_key>`) we will now create a new account (i.e. `<new_acc_name>`) and set the registrar and referrer to the account we've just imported from the GUI (i.e. `<imp_acc_name>`):
 ```
-create_account_with_brain_key <brain_key> <new_account_name> <imported_account_name> <imported_account_name> true
+create_account_with_brain_key <brain_key> <new_acc_name> <imp_acc_name> <imp_acc_name> true
 ```
 
 The brain-key can be used to regenerate the account (even in the GUI wallet) so you might want to make a backup of this brain-key somewhere.  
