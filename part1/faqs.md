@@ -56,7 +56,7 @@ In Windows you can try `ctrl-d` which stops the process but stil produces a nast
 Yes, it's safe to delete `witness_node_data_dir\logs\p2p` but they're rotated automatically after 24 hours anyway. If you don't use them you should probably modify `config.ini` so they aren't written to disk in the first place.
 
 ---
-####  *How can I import to my CLI client a wallet originally created in the web GUI? I would expect something like "restore_backup" command that would accept a \*.bin wallet file.*
+####  *How can I import to my CLI client a wallet originally created in the web GUI? I would expect something like 'restore_backup' command that would accept a GUI backup file.*
 CLI and WEB wallet are two separated applications. They use separated ways to represent backups. I think you can currently only manually import keys from the GUI into the CLI.
 
 ---
