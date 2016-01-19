@@ -27,12 +27,9 @@
   border-bottom: 1px solid #eee;
 }
 
-
-.book .book-body .page-wrapper .page-inner section.normal p code,
 .book .book-body .page-wrapper .page-inner section.normal code {
   color: #c7254e;
-  line-height: 0.5;
-  font-size:50%;
+  font-size:80%;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal pre code,
