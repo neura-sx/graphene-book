@@ -35,12 +35,13 @@ It's a shared key for some special purpose. If I remember BM or someone else has
 ---
 > What is the meaning of all those different text colors in the witness node console?
 
+```
 green - debug  
 white - info/default  
 yellow/brown - warning  
 red - error  
 blue - some kind of info, I don't know
-
+```
 Related source files are in `libraries/fc/include/fc/log/` and `libraries/fc/src/log/`.
 
 ---
