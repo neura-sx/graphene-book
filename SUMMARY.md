@@ -6,4 +6,5 @@
     * [Frequently Asked Questions](part1/faqs.md)
     * [xxx](part1/xxx.adoc)
     * [yyy](part1/yyy.md)
+    * [Private](part1/private.rst)
 
