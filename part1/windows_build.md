@@ -19,7 +19,7 @@ If you want, you can keep everything in one folder so that `[Graphene-Aux]` is t
 
 ### Downloads
 
-* **CMake**  
+#### CMake  
 https://cmake.org/files/v3.4/cmake-3.4.1-win32-x86.zip  
 Unzip the file and move it to `[Graphene-Aux]\cmake-3.4.1-win32-x86`.  
 Make sure you don't end up with nested folders, i.e. you should have:  
@@ -27,14 +27,15 @@ Make sure you don't end up with nested folders, i.e. you should have:
 instead of something like this:  
 `[Graphene-Aux]\cmake-3.4.1-win32-x86\cmake-3.4.1-win32-x86\bin`.
 
-* **Boost**  
+#### Boost  
 We will use a precompiled version available here:  
 http://netcologne.dl.sourceforge.net/project/boost/boost-binaries/1.60.0/boost_1_60_0-msvc-14.0-64.exe  
 Run the downloaded exe file and when prompted choose the deployment location as `[Graphene-Aux]\boost_1_60_0`.  
 Once Boost is successfully deployed, you should end up with `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0` containing compiled 64-bit Boost libraries.  
+
 > If you don't trust this exe file, get the Boost compilation from elsewhere (or compile it from source) and make sure that the 64-bit compiled libraries are located in `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0`.
 
-* **OpenSSL**  
+#### OpenSSL  
 We will use a precompiled version available here:  
 www.npcglib.org/~stathis/downloads/openssl-1.0.1q-vs2015.7z  
 Extract the content of this archive using 7-zip to `[Graphene-Aux]\openssl-1.0.1q-vs2015`.  
@@ -43,9 +44,10 @@ Make sure you don't end up with nested folders, i.e. you should have:
 instead of something like this:  
 `[Graphene-Aux]\openssl-1.0.1q-vs2015\openssl-1.0.1q-vs2015\bin`.  
 Inside the `[Graphene-Aux]\openssl-1.0.1q-vs2015` folder we need to do some renaming:  
--- rename `bin` to `bin32` and then `bin64` to `bin`  
--- rename `include` to `include32` and then `include64` to `include`  
--- rename `lib` to `lib32` and then `lib64` to `lib`  
+* rename `bin` to `bin32` and then `bin64` to `bin`  
+* rename `include` to `include32` and then `include64` to `include`  
+* rename `lib` to `lib32` and then `lib64` to `lib`
+
 > Again, if you don't trust this precompiled version, get the OpenSSL compilation from elsewhere (or compile it from source) and make sure that the 64-bit binaries, includes and libraries are located in `bin`,`lib` and `include` folders. The important thing is that OpenSSL needs to be compiled in MSVC 2015 because previous compilations are incompatible with VS 2015 as described [here](http://stackoverflow.com/questions/30412951/unresolved-external-symbol-imp-fprintf-and-imp-iob-func-sdl2).
 
 As a result, you should end up with these three folders inside `[Graphene-Aux]`:
