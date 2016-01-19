@@ -66,9 +66,7 @@ As a result, you should end up with these folders inside `[Graphene-Aux]`:
 * `cmake-3.4.1-win32-x86`
     * `bin`
 * `openssl-1.0.1q-vs2015`
-    * `bin`
-    * `include`
-    * `lib`
+    * `bin`, `bin32`, `include`, `include32`, `lib`, `lib32`
 
 ### System path variable
 Add `[Graphene-Aux]\openssl-1.0.1q-vs2015\bin` to your system path variable.  
