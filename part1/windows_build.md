@@ -77,13 +77,13 @@ You can close the powershell console now.
 
 ### CMake amendmends
 There are two little hacks needed to make CMake pre-processing work on Windows.  
-* **[Graphene-Main]\bitshares-2\CMakeLists.txt**  
+* `[Graphene-Main]\bitshares-2\CMakeLists.txt`  
 Line 35:  
 `list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )`  
 needs to be commented out, i.e. changed to this:  
 `# list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )`
 
-* **[Graphene-Main]\bitshares-2\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake**  
+* `[Graphene-Main]\bitshares-2\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake`  
 Line 133:  
 `set(${_var} "GIT-NOTFOUND" PARENT_SCOPE)` (i.e. within the `get_git_unix_timestamp` function)  
 needs to be changed to something like this:  
