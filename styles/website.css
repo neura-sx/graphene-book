@@ -9,6 +9,7 @@
 
 .book .book-body .page-wrapper .page-inner section.normal h4 {
     color: #800000;
+    line-height: 1.5;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal ul,
