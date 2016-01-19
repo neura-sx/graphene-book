@@ -7,7 +7,7 @@ Genesis creation
 
 First, we'll create a ``genesis.json`` file named ``my-genesis.json``:
 
-.. code-block:: sh
+.. code-block::
 
     mkdir -p genesis
     programs/witness_node/witness_node --create-genesis-json genesis/my-genesis.json
@@ -39,7 +39,7 @@ Embedding genesis (optional)
 
 Once you have ``genesis.json``, you may set a ``cmake`` variable like so:
 
-.. code-block:: sh
+.. code-block::
 
     cmake -DGRAPHENE_EGENESIS_JSON="$(pwd)/genesis/my-genesis.json"
 
@@ -47,7 +47,7 @@ and then rebuild.  Note, sometimes I've had to clean the build and
 CMake cache variables in order for ``GRAPHENE_EGENESIS_JSON`` to take
 effect:
 
-.. code-block:: sh
+.. code-block::
 
     make clean
     find . -name "CMakeCache.txt" | xargs rm -f
@@ -78,7 +78,7 @@ Creating data directory
 
 We will a new data directory for our witness as follows:
 
-.. code-block:: sh
+.. code-block::
 
     programs/witness_node/witness_node --data-dir data/my-blockprod --genesis-json my-genesis.json
 
@@ -130,7 +130,7 @@ signing blocks on a single node.
 
 Now run ``witness_node`` again:
 
-.. code-block:: sh
+.. code-block::
 
     programs/witness_node/witness_node --data-dir data/my-blockprod --enable-stale-production
 
@@ -156,7 +156,7 @@ The chain ID is printed at witness node startup.  It can also be
 obtained by using the API to query a running witness node with the
 ``get_chain_properties`` API call:
 
-.. code-block:: sh
+.. code-block::
 
     curl --data '{"jsonrpc": "2.0", "method": "get_chain_properties", "params": [], "id": 1}' http://127.0.0.1:11011/rpc && echo
 
@@ -169,7 +169,7 @@ In order to create a wallet, you must specify a chain ID and server.
 With the witness node's default access control settings, a blank
 username and password will suffice:
 
-.. code-block:: sh
+.. code-block::
 
     programs/cli_wallet/cli_wallet --wallet-file my-wallet.json --chain-id cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b --server-rpc-endpoint ws://127.0.0.1:11011 -u '' -p ''
 
