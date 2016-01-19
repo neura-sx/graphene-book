@@ -73,7 +73,7 @@ CLI and WEB wallet are two separated applications. They use separated ways to re
 > I'd like to create and register a new account in my CLI wallet and pay for the registration from an existing account in the web GUI. How do I do this?
 
 It doesn't work that way with the current implementation.  
-But you can work around it by importing from the GUI to the CLI an active key of a `Lifetime Member` account that has funds:
+But you can work around it by importing from the GUI to the CLI an active private key of a `Lifetime Member` account that has funds:
 1. In the GUI, go to the permissions tab of an account that is funded and has a `Lifetime Member` status.  
 Click on the BTS public key on the `Active` tab and copy the private key.
 2. Import this private key into the CLI wallet by running this command:
