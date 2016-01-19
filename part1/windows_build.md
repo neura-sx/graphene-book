@@ -97,9 +97,7 @@ Make sure you don't confuse line 133 with line 89 which looks the same but it's 
 The purpose of CMake is to create a Visual Studio solution for the BitShares source code.  
 The `[Visual-Studio-Home]` placeholder stands for Visual Studio 2015 home folder, e.g.  
 `C:\Program Files (x86)\Microsoft Visual Studio 14.0`  
-Open a standard command prompt console and run the following commands:  
-> Make sure you replace all placeholders with appropriate paths.
-
+Open a standard command prompt console and run the following commands:
 ```
 cd [Graphene-Main]
 set GRAPHENE_AUX=[Graphene-Aux]
@@ -109,6 +107,8 @@ set OPENSSL_ROOT_DIR=%GRAPHENE_AUX%\openssl-1.0.1q-vs2015
 "[Visual-Studio-Home]\VC\vcvarsall" x86_amd64
 "[Graphene-Aux]\cmake-3.4.1-win32-x86\bin\cmake-gui" -G "Visual Studio 14 Win64"
 ```
+> Make sure you replace all placeholders with appropriate paths.
+
 As a result the CMake GUI should appear on your screen.  
 Enter the following path in the source code field: `[Graphene-Main]\bitshares-2`.  
 Enter the following path in the binaries field: `[Graphene-Main]\bin64`.  
