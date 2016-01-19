@@ -8,13 +8,13 @@
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h4 {
-    color: green;
+    color: #c7254e;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal ul,
 .book .book-body .page-wrapper .page-inner section.normal p {
   line-height: 1.4;
-  font-size: 100%;
+  font-size: 95%;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1 {
@@ -27,6 +27,8 @@
   border-bottom: 1px solid #eee;
 }
 
+
+.book .book-body .page-wrapper .page-inner section.normal p code,
 .book .book-body .page-wrapper .page-inner section.normal code {
   color: #c7254e;
   line-height: 1;
