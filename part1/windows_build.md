@@ -61,11 +61,9 @@ Inside the `[Graphene-Aux]\openssl-1.0.1q-vs2015` folder we need to do some rena
 
 #### Expected result
 As a result, you should end up with these three folders inside `[Graphene-Aux]`:
-```
-boost_1_60_0
-cmake-3.4.1-win32-x86
-openssl-1.0.1q-vs2015
-```
+* `boost_1_60_0`
+* `cmake-3.4.1-win32-x86`
+* `openssl-1.0.1q-vs2015`
 
 ### System path variable
 Add `[Graphene-Aux]\openssl-1.0.1q-vs2015\bin` to your system path variable.  
