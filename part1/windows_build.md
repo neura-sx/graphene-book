@@ -25,6 +25,7 @@ If you want, you can keep everything in one folder so that `[Graphene-Aux]` is t
 ### Downloads
 
 #### Fetch CMake
+We will use a zipped version available here:  
 https://cmake.org/files/v3.4/cmake-3.4.1-win32-x86.zip  
 Unzip the file and move it to `[Graphene-Aux]\cmake-3.4.1-win32-x86`.
 
