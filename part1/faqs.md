@@ -88,7 +88,7 @@ import_key <account_name> <private_key>
 suggest_brain_key
 ```
 
-4. With the new-brain key (i.e. `<brain_key>`) we will now create a new account (i.e. `<new_acc_name>`) and set the registrar and referrer to the account we've just imported from the GUI (i.e. `<imp_acc_name>`):
+4. With the new-brain key (i.e. `<brain_key>`) you can now create a new account (i.e. `<new_acc_name>`) and set the registrar and referrer to the account you've just imported from the GUI (i.e. `<imp_acc_name>`):
 ```
 create_account_with_brain_key <brain_key> <new_acc_name> <imp_acc_name> <imp_acc_name> true
 ```
