@@ -80,15 +80,14 @@ Click on the BTS public key on the `Active` tab and copy the private key.
 ```
 import_key <account_name> <private_key>
 ```
-3. Create a new brain key with this command:
+3. Create a new brain-key with this command:
 ```
 suggest_brain_key
 ```
-4. With the new brain key (i.e. `<brainkey>`) we will now create a new account (called `<new_account_name>`) and set the registrar and referrer to the account we've just imported from the GUI (i.e. `<imported_account_name>`):
+4. With the new-brain key (i.e. `<brain_key>`) we will now create a new account (i.e. `<new_account_name>`) and set the registrar and referrer to the account we've just imported from the GUI (i.e. `<imported_account_name>`):
 ```
-create_account_with_brain_key <brainkey> <new_account_name> <imported_account_name> <imported_account_name> true
+create_account_with_brain_key <brain_key> <new_account_name> <imported_account_name> <imported_account_name> true
 ```
-  
 
-> The brainkey can be used to regenerate the account (even in the GUI wallet) so you might want to make a backup of your brain key somewhere.  
-Also, when the process is complete, you might want to manually delete the imported active key from your wallet (i.e. the `wallet.json` file).
+> The brain-key can be used to regenerate the account (even in the GUI wallet) so you might want to make a backup of this brain-key somewhere.  
+Also, when the process is complete, you might want to manually delete the imported private key from your wallet (i.e. from the `wallet.json` file).
