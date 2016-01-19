@@ -8,14 +8,15 @@
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h4 {
-    color: blue;
+    color: green;
 }
 
+.book .book-body .page-wrapper .page-inner section.normal ul,
 .book .book-body .page-wrapper .page-inner section.normal ul p,
 .book .book-body .page-wrapper .page-inner section.normal p {
   line-height: 1.4;
   font-size: 100%;
-  color: green;
+  color: blue;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1 {
