@@ -1,6 +1,6 @@
 {
    "plugins": ["styles-less"],
     "styles": {
-        "pdf": "./styles/pdf.less"
+        "website": "./styles/website.less"
     }
 }
