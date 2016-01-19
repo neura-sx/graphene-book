@@ -3,9 +3,8 @@
 > Why does the CLI client crash immediately when I try to run it for the first time?
 
 The CLI client is unable to run on its own, i.e. without being connected to the witness node (via a web socket connection). So to successfully run the CLI client you need to do this:
-* make sure you have this entry uncommented in the `witness_node_data_dir/config.ini` file  
-`rpc-endpoint = 127.0.0.1:8090`
-* before you start the CLI client, you need to start the witness node (and wait a while till it's up and running)
+1. Make sure you have `rpc-endpoint = 127.0.0.1:8090` uncommented in the `witness_node_data_dir/config.ini` file.
+2. Before you start the CLI client, you need to start the witness node (and wait a while till it's up and running).
 
 ---
 > How do I check whether the witness node is already synced?
@@ -53,7 +52,7 @@ Not much. The biggest difference is that public testnet are intended for wider a
 In windows use `ctrl-c`.
 
 ---
-> How can I close the CLI client in a clean way? There seems to be no command for that - something like `exit` or `quit`.
+> How can I close the CLI client in a clean way? There seems to be no command for that. I would expect something like `exit` or `quit`.
 
 On Linux and Mac `ctrl-d` does the job.  
 On Windows you can try `ctrl-d` which stops the process but it stil produces a nasty exception.
