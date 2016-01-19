@@ -14,7 +14,7 @@
 .book .book-body .page-wrapper .page-inner section.normal ul,
 .book .book-body .page-wrapper .page-inner section.normal p {
   line-height: 1.4;
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1 {
@@ -29,8 +29,8 @@
 
 .book .book-body .page-wrapper .page-inner section.normal code {
   color: #c7254e;
-  line-height: 1.0;
-  font-size:80%;
+  line-height: 0.5;
+  font-size:90%;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal pre code,
