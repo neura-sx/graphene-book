@@ -34,3 +34,8 @@
 .book .book-body .page-wrapper .page-inner section.normal .highlight pre {
   color: #000;
 }
+
+.book .book-body .page-wrapper .page-inner section.normal hr {
+  color: #c7254e;
+}
+
