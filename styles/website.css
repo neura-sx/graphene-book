@@ -8,12 +8,13 @@
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h4 {
-    color: #c7254e;
+    color: #f0f;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal p {
   line-height: 1.4;
-  font-size: 100%;
+  font-size: 90%;
+  color: green;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h1 {
