@@ -36,16 +36,16 @@ instead of something like this:
 #### Fetch Boost  
 We will use a precompiled version available here:  
 [http://netcologne.dl.sourceforge.net/project/boost/boost-binaries/1.60.0/boost_1_60_0-msvc-14.0-64.exe]()  
-Run the downloaded exe file and when prompted choose the deployment location as `[Graphene-Aux]\boost_1_60_0`.  
+Run the downloaded exe file and when prompted choose the deployment location as `[Graphene-Aux]\boost_1_60_0`.
 
-Once Boost is successfully deployed, you should end up with `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0` containing compiled 64-bit Boost libraries.  
+Once Boost is successfully deployed, you should end up with `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0` containing compiled 64-bit Boost libraries.
 
 > If you don't trust this exe file, get the Boost compilation from elsewhere (or compile it from source) and make sure that the 64-bit compiled libraries are located in `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0`.
 
 #### Fetch OpenSSL  
 We will use a precompiled version available here:  
 [www.npcglib.org/~stathis/downloads/openssl-1.0.1q-vs2015.7z]()  
-Extract the content of this archive using 7-zip to `[Graphene-Aux]\openssl-1.0.1q-vs2015`.  
+Extract the content of this archive using 7-zip to `[Graphene-Aux]\openssl-1.0.1q-vs2015`.
 
 > Make sure you don't end up with nested folders, i.e. you should have:  
 `[Graphene-Aux]\openssl-1.0.1q-vs2015\bin`  
