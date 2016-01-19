@@ -1,22 +1,24 @@
 # Frequently Asked Questions
 
-#### *Why does the CLI client crash immediately when I try to run it for the first time?*
+> Why does the CLI client crash immediately when I try to run it for the first time?
+
 The CLI client is unable to run on its own, i.e. without being connected to the witness node (via a web socket connection). So to successfully run the CLI client you need to do this:
 * make sure you have this entry uncommented in the `witness_node_data_dir/config.ini` file  
 `rpc-endpoint = 127.0.0.1:8090`
 * before you start the CLI client, you need to start the witness node (and wait a while till it's up and running)
 
 ---
-#### *How do I check whether the witness node is already synced?*
+> How do I check whether the witness node is already synced?
+
 Run the `info` command in the CLI client and check the `head_block_age` value.
 
 ---
-#### *I have problems with syncing the witness node - it seems to be unable to sync beyond a certain date.*
+> I have problems with syncing the witness node - it seems to be unable to sync beyond a certain date.
 
 You should always make sure you use the newest build available [here](https://github.com/bitshares/bitshares-2/releases/latest) as earlier releases will get stuck due to hard-forks.
 
 ---
-#### *What is the best way to interact with the witness node? There seems to be no way to control it, apart from opening & closing it.*
+> What is the best way to interact with the witness node? There seems to be no way to control it, apart from opening & closing it.
 
 The only way you can interact with the witness node is through the CLI client by using its API.  
 You can also use the GUI (i.e. the light client). In the GUI, change `Settings -> API connection`, add `ws://127.0.0.1:8090/ws` (according to settings of your witness node) and select it.
