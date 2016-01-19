@@ -31,7 +31,7 @@ We will use a precompiled version available here:
 http://netcologne.dl.sourceforge.net/project/boost/boost-binaries/1.60.0/boost_1_60_0-msvc-14.0-64.exe  
 Run the downloaded exe file and when prompted choose the deployment location as `[Graphene-Aux]\boost_1_60_0`.  
 Once Boost is successfully deployed, you should end up with `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0` containing compiled 64-bit Boost libraries.  
-> *If you don't trust this exe file, get the Boost compilation from elsewhere (or compile it from source) and make sure that the 64-bit compiled libraries are located in* `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0`*.*
+> If you don't trust this exe file, get the Boost compilation from elsewhere (or compile it from source) and make sure that the 64-bit compiled libraries are located in `[Graphene-Aux]\boost_1_60_0\lib64-msvc-14.0`.
 
 * **OpenSSL**  
 We will use a precompiled version available here:  
@@ -45,7 +45,7 @@ Inside the `[Graphene-Aux]\openssl-1.0.1q-vs2015` folder we need to do some rena
 -- rename `bin` to `bin32` and then `bin64` to `bin`  
 -- rename `include` to `include32` and then `include64` to `include`  
 -- rename `lib` to `lib32` and then `lib64` to `lib`  
-> *Again, if you don't trust this precompiled version, get the OpenSSL compilation from elsewhere (or compile it from source) and make sure that the 64-bit binaries, includes and libraries are located in* `bin`*,*`lib` *and* `include` *folders. The important thing is that OpenSSL needs to be compiled in MSVC 2015 because previous compilations are incompatible with VS 2015 as described [here](http://stackoverflow.com/questions/30412951/unresolved-external-symbol-imp-fprintf-and-imp-iob-func-sdl2).*
+> Again, if you don't trust this precompiled version, get the OpenSSL compilation from elsewhere (or compile it from source) and make sure that the 64-bit binaries, includes and libraries are located in `bin`,`lib` and `include` folders. The important thing is that OpenSSL needs to be compiled in MSVC 2015 because previous compilations are incompatible with VS 2015 as described [here](http://stackoverflow.com/questions/30412951/unresolved-external-symbol-imp-fprintf-and-imp-iob-func-sdl2).
 
 As a result, you should end up with these three folders inside `[Graphene-Aux]`:
 ```
@@ -85,14 +85,15 @@ Line 133:
 `set(${_var} "GIT-NOTFOUND" PARENT_SCOPE)` (i.e. within the `get_git_unix_timestamp` function)  
 needs to be changed to something like this:  
 `set(${_var} "888" PARENT_SCOPE)`  
-"888" is just a random number, it could  be anything e.g. "123" - it just needs to be a number (enclosed by double inverted commas), not text. *Please make sure you don't confuse line 133 with line 89 which looks the same but it's within the* `git_describe` *function.*
+"888" is just a random number, it could  be anything e.g. "123" - it just needs to be a number (enclosed by double inverted commas), not text. 
+> Please make sure you don't confuse line 133 with line 89 which looks the same but it's within the `git_describe` function.
 
 ### Run CMake
 The purpose of CMake is to create a Visual Studio solution for the BitShares source code.  
 The `[Visual-Studio-Home]` placeholder stands for Visual Studio 2015 home folder, e.g.  
 `C:\Program Files (x86)\Microsoft Visual Studio 14.0`  
 Open a standard command prompt console and run the following commands:  
-> *Make sure you replace all placeholders with appropriate paths*
+> Make sure you replace all placeholders with appropriate paths.
 
 ```
 cd [Graphene-Main]
