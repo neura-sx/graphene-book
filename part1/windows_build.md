@@ -107,7 +107,7 @@ set OPENSSL_ROOT_DIR=%GRAPHENE_AUX%\openssl-1.0.1q-vs2015
 "[Visual-Studio-Home]\VC\vcvarsall" x86_amd64
 "[Graphene-Aux]\cmake-3.4.1-win32-x86\bin\cmake-gui" -G "Visual Studio 14 Win64"
 ```
-> Make sure you replace all placeholders with appropriate paths.
+> Make sure you replace all placeholders (e.g. `[Graphene-Main]`) with appropriate paths.
 
 As a result the CMake GUI should appear on your screen.  
 Enter the following path in the source code field: `[Graphene-Main]\bitshares-2`.  
