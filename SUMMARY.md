@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Part I](part1/README.md)
-    * [Windows Build](part1/windows_build.md)
+    * [Windows Build](part1/windows-build.md)
     * [FAQs - Using the CLI](part1/faqs-cli.md)
-    * [FAQs - Setting up testnet](part1/faqs-testnet.md)
+    * [FAQs - Setting up a testnet](part1/faqs-testnet.md)
 
