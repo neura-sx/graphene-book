@@ -7,11 +7,15 @@ while this has public keys starting with BTS..
 Is it OK to mix those different types of keys? (i.e. GPH.. and BTS..)
 
 ---
-> When I try run the CLI with a specific RPC endpoint, the `server-rpc-endpoint` parameter seems to be ignored by the CLI and the default value is applied instead.
+> When I try run the CLI with a specific RPC endpoint or a specific wallet file name, the `server-rpc-endpoint` or `wallet-file` parameters seems to be ignored by the CLI and the default values are applied instead.
 
-The `server-rpc-endpoint` parameter is implicit. To make it explicit use the `--option=value` syntax, i.e.:
+These two parameters are implicit. To make them explicit use the `--option=value` syntax, i.e. instead of the standard syntax:
 ```
-cli_wallet --server-rpc-endpoint=ws://testnet.bitshares.eu:11011
+cli_wallet --wallet-file my-wallet.json --server-rpc-endpoint ws://testnet.bitshares.eu:11011
+```
+use this syntax with `=` between the parameter name and its value:
+```
+cli_wallet --wallet-file=my-wallet.json --server-rpc-endpoint=ws://testnet.bitshares.eu:11011
 ```
 
 ---
