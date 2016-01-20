@@ -17,7 +17,7 @@ If you choose to run your own witness node:
 rpc-endpoint = 127.0.0.1:8090
 ```
 
-* alternatively you can leave the `config.ini` untouched and run the witness node with the `rpc-endpoint` defined, e.g.:
+* alternatively you can leave the `config.ini` untouched and run the witness node with the `rpc-endpoint` parameter defined, e.g.:
 ```
 witness_node --rpc-endpoint 127.0.0.1:8090
 ```
