@@ -4,7 +4,7 @@
 
 The CLI client is unable to run on its own, i.e. without being connected to the witness node (via a web socket connection).  
 You have two options:
-* either run the CLI client with the `server-rpc-endpoint` parameter pointing to an existing witness node, e.g.
+* either run the CLI client with the `server-rpc-endpoint` parameter pointing to an existing witness node, e.g.:
 ```
 cli_wallet --server-rpc-endpoint ws://testnet.bitshares.eu:11011
 ```
@@ -12,9 +12,12 @@ cli_wallet --server-rpc-endpoint ws://testnet.bitshares.eu:11011
 * or start your own witness node before starting the CLI client.
 
 If you choose to run your own witness node:
-* make sure you have `rpc-endpoint = 127.0.0.1:8090` uncommented in the `witness_node_data_dir/config.ini` file.
+* make sure you have the `rpc-endpoint` parameter uncommented and defined in the `witness_node_data_dir/config.ini` file, e.g.:
+```
+rpc-endpoint = 127.0.0.1:8090
+```
 
-* alternatively you can leave the `config.ini` untouched and run the witness node with the `rpc-endpoint` defined, e.g.
+* alternatively you can leave the `config.ini` untouched and run the witness node with the `rpc-endpoint` defined, e.g.:
 ```
 witness_node --rpc-endpoint 127.0.0.1:8090
 ```
