@@ -1,4 +1,4 @@
-# Frequently Asked Questions
+# FAQs - Using the Command Line Interface
 
 > Why does the CLI client crash immediately when I try to run it for the first time?
 
