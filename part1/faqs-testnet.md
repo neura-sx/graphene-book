@@ -19,7 +19,7 @@ cli_wallet --wallet-file=my-wallet.json --server-rpc-endpoint=ws://testnet.bitsh
 ```
 
 ---
-> Another question
+> When is it safe to stop using the `--enable-stale-production` parameter?
 
 ---
 > Another question
