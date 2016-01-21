@@ -1,3 +1,7 @@
+http://docs.bitshares.eu/api/websocket.html
+
+---
+
 Install Nodejs  
 https://nodejs.org/dist/v4.2.5/node-v4.2.5-x64.msi
 
