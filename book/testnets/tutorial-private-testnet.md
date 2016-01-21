@@ -44,11 +44,11 @@ rpc-endpoint = 127.0.0.1:11011
 genesis-json = my-genesis.json  
 enable-stale-production = true 
 ```
-Also, just under this entry in the `config.ini` file:
+Also, locate this entry in the `config.ini` file:
 ```
 # ID of witness controlled by this node (e.g. "1.6.5", quotes are required, may specify multiple times)
 ```
-add the following entries: 
+... and add the following entries: 
 ```
 witness-id = "1.6.1"
 witness-id = "1.6.2"
@@ -71,15 +71,15 @@ private-key = ["TEST6MRyA...T5GDW5CV","5KQwrPb...tP79zkvFD3"]
 
 ### Start block production
 This is the big moment - you are about to produce the very first blocks of your private blockchain.  
-Just run this command:
+Just run the witness node with this command:
 ```
 witness_node --data-dir data 
 ```
-and your block production should start at this stage. You should see this big message:
+... and your block production should start at this stage. You should see this big message:
 ```
 xxxx
 ```
-and subseqently further messages signaling the successfull creation of blocks:
+... and subseqently further messages signaling the successfull creation of blocks:
 ```
 xxxxx
 ```
