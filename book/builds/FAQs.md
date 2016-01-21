@@ -1,7 +1,7 @@
-# FAQs - Setting up testnets
+# FAQs - Building from sources
 
-> This file has public keys starting with GPH..  
-`cryptonomex/graphene/testnet-shared-accounts.txt`  
-while this has public keys starting with BTS..  
-`cryptonomex/graphene/testnet-shared-balances.txt`  
-Is it OK to mix those different types of keys? (i.e. GPH.. and BTS..)
+> Why do we need to set up the OpenSLL path?
+
+For two reasons:
+* to build in Visual Studio
+* to be able to run the witness node
