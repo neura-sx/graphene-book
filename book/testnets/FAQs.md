@@ -2,7 +2,7 @@
 
 > What is the difference between public and private testnet?
 
-Not much. The biggest difference is that public testnets are intended for wider audience so that they are are constructed in such a way as to enable third-party witnesses to join in. Therefore setting up a public network is a bit more complex than private one.
+Not much. The biggest difference is that public testnets are intended for wider audience so that they are are constructed in such a way as to enable third-party witness modes to join in. Therefore setting up a public network is a bit more complex than setting up a local private one.
 
 ---
 > When I try run the CLI with a specific RPC endpoint or a specific wallet file name, the `server-rpc-endpoint` or `wallet-file` parameters seems to be ignored by the CLI and the default values are applied instead.
