@@ -1,9 +1,9 @@
-# Setting up testnets
+# Interfacing with Graphene
 
 Some text goes here.
 
 ---
 
-#### [Private testnet](tutorial-private-testnet.md)
-#### [Public testnet](tutorial-public-testnet.md)
+#### [Interacting with a witness node](tutorial-interacting-with-witness.md)
+#### [Interacting with a CLI](tutorial-interacting-with-cli.md)
 #### [FAQs](FAQs.md)
