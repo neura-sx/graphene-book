@@ -16,7 +16,7 @@ We create a new genesis json file named `my-genesis.json` by running this comman
 witness_node --create-genesis-json my-genesis.json
 ```
 The `my-genesis.json` file will be created in the `[Testnet-Home]` folder.  
-Once the job is done the witness node will terminate on its own.
+Once this task is done, the witness node will terminate on its own.
 
 ### Edit the genesis file
 If you want to customize the network's initial state, edit the newly created `my-genesis.json` file. This allows you to control things such as:
