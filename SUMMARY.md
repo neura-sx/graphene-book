@@ -5,6 +5,7 @@
     * [Tutorial - Windows Build](part1/tutorial-windows-build.md)
     * [Tutorial - Private Testnet](part1/tutorial-private-testnet.md)
     * [Tutorial - Web Sockets](part1/tutorial-web-sockets.md)
-    * [FAQs - Using the CLI](part1/faqs-cli.md)
-    * [FAQs - Setting up a testnet](part1/faqs-testnet.md)
+* [Part 2](part2/README.md)
+    * [FAQs - Using the CLI](part2/faqs-cli.md)
+    * [FAQs - Setting up a testnet](part2/faqs-testnet.md)
 
