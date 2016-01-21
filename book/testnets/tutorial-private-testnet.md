@@ -1,9 +1,11 @@
-https://github.com/BitSharesEurope/docs.bitshares.eu/blob/3ea1f3f4d3cf222a421362efff0bb8b2db1dafb2/source/testnet/Private.rst
-
-### Prerequisites
-First, we'll create a genesis json file named `my-genesis.json`:
-
+# Windows Build for Visual Studio 2015
+### The genesis file
+The genesis file defines the initial state of the network.  
+We create a new genesis json file named `my-genesis.json` by running this command:
+```
 witness_node --create-genesis-json my-genesis.json
+```
+
 
 ---
 
@@ -79,3 +81,5 @@ upgrade_account alpha true
 get_account alpha
 list_account_balances alpha
 ```
+
+https://github.com/BitSharesEurope/docs.bitshares.eu/blob/3ea1f3f4d3cf222a421362efff0bb8b2db1dafb2/source/testnet/Private.rst
