@@ -1,5 +1,8 @@
 # Private testnet
 
+### Folder structure
+The genesis file defines the init
+
 ### Create a genesis file
 The genesis file defines the initial state of the network.  
 For our testnet we need to have a unique blockchain id and thus we need to create a new genesis file as blockchain id is derived from this file.  
@@ -7,7 +10,8 @@ We create a new genesis json file named `my-genesis.json` by running this comman
 ```
 witness_node --create-genesis-json my-genesis.json
 ```
-The `my-genesis.json` file will be created in your current working directory.
+The `my-genesis.json` file will be created in your current working directory.  
+Once the job is done the witness node will terminate on its own.
 
 ### Edit the genesis file
 If you want to customize the network's initial state, edit the newly created `my-genesis.json` file. This allows you to control things such as:
@@ -15,7 +19,6 @@ If you want to customize the network's initial state, edit the newly created `my
 * Assets and their initial distribution (including core asset)
 * The initial values of chain parameters (including fees)
 * The account / signing keys of the init witnesses (or in fact any account at all).
-
 
 ### Get the blockchain id
 The blockchain id is a hash of the genesis state. All transaction signatures are only valid for a single blockchain id. So editing the genesis file will change your blockchain id, and make you unable to sync with all existing chains (unless one of them has exactly the same genesis file you do).
@@ -31,11 +34,11 @@ and when a message like this shows up:
 ```
 the initialization is complete. Use `ctrl-c` to close the witness node.
 
-As a result, you should get two things:
-* a directory named `data` has been created with a file named `config.ini` located in it.
-* your blockchain id is now known - it's displayed in the message above
+As a result, you should get two items:
+* A directory named `data` has been created with a file named `config.ini` located in it.
+* Your blockchain id is now known - it's displayed in the message above.
 
-> Note that your blockchain id will be different than the one used in the above example
+> Note that your blockchain id will be different than the one used in the above example. Copy this id somewhere as you will be needing it later on.
 
 ### Edit the config file
 Open the `data/config.ini` file in your favorite text editor, and set the following settings, uncommenting them if necessary:
