@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Building from sources](book/builds/README.md)
     * [Windows Build](book/builds/tutorial-windows-build.md)
+    * [FAQs](book/builds/FAQs.md)
 * [Interfacing with Graphene](book/interfaces/README.md)
     * [Interacting with a witness node](book/interfaces/tutorial-interacting-with-witness.md)
     * [Interacting with a CLI](book/interfaces/tutorial-interacting-with-cli.md)
