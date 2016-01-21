@@ -1,8 +1,11 @@
 # Private testnet
 
 ### Folder structure
-We assume that you have both the `witness_node` and `cli_wallet` files already compliled (or downloaded from bitshares.org).  
-Create a new folder (we will refer to this folder as [Testnet-Home] and copy `witness_node` and `cli_wallet` there
+We assume that you have both the `witness_node` and `cli_wallet` files already compliled (or downloaded from bitshares.org).
+
+* Create a new folder (we will refer to this folder as `[Testnet-Home]`) and copy `witness_node` and `cli_wallet` there. `[Testnet-Home]` will contain all files and folders related to the testnet.
+
+* Open a Command Prompt window and switch to the `[Testnet-Home]` directory.
 
 ### Create a genesis file
 The genesis file defines the initial state of the network.  
@@ -11,7 +14,7 @@ We create a new genesis json file named `my-genesis.json` by running this comman
 ```
 witness_node --create-genesis-json my-genesis.json
 ```
-The `my-genesis.json` file will be created in your current working directory.  
+The `my-genesis.json` file will be created in the `[Testnet-Home]` folder.  
 Once the job is done the witness node will terminate on its own.
 
 ### Edit the genesis file
@@ -42,7 +45,7 @@ As a result, you should get two items:
 > Note that your blockchain id will be different than the one used in the above example. Copy this id somewhere as you will be needing it later on.
 
 ### Edit the config file
-Open the `data/config.ini` file in your favorite text editor, and set the following settings, uncommenting them if necessary:
+Open the `[Testnet-Home]/data/config.ini` file in your favorite text editor, and set the following settings, uncommenting them if necessary:
 ```
 rpc-endpoint = 127.0.0.1:11011  
 genesis-json = my-genesis.json  
