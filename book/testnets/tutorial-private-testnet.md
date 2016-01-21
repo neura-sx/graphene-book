@@ -1,10 +1,23 @@
-# Windows Build for Visual Studio 2015
-### The genesis file
+# Private testnet
+
+### Creating the genesis file
 The genesis file defines the initial state of the network.  
+For our testnet we need to have a unique blockchain id and thus we need to create a new genesis file as blockchain id is derived from this file.  
 We create a new genesis json file named `my-genesis.json` by running this command:
 ```
 witness_node --create-genesis-json my-genesis.json
 ```
+### Editing the genesis file
+If you want to customize the network's initial state, edit the newly created `my-genesis.json` file. This allows you to control things such as:
+* The accounts that exist at genesis, their names and public keys
+* Assets and their initial distribution (including core asset)
+* The initial values of chain parameters (including fees)
+* The account / signing keys of the init witnesses (or in fact any account at all).
+
+The blockchain id is a hash of the genesis state. All transaction signatures are only valid for a single blockchain id. So editing the genesis file will change your blockchain id, and make you unable to sync with all existing chains (unless one of them has exactly the same genesis file you do).
+
+
+
 
 
 ---
