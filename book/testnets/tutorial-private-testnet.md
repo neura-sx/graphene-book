@@ -188,7 +188,7 @@ import_key alpha 5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE
 ```
 > Make sure you replace `5JDh3XmH...9idNisYnE` with your version of it.
 
-### Transfer some funds to the other account
+### Transfer funds between accounts
 As a final step, we will transfer some money from `nathan` to `alpha`. For that we use the `transfer` command:
 ```
 transfer nathan alpha 2000000000 BTS "here is some cash" true
