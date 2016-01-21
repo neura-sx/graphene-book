@@ -35,7 +35,7 @@ Underlying Transport Error
 > Sometimes when I start a witness node it gets stuck just after displaying the blockchian id.
 
 If the witness node is running properly, it should produce messages about the creation of new blocks every few seconds (unless you've delibaretly switched off this messaging).  
-If it doesn't behave like this, it means it's got stuck and needs to be forecefully restarted. If this happens, please be patient as the witness node needs to replay the whole blockchain before the CLI client can be connected to it. You'll see the progress of this process in messages like these:
+If it doesn't behave like this, it means it's got stuck and needs to be forecefully restarted. If this happens, please be patient as in this case, after restarting, the witness node needs to replay the whole blockchain before the CLI client can be connected to it. You'll see the progress of this process in messages like these:
 ```
 97.8505%   2778000 of 2839025
 97.9209%   2780000 of 2839025
