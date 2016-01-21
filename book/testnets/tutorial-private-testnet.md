@@ -112,8 +112,9 @@ Now you can unlock the newly created wallet:
 unlock supersecret
 ```
 
-### Gain access to genesis stake
-In Graphene, balances are contained in accounts. To claim an account that was defined in the genesis file, use the `import_key` command:
+### Gain access to the genesis stake
+In Graphene, balances are contained in accounts. To import an account into your wallet, all you need to know is its name and its private key.  
+We will now import into the wallet an account called `nathan` using the `import_key` command:
 ```
 import_key nathan 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 ```
