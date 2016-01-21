@@ -1,6 +1,6 @@
 https://github.com/BitSharesEurope/docs.bitshares.eu/blob/3ea1f3f4d3cf222a421362efff0bb8b2db1dafb2/source/testnet/Private.rst
 
----
+First, we'll create a genesis json file named `my-genesis.json`:
 
 witness_node --create-genesis-json my-genesis.json
 
