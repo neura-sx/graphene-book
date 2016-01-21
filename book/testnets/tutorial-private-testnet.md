@@ -189,26 +189,13 @@ import_key alpha 5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE
 > Make sure you replace `5JDh3XmH...9idNisYnE` with your version of it.
 
 ### Transfer some funds to the other account
-
----
-
----
-
----
-
+As a final step, we will transfer some money from `nathan` to `alpha`. For that we use the `transfer` command:
 ```
+transfer nathan alpha 2000000000 BTS "here is some cash" true
+```
+> The text `here is some cash` is an arbitrary memo you can attatch to a transfer. If you don't need it, just use `""` instead. 
 
-
-
-
-
-
-
-transfer nathan alpha 2000000000 TEST "here is the cash for upgrade" true
-list_account_balances alpha
-upgrade_account alpha true
-get_account alpha
+And now you can verify that `alpha` has indeed received the money:
+```
 list_account_balances alpha
 ```
-
-https://github.com/BitSharesEurope/docs.bitshares.eu/blob/3ea1f3f4d3cf222a421362efff0bb8b2db1dafb2/source/testnet/Private.rst
