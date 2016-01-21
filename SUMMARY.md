@@ -5,7 +5,7 @@
     * [Windows Build](book/builds/tutorial-windows-build.md)
 * [Interfacing with Graphene](book/interfaces/README.md)
     * [Interacting with a witness node](book/interfaces/tutorial-interacting-with-witness.md)
-    * [Interacting with CLI](book/interfaces/tutorial-interacting-with-cli.md)
+    * [Interacting with a CLI](book/interfaces/tutorial-interacting-with-cli.md)
     * [FAQs](book/interfaces/FAQs.md)
 * [Setting up testnets](book/testnets/README.md)
     * [Private testnet](book/testnets/tutorial-private-testnet.md)
