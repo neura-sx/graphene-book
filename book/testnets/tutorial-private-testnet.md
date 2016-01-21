@@ -1,6 +1,6 @@
 # Private testnet
 
-### Creating the genesis file
+### Create the genesis file
 The genesis file defines the initial state of the network.  
 For our testnet we need to have a unique blockchain id and thus we need to create a new genesis file as blockchain id is derived from this file.  
 We create a new genesis json file named `my-genesis.json` by running this command:
@@ -9,7 +9,7 @@ witness_node --create-genesis-json my-genesis.json
 ```
 The `my-genesis.json` file will be created in your current working directory.
 
-### Editing the genesis file
+### Edit the genesis file
 If you want to customize the network's initial state, edit the newly created `my-genesis.json` file. This allows you to control things such as:
 * The accounts that exist at genesis, their names and public keys
 * Assets and their initial distribution (including core asset)
@@ -17,7 +17,7 @@ If you want to customize the network's initial state, edit the newly created `my
 * The account / signing keys of the init witnesses (or in fact any account at all).
 
 
-### Getting the blockchain id
+### The blockchain id
 The blockchain id is a hash of the genesis state. All transaction signatures are only valid for a single blockchain id. So editing the genesis file will change your blockchain id, and make you unable to sync with all existing chains (unless one of them has exactly the same genesis file you do).
 
 Run this command:
@@ -37,8 +37,7 @@ As a result, you should get two things:
 
 > Note that your blockchain id will be different than the one used in the above example
 
-### Editing the config file
-
+### Edit the config file
 Open the `data/config.ini` file in your favorite text editor, and set the following settings, uncommenting them if necessary:
 ```
 rpc-endpoint = 127.0.0.1:11011  
@@ -70,25 +69,39 @@ The private keys for all those witness ids (needed to sign blocks) are already s
 private-key = ["TEST6MRyA...T5GDW5CV","5KQwrPb...tP79zkvFD3"]
 ```
 
-
-
----
-
----
-
----
-
-
+### Start block production
+This is the big moment - you are about to produce the first blocks of your private blockchain.  
+Just run this command:
 ```
-witness_node --data-dir data  
+witness_node --data-dir data 
 ```
-block production should start at this stage
+and your block production should start at this stage. You should see this big message:
+```
+xxxx
+```
+and subseqently further messages signaling the successfull creation of blocks:
+```
+xxxxx
+```
 
----
-
+### Run the CLI
+We are now ready to connect the CLI to the running witness node.  
+Keep your witness node running and in another window run this command:
 ```
 cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
 ```
+> Make sure to replace the above blockchain id `8b7bd36a...62bd64294824` with your own blockchain id. The blockchain id of your CLI needs to match the id generated and used by the witness node.
+
+If you get the `set_password` prompt, it means your CLI has successfully conected to the testnet witness node.
+
+### Create a new wallet
+
+
+---
+
+---
+
+---
 
 ```
 set_password southpark
