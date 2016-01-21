@@ -32,6 +32,19 @@ Underlying Transport Error
 ```
 
 ---
+> Sometimes when I start a witness node it gets stuck just after displaying the blockchian id.
+
+If the witness node is running properly, it should produce messages about the creation of new blocks every few seconds (unless you've delibaretly switched off this messaging).  
+If it doesn't behave like this, it means it's got stuck and needs to be forecefully restarted. If this happens, please be patient as the witness node needs to replay the whole blockchain before the CLI client can be connected to it. You'll see the progress of this process in messages like these:
+```
+97.8505%   2778000 of 2839025
+97.9209%   2780000 of 2839025
+97.9914%   2782000 of 2839025
+98.0618%   2784000 of 2839025
+98.1323%   2786000 of 2839025
+```
+
+---
 > How do I check whether the witness node is already synced?
 
 Run the `info` command in the CLI client and check the `head_block_age` value.
