@@ -1,4 +1,4 @@
-# Windows 64-bit - Visual Studio 2015
+# Tutorial - Windows Build
 ### Prerequisites
 * This build is for `Windows 7 64-bit` or `Windows 10 64-bit`.
 * We assume the following applications are already installed:
