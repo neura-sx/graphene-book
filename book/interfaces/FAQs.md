@@ -22,7 +22,14 @@ rpc-endpoint = 127.0.0.1:8090
 witness_node --rpc-endpoint 127.0.0.1:8090
 ```
 
-Note: you need to wait a little while until the witness node is up and running because if you try to connect with the CLI client too early the connection will fail.
+Note: you need to wait a little while until the witness node is up and running because if you try to connect with the CLI client too early the connection will fail with an error like this:
+```
+Underlying Transport Error
+    {"message":"Underlying Transport Error"}
+    asio  websocket.cpp:436 fc::http::detail::websocket_client_impl::{ctor}::<lambda_a9259faf4b..>::operator ()
+    {"uri":"ws://localhost:8090"}
+    th_a  websocket.cpp:621 fc::http::websocket_client::connect
+```
 
 ---
 > How do I check whether the witness node is already synced?
