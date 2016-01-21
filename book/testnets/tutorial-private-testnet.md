@@ -1,6 +1,6 @@
 # Private testnet
 
-### Create the genesis file
+### Create a genesis file
 The genesis file defines the initial state of the network.  
 For our testnet we need to have a unique blockchain id and thus we need to create a new genesis file as blockchain id is derived from this file.  
 We create a new genesis json file named `my-genesis.json` by running this command:
@@ -17,7 +17,7 @@ If you want to customize the network's initial state, edit the newly created `my
 * The account / signing keys of the init witnesses (or in fact any account at all).
 
 
-### The blockchain id
+### Get the blockchain id
 The blockchain id is a hash of the genesis state. All transaction signatures are only valid for a single blockchain id. So editing the genesis file will change your blockchain id, and make you unable to sync with all existing chains (unless one of them has exactly the same genesis file you do).
 
 Run this command:
@@ -48,7 +48,7 @@ Also, just under this entry in the `config.ini` file:
 ```
 # ID of witness controlled by this node (e.g. "1.6.5", quotes are required, may specify multiple times)
 ```
-add the following multiple entry: 
+add the following entries: 
 ```
 witness-id = "1.6.1"
 witness-id = "1.6.2"
@@ -70,7 +70,7 @@ private-key = ["TEST6MRyA...T5GDW5CV","5KQwrPb...tP79zkvFD3"]
 ```
 
 ### Start block production
-This is the big moment - you are about to produce the first blocks of your private blockchain.  
+This is the big moment - you are about to produce the very first blocks of your private blockchain.  
 Just run this command:
 ```
 witness_node --data-dir data 
@@ -85,7 +85,7 @@ xxxxx
 ```
 
 ### Run the CLI
-We are now ready to connect the CLI to the running witness node.  
+We are now ready to connect the CLI to your testnet witness node.  
 Keep your witness node running and in another window run this command:
 ```
 cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
