@@ -19,8 +19,8 @@ cli_wallet --wallet-file=my-wallet.json --server-rpc-endpoint=ws://testnet.bitsh
 ---
 > When is it safe to stop using the `enable-stale-production` flag?
 
-The `enable-stale-production` flag tells the witness node to produce on a chain with zero blocks or very old blocks.
+The `enable-stale-production` flag tells the witness node to produce on a chain with zero blocks or very old blocks. It can be specified as a parameter on the command line or directly in the `config.ini` file.
 
-If you are running a private testnet on a single machine, you should use it at all times. This flag ensures that blocks are generated even if the blockchain has been stuck due to a server crash or something similar.
+If you are running a private testnet on a single machine, you should keep this flag on at all times. This way you ensure that blocks are generated even if the blockchain has been stuck due to a server crash or something similar.
 
-If you are running a public testnet and the witness participation is high enough you can safely switch this flag off.
+If you are running a public testnet and the witness participation is high enough you can safely switch this flag off. In this case, when starting up, your witness node will connect to another existing witness node over the p2p network, or get the blockchain state from an existing data directory.
