@@ -1,9 +1,8 @@
-# Interfacing with Graphene
+# Building from sources
 
 Some text goes here.
 
 ---
 
-#### [Interacting with a witness node](tutorial-interacting-with-witness.md)
-#### [Interacting with a CLI](tutorial-interacting-with-cli.md)
+#### [Windows Build](tutorial-windows-build.md)
 #### [FAQs](FAQs.md)
