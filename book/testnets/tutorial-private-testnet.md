@@ -165,7 +165,7 @@ To upgrade to LTM, use the `upgrade_account` command:
 ```
 upgrade_account nathan true
 ```
-> Due to a known bug, you need to restart the CLI at this stage as otherwise it will not be aware of `nathan` having been upgraded. Stop the CLI by pressing `ctrl-c` and start it again by using exactly the same command as before, i.e.
+> Due to a known [caching bug](https://github.com/cryptonomex/graphene/issues/527), you need to restart the CLI at this stage as otherwise it will not be aware of `nathan` having been upgraded. Stop the CLI by pressing `ctrl-c` and start it again by using exactly the same command as before, i.e.
 ```
 cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
 ```
