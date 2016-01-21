@@ -48,7 +48,7 @@ Indeed, the `config.ini` file contains a hard-coded private key:
 # Tuple of [PublicKey, WIF private key] (may specify multiple times)
 private-key = ["BTS6MRyAjQq8u...","5KQwrPbwdL6PhXu..."]
 ```
-It's a shared key for some special purpose. If I remember BM or someone else has ever explained it in the forum, but I can't find the post right now. Just let it be there. I think if you comment it out, it will appear again automatically, it's generated automatically by the code.
+It's a shared key for some special purpose. If I remember BM or someone else has ever explained it in the forum, but I can't find the post right now.
 
 ---
 > What is the meaning of all those different text colors in the witness node console?
@@ -60,11 +60,6 @@ It's a shared key for some special purpose. If I remember BM or someone else has
 * `blue` - some kind of info, I don't know
 
 Related source files are in `libraries/fc/include/fc/log/` and `libraries/fc/src/log/`.
-
----
-> What is the difference between public and private testnet?
-
-Not much. The biggest difference is that public testnet are intended for wider audience.
 
 ---
 > How can I close the witness node in a clean way?
