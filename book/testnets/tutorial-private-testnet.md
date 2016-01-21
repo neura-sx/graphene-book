@@ -32,12 +32,13 @@ Run this command:
 ```
 witness_node --data-dir data --genesis-json my-genesis.json 
 ```
-and when a message like this shows up:
+... and when a message like this shows up:
 ```
 3501235ms th_a main.cpp:165 main] Started witness node on a chain with 0 blocks.
 3501235ms th_a main.cpp:166 main] Chain ID is 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
 ```
-the initialization is complete. Use `ctrl-c` to close the witness node.
+... it means the initialization is complete.  
+Use `ctrl-c` to close the witness node.
 
 As a result, you should get two items:
 * A directory named `data` has been created with a file named `config.ini` located in it.
@@ -74,7 +75,7 @@ The above list authorizes the witness node to produce blocks on behalf of the li
 The private keys for all those witness ids (needed to sign blocks) are already supplied in the `config.ini` file:
 ```
 # Tuple of [PublicKey, WIF private key] (may specify multiple times)
-private-key = ["TEST6MRyA...T5GDW5CV","5KQwrPb...tP79zkvFD3"]
+private-key = ["BTS6MRyA...T5GDW5CV","5KQwrPb...tP79zkvFD3"]
 ```
 
 ### Start block production
@@ -159,7 +160,7 @@ list_account_balances nathan
 We will now create another account (named `alpha`) so that we can transfer funds back and forth between `nathan` and `alpha`.
 
 Creating a new account is always done by using an existing account - we need it because someone (i.e. an registrar) has to fund the registration fee.  
-Also, there is a requirement for the registrar account to have a lifetime member (LTM) status. So we need to upgrade `nathan` to LTM, before we can proceed with creating other accounts.  
+Also, there is the requirement for the registrar account to have a lifetime member (LTM) status. So we need to upgrade `nathan` to LTM, before we can proceed with creating other accounts.  
 To upgrade to LTM, use the `upgrade_account` command:
 ```
 upgrade_account nathan true
