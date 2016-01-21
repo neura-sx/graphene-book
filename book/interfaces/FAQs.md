@@ -107,3 +107,8 @@ create_account_with_brain_key <brain_key> <new_acc_name> <imp_acc_name> <imp_acc
 
 The brain-key can be used to regenerate the newly created account (even in the GUI wallet) so you might want to make a backup of this brain-key somewhere.  
 Also, when the process is complete, you might want to manually delete the imported active private key from your wallet (i.e. from the `wallet.json` file).
+
+---
+> Is it possible to remove a private key from the `wallet.json` file?
+
+???
