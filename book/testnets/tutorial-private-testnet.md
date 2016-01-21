@@ -70,7 +70,7 @@ witness-id = "1.6.9"
 witness-id = "1.6.10"
 witness-id = "1.6.11"
 ```
-The above list authorizes the witness node to produce blocks on behalf of the listed witness ids. Normally each witness would be on a different node, but for the purposes of this private testnet, we will start out with all witnesses signing blocks on a single node.  
+The above list authorizes the witness node to produce blocks on behalf of the listed witness ids. Normally each witness would be on a different node, but for the purpose of this private testnet, we will start out with all witnesses signing blocks on a single node.  
 The private keys for all those witness ids (needed to sign blocks) are already supplied in the `config.ini` file:
 ```
 # Tuple of [PublicKey, WIF private key] (may specify multiple times)
@@ -94,11 +94,11 @@ xxxxx
 
 ### Run the CLI
 We are now ready to connect the CLI to your testnet witness node.  
-Keep your witness node running and in another window run this command:
+Keep your witness node running and in another Command Prompt window run this command:
 ```
 cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
 ```
-> Make sure to replace the above blockchain id `8b7bd36a...4294824` with your own blockchain id. The blockchain id given to the CLI needs to match the id generated and used by the witness node.
+> Make sure to replace the above blockchain id `8b7bd36a...4294824` with your own blockchain id. The blockchain id passed to the CLI needs to match the id generated and used by the witness node.
 
 If you get the `set_password` prompt, it means your CLI has successfully conected to the testnet witness node.
 
@@ -114,7 +114,7 @@ unlock supersecret
 ```
 
 ### Gain access to the genesis stake
-In Graphene, balances are contained in accounts. To import an account into your wallet, all you need to know is its name and its private key.  
+In Graphene, balances are contained in accounts. To import an account into your wallet, all you need to know its name and its private key.  
 We will now import into the wallet an account called `nathan` using the `import_key` command:
 ```
 import_key nathan 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
@@ -137,7 +137,7 @@ list_account_balances nathan
 
 ### Create another account
 
-We will now create another account (named `alpha` so that we can transfer funds back and forth between `nathan` and `alpha`.
+We will now create another account (named `alpha`) so that we can transfer funds back and forth between `nathan` and `alpha`.
 
 Creating a new account is always done by using an existing account - we need it because someone (i.e. an registrar) has to fund the registration fee.  
 Also, there is a requirement for the registrar account to have a lifetime member (LTM) status. So we need to upgrade `nathan` to LTM, before we can proceed with creating other accounts.  
@@ -154,7 +154,7 @@ Verify that `nathan` has now a LTM status:
 ```
 get_account nathan
 ```
-In the response, next to `membership_expiration_date` you should see `1969-12-31T23:59:59`. If you get `1970-01-01T00:00:00` something is wrong and `nathan` is has not been successfully upgraded.
+In the response, next to `membership_expiration_date` you should see `1969-12-31T23:59:59`. If you get `1970-01-01T00:00:00` something is wrong and `nathan` has not been successfully upgraded.
 
 We can now register an account by using `nathan` as registrar. But first we need to get hold of the public key for the new account. We do it by using the `suggest_brain_key` command:
 ```
@@ -201,3 +201,4 @@ And now you can verify that `alpha` has indeed received the money:
 ```
 list_account_balances alpha
 ```
+So at this stage you have a private testnet with two accounts defined and the ability to transfer BTS funds between them.
