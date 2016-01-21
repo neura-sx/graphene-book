@@ -4,6 +4,6 @@ Let's learn about Graphene
 
 ---
 
-#### [Building from sources](tutorial-interacting-with-witness.md)
-#### [Interacting with a CLI](tutorial-interacting-with-cli.md)
-#### [FAQs](FAQs.md)
+#### [Building from sources](book/builds/README.md)
+#### [Interfacing with Graphene](book/interfaces/README.md)
+#### [Setting up testnets](book/testnets/README.md)
