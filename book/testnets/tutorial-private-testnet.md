@@ -78,18 +78,37 @@ private-key = ["TEST6MRyA...T5GDW5CV","5KQwrPb...tP79zkvFD3"]
 ```
 
 ### Start block production
-This is the big moment - you are about to produce the very first blocks of your private blockchain.  
+This is the crucial moment - you are about to produce the very first blocks of your private blockchain.  
 Just run the witness node with this command:
 ```
 witness_node --data-dir data 
 ```
 ... and your block production should start at this stage. You should see this big message:
 ```
-xxxx
+********************************
+*                              *
+*   ------- NEW CHAIN ------   *
+*   - Welcome to Graphene! -   *
+*   ------------------------   *
+*                              *
+********************************
 ```
 ... and subseqently further messages signaling the successfull creation of blocks:
 ```
-xxxxx
+2322793ms th_a  main.cpp:176     main    ] Started witness node on a chain with 0 blocks.
+2322794ms th_a  main.cpp:177     main    ] Chain ID is 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
+2324613ms th_a  witness.cpp:185  block_production_loo ] Generated block #1 with timestamp 2016-01-21T22:38:40 at time 2016-01-21T22:38:40
+2325604ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2342604ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2343609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2344604ms th_a  witness.cpp:185  block_production_loo ] Generated block #2 with timestamp 2016-01-21T22:39:00 at time 2016-01-21T22:39:00
+2345605ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2349616ms th_a  witness.cpp:185  block_production_loo ] Generated block #3 with timestamp 2016-01-21T22:39:05 at time 2016-01-21T22:39:05
+2350602ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2353612ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2354605ms th_a  witness.cpp:185  block_production_loo ] Generated block #4 with timestamp 2016-01-21T22:39:10 at time 2016-01-21T22:39:10
+2355609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+2356609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
 ```
 
 ### Run the CLI
