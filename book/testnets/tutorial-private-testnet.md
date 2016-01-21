@@ -102,7 +102,93 @@ cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e2860
 If you get the `set_password` prompt, it means your CLI has successfully conected to the testnet witness node.
 
 ### Create a new wallet
+Fist you need to create a new password for your wallet. This password is used to encrypt all the private keys in the wallet. For this tutorial we will use the password `supersecret` but obviosusely you are free to come up with your own combination of letters and numbers.   
+Use this command to create the password:
+```
+>>> set_password supersecret
+```
+Now you can unlock the newly created wallet:
+```
+unlock supersecret
+```
 
+### Gain access to genesis stake
+In Graphene, balances are contained in accounts. To claim an account that was defined in the genesis file, use the `import_key` command:
+```
+import_key nathan 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+```
+> Note that `nathan` happens to be the account name defined in the genesis file. If you had edited your `my-genesies.json` file just after it was created, you could have put a different name there. Also, note that `5KQwrPbwdL...P79zkvFD3` is the private key defined in the `config.ini` file.
+
+Now we have the private key imported into the wallet but still no funds assocciated with it. Funds are stored in genesis balance objects. These funds can be claimed, with no fee, using the `import_balance` command: 
+```
+import_balance nathan ["5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"] true
+```
+As a result, we have one account (named `nathan`) imported into the wallet and this account is well funded with BTS as we have claimed the funds stored in the genesis file.  
+You can view this account by using this command:
+```
+get_account nathan
+```
+...and its balance by using this command:
+```
+list_account_balances nathan
+```
+
+### Create another account
+
+We will now create another account (named `alpha` so that we can transfer funds back and forth between `nathan` and `alpha`.
+
+Creating a new account is always done by using an existing account - we need it because someone (i.e. an registrar) has to fund the registration fee.  
+Also, there is a requirement for the registrar account to have a lifetime member (LTM) status. So we need to upgrade `nathan` to LTM, before we can proceed with creating other accounts.  
+To upgrade to LTM, use the `upgrade_account` command:
+```
+upgrade_account nathan true
+```
+> Due to a known bug, you need to restart the CLI at this stage as otherwise the CLI will not be aware of `nathan` having been upgraded. Stop the CLI by pressing `ctrl-c` and start it again by using exactly the same command as before, i.e.
+```
+cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
+```
+
+Verify that `nathan` has now a LTM status:
+```
+get_account nathan
+```
+In the response, next to `membership_expiration_date` you should see `1969-12-31T23:59:59`. If you get `1970-01-01T00:00:00` something is wrong and `nathan` is has not been successfully upgraded.
+
+We can now register an account by using `nathan` as registrar. But first we need to get hold of the public key for the new account. We do it by using the `suggest_brain_key` command:
+```
+suggest_brain_key
+```
+And the resposne should be something similar to this:
+```
+suggest_brain_key
+{
+  "brain_priv_key": "MYAL SOEVER UNSHARP PHYSIC JOURNEY SHEUGH BEDLAM WLOKA FOOLERY GUAYABA DENTILE RADIATE TIEPIN ARMS FOGYISH COQUET",
+  "wif_priv_key": "5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE",
+  "pub_key": "BTS78CuY47Vds2nfw2t88ckjTaggPkw16tLhcmg4ReVx1WPr1zRL5"
+}
+```
+So in this example:
+* the public key is `BTS78CuY47V...WPr1zRL5`
+* the private key is `5JDh3XmH...9idNisYnE`
+* and let's assume our new account will be called `alpha`
+
+Copy those keys as we will need them soon.
+
+> Your public and private keys will obviously be different (as the result of the `suggest_brain_key` comamnd is random) so make sure you use those. Also, you are free to choose any other name different from `alpha`.
+
+The `register_account` command allows you to register an account using only a public key.
+```
+register_account alpha BTS78CuY47Vds2nfw2t88ckjTaggPkw16tLhcmg4ReVx1WPr1zRL5 BTS78CuY47Vds2nfw2t88ckjTaggPkw16tLhcmg4ReVx1WPr1zRL5 nathan nathan 0 true
+```
+> Make sure you replace `BTS78CuY4...WPr1zRL5` with your version of it.
+
+The new account has been created but it's not in your wallet at this stage. We need to import it using the `import_key` command and `alpha`'s private key:
+```
+import_key alpha 5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE
+```
+> Make sure you replace `5JDh3XmH...9idNisYnE` with your version of it.
+
+### Transfer some funds to the other account
 
 ---
 
@@ -111,27 +197,12 @@ If you get the `set_password` prompt, it means your CLI has successfully conecte
 ---
 
 ```
-set_password southpark
-unlock southpark
 
-import_key nathan 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
-import_balance nathan ["5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"] true
-get_account nathan
-upgrade_account nathan true
-!!! restart CLI
-get_account nathan
->>"membership_expiration_date": "1970-01-01T00:00:00"<<
->>"membership_expiration_date": "1969-12-31T23:59:59"<<
 
-suggest_brain_key
-{
-  "brain_priv_key": "MYAL SOEVER UNSHARP PHYSIC JOURNEY SHEUGH BEDLAM WLOKA FOOLERY GUAYABA DENTILE RADIATE TIEPIN ARMS FOGYISH COQUET",
-  "wif_priv_key": "5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE",
-  "pub_key": "TEST78CuY47Vds2nfw2t88ckjTaggPkw16tLhcmg4ReVx1WPr1zRL5"
-}
 
-register_account alpha TEST78CuY47Vds2nfw2t88ckjTaggPkw16tLhcmg4ReVx1WPr1zRL5 TEST78CuY47Vds2nfw2t88ckjTaggPkw16tLhcmg4ReVx1WPr1zRL5 nathan nathan 0 true
-import_key alpha 5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE
+
+
+
 
 transfer nathan alpha 2000000000 TEST "here is the cash for upgrade" true
 list_account_balances alpha
