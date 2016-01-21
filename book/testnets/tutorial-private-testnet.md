@@ -1,7 +1,8 @@
 # Private testnet
 
 ### Folder structure
-The genesis file defines the init
+We assume that you have both the `witness_node` and `cli_wallet` files already compliled (or downloaded from bitshares.org).  
+Create a new folder (we will refer to this folder as [Testnet-Home] and copy `witness_node` and `cli_wallet` there
 
 ### Create a genesis file
 The genesis file defines the initial state of the network.  
