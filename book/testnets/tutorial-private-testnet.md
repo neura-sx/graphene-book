@@ -1,7 +1,7 @@
 # Private testnet
 
 ### Folder structure
-We assume that you have both the `witness_node` and `cli_wallet` files already compliled (or downloaded from bitshares.org).
+We assume that you have both `witness_node` and `cli_wallet` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).
 
 * Create a new folder (we will refer to this folder as `[Testnet-Home]`) and copy `witness_node` and `cli_wallet` there. `[Testnet-Home]` will contain all files and folders related to the testnet.
 
