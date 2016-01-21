@@ -1,28 +1,29 @@
-https://github.com/BitSharesEurope/docs.bitshares.eu/blob/3ea1f3f4d3cf222a421362efff0bb8b2db1dafb2/source/testnet/Private.rst
+https://github.com/BitSharesEurope/docs.bitshares.eu/blob/3ea1f3f4d3cf222a421362efff0bb8b2db1dafb2/source/testnet/Private.rst  
 http://docs.bitshares.eu/testnet/index.html#public-testnet
 
-
-
+---
 
 witness_node --create-genesis-json my-genesis.json
 
+---
 
-
-witness_node --data-dir data --genesis-json my-genesis.json
-
-Several messages will go to the console. When you see messages like these:
+witness_node --data-dir data --genesis-json my-genesis.json  
+Several messages will go to the console. When you see messages like these:  
+```
 3501235ms th_a       main.cpp:165                  main                 ] Started witness node on a chain with 0 blocks.
 3501235ms th_a       main.cpp:166                  main                 ] Chain ID is 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
+```
 the initialization is complete, and you can press Ctrl+C to quit the witness node.
 
-
+---
 
 Edit config.ini
 
-rpc-endpoint = 127.0.0.1:11011
-genesis-json = my-genesis.json
-enable-stale-production = true
+rpc-endpoint = 127.0.0.1:11011  
+genesis-json = my-genesis.json  
+enable-stale-production = true  
 
+```
 witness-id = "1.6.1"
 witness-id = "1.6.2"
 witness-id = "1.6.3"
@@ -34,16 +35,22 @@ witness-id = "1.6.8"
 witness-id = "1.6.9"
 witness-id = "1.6.10"
 witness-id = "1.6.11"
+```
 
+---
 
+```
+witness_node --data-dir data  
+```
+block production should start at this stage
 
+---
 
-witness_node --data-dir data
->>block production should start at this stage<<
-
-
+```
 cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
+```
 
+```
 set_password southpark
 unlock southpark
 
@@ -71,3 +78,4 @@ list_account_balances alpha
 upgrade_account alpha true
 get_account alpha
 list_account_balances alpha
+```
