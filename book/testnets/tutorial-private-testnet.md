@@ -93,7 +93,7 @@ witness_node --data-dir data
 *                              *
 ********************************
 ```
-... and subseqently further messages signaling the successfull creation of blocks:
+... and subseqently further messages indicating the successfull creation of blocks:
 ```
 2322793ms th_a  main.cpp:176     main    ] Started witness node on a chain with 0 blocks.
 2322794ms th_a  main.cpp:177     main    ] Chain ID is 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
