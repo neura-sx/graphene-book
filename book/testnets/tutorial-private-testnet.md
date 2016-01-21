@@ -97,7 +97,7 @@ Keep your witness node running and in another window run this command:
 ```
 cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
 ```
-> Make sure to replace the above blockchain id `8b7bd36a...62bd64294824` with your own blockchain id. The blockchain id of your CLI needs to match the id generated and used by the witness node.
+> Make sure to replace the above blockchain id `8b7bd36a...4294824` with your own blockchain id. The blockchain id given to the CLI needs to match the id generated and used by the witness node.
 
 If you get the `set_password` prompt, it means your CLI has successfully conected to the testnet witness node.
 
