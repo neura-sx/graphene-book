@@ -123,7 +123,7 @@ cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e2860
 If you get the `set_password` prompt, it means your CLI has successfully conected to the testnet witness node.
 
 ### Create a new wallet
-Fist you need to create a new password for your wallet. This password is used to encrypt all the private keys in the wallet. For this tutorial we will use the password `supersecret` but obviosusely you are free to come up with your own combination of letters and numbers.   
+Fist you need to create a new password for your wallet. This password is used to encrypt all the private keys in the wallet. For this tutorial we will use the password `supersecret` but obviously you are free to come up with your own combination of letters and numbers.   
 Use this command to create the password:
 ```
 >>> set_password supersecret
@@ -165,7 +165,7 @@ To upgrade to LTM, use the `upgrade_account` command:
 ```
 upgrade_account nathan true
 ```
-> Due to a known bug, you need to restart the CLI at this stage as otherwise the CLI will not be aware of `nathan` having been upgraded. Stop the CLI by pressing `ctrl-c` and start it again by using exactly the same command as before, i.e.
+> Due to a known bug, you need to restart the CLI at this stage as otherwise it will not be aware of `nathan` having been upgraded. Stop the CLI by pressing `ctrl-c` and start it again by using exactly the same command as before, i.e.
 ```
 cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
 ```
@@ -221,4 +221,4 @@ And now you can verify that `alpha` has indeed received the money:
 ```
 list_account_balances alpha
 ```
-So at this stage you have a private testnet with two accounts defined and the ability to transfer BTS funds between them.
+At this stage you have a private testnet with access to two accounts defined in it and the ability to transfer BTS funds between them.
