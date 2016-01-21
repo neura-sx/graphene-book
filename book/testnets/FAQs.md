@@ -1,4 +1,4 @@
-# FAQs - Setting up a testnet
+# FAQs - Setting up testnets
 
 > This file has public keys starting with GPH..  
 `cryptonomex/graphene/testnet-shared-accounts.txt`  
