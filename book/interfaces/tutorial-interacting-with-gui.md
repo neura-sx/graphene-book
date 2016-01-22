@@ -1,3 +1,3 @@
-# Windows Build for Visual Studio 2015
+# Interacting with a GUI
 ### Prerequisites
 Coming soon - still under construction
