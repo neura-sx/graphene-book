@@ -3,11 +3,16 @@
 * We assume that you have both `witness_node` and `cli_wallet` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).  
 * Also, we assume that you have the private keys and the name of some funded account.
 
+### Folder structure
+Create a new folder in any location you like and copy `witness_node` and `cli_wallet` there.  
+Next, open a *Command Prompt* window and switch the current directory to your newly created folder.
+
 ### Run the witness node
 To run the witness node use this command:
 ```
 witness_node --rpc-endpoint 127.0.0.1:11011
 ```
+
 ### Run the CLI
 To run the CLI use this command:
 ```
