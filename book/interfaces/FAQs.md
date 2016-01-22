@@ -136,7 +136,7 @@ Also, when the process is complete, you might want to manually delete the import
 ---
 > Is it possible to connect a hosted wallet GUI (e.g. `https://bitshares.openledger.info`) to a private witness node run locally?
 
-A BitShares GUI can be connected to a local witness node only if you use either of these:
+Any GUI can be connected to a local witness node only if you use either of these:
 - a light wallet GUI running locally on your machine
 - a hosted wallet GUI, provided it is not using a secure domain (i.e. only works with plain `http`, not `https`)
 
