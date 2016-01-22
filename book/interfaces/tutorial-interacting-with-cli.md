@@ -1,7 +1,7 @@
 # Interacting with a CLI
 ### Prerequisites
 * We assume that you have both `witness_node` and `cli_wallet` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).  
-* Also, we assume that you have the private keys and the name of some funded account.
+* Also, we assume that you have the private keys for two existing accounts and at least one of them has some funds.
 
 ### Folder structure
 Create a new folder in any location you like and copy `witness_node` and `cli_wallet` there.  
@@ -30,48 +30,60 @@ Now you can unlock the newly created wallet:
 unlock supersecret
 ```
 
-### Gain access to the genesis stake
-In Graphene, balances are contained in accounts. To import an account into your wallet, all you need to know its name and its private key.  
-We will now import into the wallet an account called `nathan` using the `import_key` command:
+### Import the private keys
+We will now import your existing accounts into our wallet.  
+Let's assume one of your accounts is this:
+* its name is `nathan`
+* its private key is `5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3`
+
+And the other one is this:
+* its name is `alpha`
+* its private key is `5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE`
+
+
+
+Use this command to import your accounts:
 ```
 import_key nathan 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+import_key alpha 5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE
 ```
-> Note that `nathan` happens to be the account name defined in the genesis file. If you had edited your `my-genesies.json` file just after it was created, you could have put a different name there. Also, note that `5KQwrPbwdL...P79zkvFD3` is the private key defined in the `config.ini` file.
-
-Now we have the private key imported into the wallet but still no funds assocciated with it. Funds are stored in genesis balance objects. These funds can be claimed, with no fee, using the `import_balance` command: 
-```
-import_balance nathan ["5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"] true
-```
-As a result, we have one account (named `nathan`) imported into the wallet and this account is well funded with BTS as we have claimed the funds stored in the genesis file.  
-You can view this account by using this command:
+You can view these accounts by using this command:
 ```
 get_account nathan
+get_account alpha
 ```
-...and its balance by using this command:
+...and their balance by using this command:
 ```
 list_account_balances nathan
+list_account_balances alpha
+```
+
+### Transfer funds between accounts
+As a final step, we will transfer some money from `nathan` to `alpha` (assuming there are some funds on `nathan`).
+For transferring funds we use the `transfer` command:
+```
+transfer nathan alpha 20000000 BTS "here is some cash" true
+```
+> The text `here is some cash` is an arbitrary memo you can attatch to a transfer. If you don't need it, just use `""` instead. 
+
+And now you can verify that `alpha` has indeed received the money:
+```
+list_account_balances alpha
 ```
 
 ### Create another account
 
-We will now create another account (named `alpha`) so that we can transfer funds back and forth between `nathan` and `alpha`.
+> If none of your accounts has a lifetime member (LTM) status, skip this step as you will not be able to create a new account in this situation. You can verify the LTM status by running the `get_account` command an checking the timestamp next to `xx`. If the value is `xx` then the account is LTM, otherwise ot is not.
+
+We will now create another account named `alpha2` and assume that `nathan` is the account with LTM status.
 
 Creating a new account is always done by using an existing account - we need it because someone (i.e. an registrar) has to fund the registration fee.  
-Also, there is the requirement for the registrar account to have a lifetime member (LTM) status. Therefore we need to upgrade the account `nathan` to LTM, before we can proceed with creating other accounts.  
-To upgrade to LTM, use the `upgrade_account` command:
-```
-upgrade_account nathan true
-```
-> Due to a known [caching issue](https://github.com/cryptonomex/graphene/issues/530), you need to restart the CLI at this stage as otherwise it will not be aware of `nathan` having been upgraded. Stop the CLI by pressing `ctrl-c` and start it again by using exactly the same command as before, i.e.
-```
-cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
-```
-
-Verify that `nathan` has now a LTM status:
+Also,  To verify if `nathan` is LTM run this command:
 ```
 get_account nathan
 ```
-In the response, next to `membership_expiration_date` you should see `1969-12-31T23:59:59`. If you get `1970-01-01T00:00:00` something is wrong and `nathan` has not been successfully upgraded.
+In the response, check the value next to `membership_expiration_date`. If you see `1969-12-31T23:59:59` then `nathan` is already LTM. If you get `1970-01-01T00:00:00` then 'nathan' neeed to be upgraded.
+
 
 We can now register an account by using `nathan` as registrar. But first we need to get hold of the public key for the new account. We do it by using the `suggest_brain_key` command:
 ```
@@ -107,14 +119,3 @@ import_key alpha 5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE
 ```
 > Make sure you replace `5JDh3XmH...9idNisYnE` with your version of it.
 
-### Transfer funds between accounts
-As a final step, we will transfer some money from `nathan` to `alpha`. For that we use the `transfer` command:
-```
-transfer nathan alpha 2000000000 BTS "here is some cash" true
-```
-> The text `here is some cash` is an arbitrary memo you can attatch to a transfer. If you don't need it, just use `""` instead. 
-
-And now you can verify that `alpha` has indeed received the money:
-```
-list_account_balances alpha
-```
