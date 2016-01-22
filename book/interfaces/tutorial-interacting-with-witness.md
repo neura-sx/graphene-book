@@ -1,9 +1,12 @@
 # Interacting with a witness node
 ### Prerequisites
 
-* We assume  you have the `witness_node` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).
+We assume  you have the `witness_node` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).
 
-* [Nodejs 4.2.5](https://nodejs.org/dist/v4.2.5/node-v4.2.5-x64.msi)
+Apart from that you will need these tools installed:
+
+* [Nodejs 4.2.6](https://nodejs.org/dist/v4.2.5/node-v4.2.5-x64.msi)
+> Version 5.5.x might work as well but I haven't tried using it.
 
 * [Python 2.7.11](https://www.python.org/ftp/python/2.7.11/python-2.7.11.msi)
 > Make sure it's Python 2.7.x not 3.5.x.  
@@ -30,6 +33,7 @@ wscat -n -c ws://127.0.0.1:11011
 > Make sure you use the same port as the one specified for the witness node.
 
 ### Run API calls
+A non-restricted API call against the witness node looks like this:
 ```
 {"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
 ```
