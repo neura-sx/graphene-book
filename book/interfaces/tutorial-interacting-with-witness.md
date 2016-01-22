@@ -11,22 +11,24 @@ https://www.python.org/ftp/python/2.7.11/python-2.7.11.msi
 > Custom installation: allow to add python to your system path.
 
 ### Install wscat
-Open the *Command Prompt* and install `wscat`:
+Open a *Command Prompt* window and install `wscat`:
 ```
 npm install -g wscat
 ```
 
 ### Run the witness node
+Use this command to start the witness node:
 ```
 witness_node --rpc-endpoint 127.0.0.1:11011
 ```
-> You can choose any port you like, e.g. `8090` or `11011`
+> You can choose any port you like, e.g. `8090` or `11011`.
 
 ### Run wscat
-Open another *Command Prompt* window and start `wscat` and connect it to the web socket of the
+Keep your witness node running and in another *Command Prompt* window start `wscat` and connect it to the web socket of the witness node:
 ```
 wscat -n -c ws://127.0.0.1:11011
 ```
+> Make sure you use the same port as the one specified for the witness node.
 
 ### Run API calls
 ```
