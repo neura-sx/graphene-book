@@ -70,12 +70,15 @@ So the first thing we need to do is log in:
 
 ### Access the Database API
 
-Let's now ask the Login API to give us access to the Database API.  
-We do it with this command:
+Let's now ask the Login API to give us access to the Database API.
+
+The Database API is especially important as it allows you to subscribe to any object changes and get notified of these changes automatically. This API is read-only - all modifications to the database must be performed via transactions, which are broadcast via the Network Broadcast API.  
+
+To retrieve an API identifier for the Database API we use this command against the Login API:
 ```
 {"id":888,"method":"call","params":[1,"database",[]]}
 ```
-You will receive a database API identifier in this format:
+You will receive a Database API identifier in this format:
 ```
 {"id":888,"result":2}
 ```
