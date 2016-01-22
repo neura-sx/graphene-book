@@ -87,29 +87,33 @@ And the resposne should be something similar to this:
 ```
 suggest_brain_key
 {
-  "brain_priv_key": "MYAL SOEVER UNSHARP PHYSIC JOURNEY SHEUGH BEDLAM WLOKA FOOLERY GUAYABA DENTILE RADIATE TIEPIN ARMS FOGYISH COQUET",
-  "wif_priv_key": "5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE",
-  "pub_key": "BTS78CuY47Vds2nfw2t88ckjTaggPkw16tLhcmg4ReVx1WPr1zRL5"
+  "brain_priv_key": "UPLOCK RUNE MORTAR TOASTER TWIGGED POMONIC GORING SUNNY SPEAN BOCARDO GODHEAD ABLY WRAXLE OHOY EMERGE JERQUE",
+  "wif_priv_key": "5JK1HAUjCh5H7Ubc1pa8WU7ydEiPkmQjAVF3L9oYdLWBBP5v2jN",
+  "pub_key": "BTS7XRAcWjD8xZKRR5u8MY34xU6tZDFVyvDthoXJ1LbtgLLft8TMu"
 }
 ```
 So in this example:
-* the public key is `BTS78CuY47V...WPr1zRL5`
-* the private key is `5JDh3XmH...9idNisYnE`
-* and let's assume our new account will be called `alpha`
+* the public key is `BTS7XRAcWjD...LbtgLLft8TMu`
+* the private key is `5JK1HAUj...YdLWBBP5v2jN`
+* and let's assume our new account will be called `alpha2`
 
 Copy those keys as we will need them soon.
 
-> Your public and private keys will obviously be different (as the result of the `suggest_brain_key` comamnd is random) so make sure you use those. Also, you are free to choose any other name different from `alpha`.
+> Your public and private keys will obviously be different (as the result of the `suggest_brain_key` comamnd is random) so make sure you use those. Also, you are free to choose any other name different from `alpha2`.
 
 The `register_account` command allows you to register an account using only a public key.
 ```
-register_account alpha BTS78CuY47Vds2nfw2t88ckjTaggPkw16tLhcmg4ReVx1WPr1zRL5 BTS78CuY47Vds2nfw2t88ckjTaggPkw16tLhcmg4ReVx1WPr1zRL5 nathan nathan 0 true
+register_account alpha2 BTS7XRAcWjD8xZKRR5u8MY34xU6tZDFVyvDthoXJ1LbtgLLft8TMu BTS7XRAcWjD8xZKRR5u8MY34xU6tZDFVyvDthoXJ1LbtgLLft8TMu nathan nathan 0 true
 ```
-> Make sure you replace `BTS78CuY4...WPr1zRL5` with your version of it.
+> Make sure you replace `BTS7XRAcWjD...LbtgLLft8TMu` with your version of it.
 
-The new account has been created but it's not in your wallet at this stage. We need to import it using the `import_key` command and `alpha`'s private key:
+The new account has been created but it's not in your wallet at this stage. We need to import it using the `import_key` command and `alpha2`'s private key:
 ```
-import_key alpha 5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE
+import_key alpha 5JK1HAUjCh5H7Ubc1pa8WU7ydEiPkmQjAVF3L9oYdLWBBP5v2jN
 ```
-> Make sure you replace `5JDh3XmH...9idNisYnE` with your version of it.
+> Make sure you replace `5JK1HAUj...YdLWBBP5v2jN` with your version of it.
 
+At this stage you should have three accounts in your wallet. You can run this command to verify this:
+```
+list_my_accounts
+```
