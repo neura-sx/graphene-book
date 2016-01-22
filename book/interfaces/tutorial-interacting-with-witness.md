@@ -32,11 +32,14 @@ wscat -n -c ws://127.0.0.1:11011
 ```
 > Make sure you use the same port as the one specified for the witness node.
 
-### Restricted
+### Remote Procedure Calls
+We have two types of witness node API calls:
+* Unrestricted calls: these are stateless calls.
 
+* Restricted calls: calls that are restricted by default (`network_node_api`) or have been restricted by configuration are not accessible via RPC because a statefull protocol (web socket) is required.
 
-### Run non-restricted API calls
-A non-restricted API call against the witness node looks like this:
+### Run unrestricted API calls
+An unrestricted API call against the witness node looks like this:
 ```
 {"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
 ```
