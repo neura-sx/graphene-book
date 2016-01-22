@@ -37,6 +37,8 @@ wscat -n -c ws://127.0.0.1:11011
 {"id":888,"method":"call","params":[1,"login",["",""]]}  
 {"id":888,"method":"call","params":[1,"database",[]]}  
 ```
+You will receive a database API id.  
+You need to use it, by replacing the `DATABASE_API_ID` placeholder, when you run the subsequent calls:
 ```
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_config",[]]}  
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_chain_id",[]]}  
