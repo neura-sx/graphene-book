@@ -138,6 +138,6 @@ Also, when the process is complete, you might want to manually delete the import
 
 Any GUI can be connected to a local witness node only if you use either of these:
 - a light wallet GUI running locally on your machine
-- a hosted wallet GUI, provided it is not using a secure domain (i.e. only works with plain `http`, not `https`)
+- a hosted wallet GUI running in a web browser, provided it is not using a secure domain (i.e. only works with plain `http`, not `https`)
 
 Thus the OpenLedger GUI cannot be connected to a private witness node, as this GUI uses the `https` protocol.
