@@ -33,17 +33,18 @@ wscat -n -c ws://127.0.0.1:11011
 ```
 {"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
 ```
+> The number `888` is just a random identifier, you can use whatever value you want.
 ```
 {"id":888,"method":"call","params":[1,"login",["",""]]}  
 {"id":888,"method":"call","params":[1,"database",[]]}  
 ```
-You will receive a database API id.  
-You need to use it, by replacing the `DATABASE_API_ID` placeholder, when you run the subsequent calls:
+You will receive a database API id in this format:
+```
+{"id":888,"result":2}
+```
+So in this case the database API id is `2` but it might be different in your case. You need to use this id, by replacing the `DATABASE_API_ID` placeholder, when you run the subsequent calls:
 ```
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_config",[]]}  
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_chain_id",[]]}  
 {"id":888,"method":"call","params":[DATABASE_API_ID,"list_assets",["",10]]}  
 ```
-
-
-http://docs.bitshares.eu/api/websocket.html
