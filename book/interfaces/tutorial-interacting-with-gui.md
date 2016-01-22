@@ -11,5 +11,13 @@ witness_node --rpc-endpoint 127.0.0.1:11011
 ```
 
 ### Run the Light Client GUI
-Start the application
+Start the application and then: 
+* navigate to settings 
+* add a new API connection: `ws://localhost:11011`
+* select this connection on the drop-down list
+* hit `CONFIRM` to apply this new connection
+
+![](../../images/web-wallet-ws-config.png)
+
+You are now connected to the network via your own full node.
 
