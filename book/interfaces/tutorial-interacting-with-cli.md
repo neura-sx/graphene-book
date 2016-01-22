@@ -73,9 +73,9 @@ list_account_balances alpha
 
 ### Create another account
 
-> If none of your accounts has a lifetime member (LTM) status, skip this step as you will not be able to create a new account in this situation. You can verify the LTM status of an account by running the `get_account` command and checking the timestamp next to `membership_expiration_date`. If the value is `1969-12-31T23:59:59` then the account is LTM, otherwise it is not.
+> If none of your accounts has a lifetime member (LTM) status, skip this step as you will not be able to create a new account in this situation. You can verify the LTM status of an account by running the `get_account` command and checking the timestamp next to the `membership_expiration_date` entry. If the value is `1969-12-31T23:59:59` then the account is LTM, otherwise it is not.
 
-We will now create another account named `alpha2` and assume that `nathan` is the account with a LTM status.
+We will now create another account named `alpha2` and assume that `nathan` is the account with a LTM status and it has enough funds to pay the registration fee.
 
 Creating a new account is always done by using an existing account - we need it because someone (i.e. the registrar) has to fund the registration fee. We will use `nathan` for this purpose as it has the required LTM status.
 
@@ -83,7 +83,7 @@ First we need to get hold of the public key for the new account. We do it by usi
 ```
 suggest_brain_key
 ```
-And the resposne should be something similar to this:
+And the response should be something similar to this:
 ```
 suggest_brain_key
 {
@@ -109,7 +109,7 @@ register_account alpha2 BTS7XRAcWjD8xZKRR5u8MY34xU6tZDFVyvDthoXJ1LbtgLLft8TMu BT
 
 The new account has been created but it's not in your wallet at this stage. We need to import it using the `import_key` command and `alpha2`'s private key:
 ```
-import_key alpha 5JK1HAUjCh5H7Ubc1pa8WU7ydEiPkmQjAVF3L9oYdLWBBP5v2jN
+import_key alpha2 5JK1HAUjCh5H7Ubc1pa8WU7ydEiPkmQjAVF3L9oYdLWBBP5v2jN
 ```
 > Make sure you replace `5JK1HAUj...YdLWBBP5v2jN` with your version of it.
 
