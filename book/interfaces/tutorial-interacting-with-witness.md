@@ -32,16 +32,31 @@ wscat -n -c ws://127.0.0.1:11011
 ```
 > Make sure you use the same port as the one specified for the witness node.
 
-### Run API calls
+### Restricted
+
+
+### Run non-restricted API calls
 A non-restricted API call against the witness node looks like this:
 ```
 {"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
 ```
 > The number `888` is just a random identifier, you can use whatever value you want.
 
-Let's now login and access the database API:
+### Run restricted API calls
+As for the restricted API calls, the first thing we need to do is to log in.
 ```
-{"id":888,"method":"call","params":[1,"login",["",""]]}  
+{"id":888,"method":"call","params":[1,"login",["",""]]}
+```
+...and you should receive a response similar to this:
+```
+{"id":2,"result":true}
+```
+...which gives a positive confirmation about your log-in attempt.
+
+> You may be required to put your username and pasword into the quotes. In our case we have used empty values in the form of `""`.
+
+Before we can subscribe to any object changes and get notified automatically, we first need to ask for access to the database API with this command:
+```
 {"id":888,"method":"call","params":[1,"database",[]]}  
 ```
 You will receive a database API id in this format:
