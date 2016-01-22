@@ -4,7 +4,7 @@ Some text goes here.
 
 ---
 
-#### [Interacting with a GUI](tutorial-interacting-with-gui.md)
-#### [Interacting with a CLI](tutorial-interacting-with-cli.md)
-#### [Interacting with a witness node](tutorial-interacting-with-witness.md)
+#### [Interfacing with a GUI](tutorial-interacting-with-gui.md)
+#### [Interfacing with a CLI](tutorial-interacting-with-cli.md)
+#### [Interfacing with a witness node](tutorial-interacting-with-witness.md)
 #### [FAQs](FAQs.md)
