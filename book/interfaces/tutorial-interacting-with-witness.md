@@ -1,14 +1,13 @@
 # Interacting with a witness node
 ### Prerequisites
 
-* We assume that you have the `witness_node` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).
+* We assume  you have the `witness_node` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).
 
-* Nodejs 4.2.5
-https://nodejs.org/dist/v4.2.5/node-v4.2.5-x64.msi
+* [Nodejs 4.2.5](https://nodejs.org/dist/v4.2.5/node-v4.2.5-x64.msi)
 
-* Python 2.7.11 (not 3.5.x!)  
-https://www.python.org/ftp/python/2.7.11/python-2.7.11.msi  
-> Custom installation: allow to add python to your system path.
+* [Python 2.7.11](https://www.python.org/ftp/python/2.7.11/python-2.7.11.msi)
+> Make sure it's Python 2.7.x not 3.5.x.  
+Also, use the custom installation and allow to add python to your system path.
 
 ### Install wscat
 Open a *Command Prompt* window and install `wscat`:
