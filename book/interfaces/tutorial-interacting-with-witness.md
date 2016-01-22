@@ -1,23 +1,20 @@
 # Interacting with a witness node
 ### Prerequisites
 
-
----
-
-Install Nodejs  
+* Install Nodejs  
 https://nodejs.org/dist/v4.2.5/node-v4.2.5-x64.msi
 
----
-
-Install Python 2.7 (not 3.5!)  
+* Install Python 2.7 (not 3.5!)  
 https://www.python.org/ftp/python/2.7.11/python-2.7.11.msi  
-Custom: add to path
+Custom: add to system path
 
----
-
+* Open the Command Prompt and install `wscat`:
+```
 npm install -g wscat
+```
 
----
+### Run the witness node
+
 
 wscat -c ws://127.0.0.1:11011
 
