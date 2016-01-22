@@ -55,7 +55,8 @@ As for the restricted API-1 calls, for security reasons, the witness node distin
 * Network Nodes API
 
 The Login API implements the bottom layer of the RPC API and it has an API identifier equal to `1`.   
-All other APIs must be requested from this API so the first thing we need to do is log in:
+All other APIs have variable API identifiers which must be requested from the Login API.  
+So the first thing we need to do is log in:
 ```
 {"id":888,"method":"call","params":[1,"login",["",""]]}
 ```
@@ -92,8 +93,7 @@ You can try any of these commands:
 {"id":888,"method":"call","params":[1,"network_broadcast",[]]}
 {"id":888,"method":"call","params":[1,"database",[]]}
 {"id":888,"method":"call","params":[1,"history",[]]}
-{"id":888,"method":"call","params":[1,"network_node",[]]}
-{"id":888,"method":"call","params":[1,"network_broadcast",[]]}
+{"id":888,"method":"call","params":[1,"network_node",[]]} <-- This one does not work. Why?
 ```
 ...and you should receive API identifiers for all of these APIs.
 
