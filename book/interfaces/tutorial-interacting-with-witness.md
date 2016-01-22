@@ -40,7 +40,7 @@ We have two types of witness node API calls:
 
 ### Run unrestricted API calls
 Unrestricted API-0 calls have an API identifier equal to `0`.  
-Below is an example of unrestricted API call :
+Below is an example of an unrestricted API call :
 ```
 {"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
 ```
