@@ -1,6 +1,7 @@
 # Interacting with a CLI
 ### Prerequisites
-* We assume that you have both `witness_node` and `cli_wallet` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).  
+* We assume that you have both `witness_node` and `cli_wallet` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).
+
 * We assume that you have the private keys for two existing accounts and at least one of them has some funds.
 
 ### Folder structure
