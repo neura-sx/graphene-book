@@ -1,6 +1,6 @@
-# Technical Guide to Graphene
+# Developer's Guide to Graphene
 
-Let's learn about Graphene
+Let's learn how to implement new features in the Graphene code-base.
 
 ---
 
