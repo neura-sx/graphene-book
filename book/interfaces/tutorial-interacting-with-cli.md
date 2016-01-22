@@ -64,7 +64,7 @@ For transferring funds we use the `transfer` command:
 ```
 transfer nathan alpha 20000000 BTS "here is some cash" true
 ```
-> The text `here is some cash` is an arbitrary memo you can attatch to a transfer. If you don't need it, just use `""` instead. 
+> The text `here is some cash` is an arbitrary memo you can attatch to a transfer. If you don't need it, just use `""` instead. Also, make sure the amount transferred is within the funds available for this account. The value `20000000` translates into 200 BTS as in case of BTS the last 5 figures are just decimal points.
 
 And now you can verify that `alpha` has indeed received the money:
 ```
