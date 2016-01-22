@@ -34,6 +34,8 @@ wscat -n -c ws://127.0.0.1:11011
 {"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
 ```
 > The number `888` is just a random identifier, you can use whatever value you want.
+
+Let's now login and access the database API:
 ```
 {"id":888,"method":"call","params":[1,"login",["",""]]}  
 {"id":888,"method":"call","params":[1,"database",[]]}  
