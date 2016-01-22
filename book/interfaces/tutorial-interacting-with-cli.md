@@ -21,7 +21,7 @@ cli_wallet --server-rpc-endpoint=ws://127.0.0.1:11011
 ```
 
 ### Create a new wallet
-Fist you need to create a new password for your wallet. This password is used to encrypt all the private keys in the wallet. For this tutorial we will use the password `supersecret` but obviously you are free to come up with your own combination of letters and numbers.   
+First you need to create a new password for your wallet. This password is used to encrypt all the private keys in the wallet. For this tutorial we will use the password `supersecret` but obviously you are free to come up with your own combination of letters and numbers.   
 Use this command to create the password:
 ```
 >>> set_password supersecret
