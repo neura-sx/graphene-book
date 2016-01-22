@@ -72,9 +72,9 @@ So the first thing we need to do is log in:
 
 Let's now ask the Login API to give us access to the Database API.
 
-The Database API is especially important as it allows you to subscribe to any object changes and get notified of these changes automatically. This API is read-only - all modifications to the database must be performed via transactions, which are broadcast via the Network Broadcast API.  
+The Database API is especially important, as it allows you to subscribe to any object changes and get notified of these changes automatically. This API is read-only - all modifications to the database must be performed via transactions, which are broadcast via the Network Broadcast API.  
 
-To retrieve an API identifier for the Database API we use this command against the Login API:
+To retrieve an API identifier for the Database API, we use this command against the Login API:
 ```
 {"id":888,"method":"call","params":[1,"database",[]]}
 ```
@@ -91,12 +91,12 @@ So in this case our Database API identifier is `2` but it might be different in 
 
 ### Access other restricted APIs
 
-You can try any of these commands:
+You can try any of these commands against the Login API:
 ```
 {"id":888,"method":"call","params":[1,"network_broadcast",[]]}
 {"id":888,"method":"call","params":[1,"database",[]]}
 {"id":888,"method":"call","params":[1,"history",[]]}
 {"id":888,"method":"call","params":[1,"network_node",[]]} <-- This one does not work. Why?
 ```
-...and you should receive API identifiers for all of these APIs.
+...to receive API identifiers for all of these APIs.
 
