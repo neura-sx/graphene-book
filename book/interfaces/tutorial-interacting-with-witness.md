@@ -1,4 +1,6 @@
-http://docs.bitshares.eu/api/websocket.html
+# Windows Build for Visual Studio 2015
+### Prerequisites
+
 
 ---
 
@@ -29,3 +31,7 @@ wscat -c ws://127.0.0.1:11011
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_config",[]]}  
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_chain_id",[]]}  
 {"id":888,"method":"call","params":[DATABASE_API_ID,"list_assets",["",10]]}  
+
+
+
+http://docs.bitshares.eu/api/websocket.html
