@@ -34,41 +34,53 @@ wscat -n -c ws://127.0.0.1:11011
 
 ### Two types of RPC calls
 We have two types of witness node API calls:
-* Unrestricted calls: these are stateless calls.
+* Unrestricted API-0 calls: these are stateless calls, as API-0 is meant for stateless querying.
 
-* Restricted calls: calls that are restricted by default (`network_node_api`) or have been restricted by configuration are not accessible via RPC because a statefull protocol (web socket) is required.
+* Restricted API-1 calls: these are statefull calls, as API-1 is meant for authencitated interaction where a statefull protocol (web socket) is required.
 
 ### Run unrestricted API calls
-An unrestricted API call against the witness node looks like this:
+Unrestricted API-0 calls have an API identifier equal to `0`.  
+Below is an example of unrestricted API call :
 ```
 {"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
 ```
-> The number `888` is just a random identifier, you can use whatever value you want.
+> The number `888` is a request identifier which can have whatever value you want, as opposed to the value `0` (i.e. the first item in `params`) which specifies the API identifier.
 
 ### Run restricted API calls
-As for the restricted API calls, the first thing we need to do is to log in.
+As for the restricted API-1 calls, for security reasons, the witness node distinguishes five different APIs:
+* Login API
+* Database API
+* Account History API
+* Network Broadcast API
+* Network Nodes API
+
+The Login API implements the bottom layer of the RPC API and it has an API identifier equal to `1`.   
+All other APIs must be requested from this API so the first thing we need to do is log in:
 ```
 {"id":888,"method":"call","params":[1,"login",["",""]]}
 ```
 ...and you should receive a response similar to this:
 ```
-{"id":2,"result":true}
+{"id":888,"result":true}
 ```
 ...which gives a positive confirmation about your log-in attempt.
 
-> You may be required to put your username and pasword into the quotes. In our case we have used empty values in the form of `""`.
+> You may be required to put your username and pasword into the quotes. In our case we have used empty values in the form of `""`. Also, note the value `1` (i.e. the first item in `params`) which specifies the API identifier of the Login API.
 
-Before we can subscribe to any object changes and get notified automatically, we first need to ask for access to the database API with this command:
+### Access the Database API
+
+Let's now ask the Login API to give us access to the Database API. We do it with this command:
 ```
 {"id":888,"method":"call","params":[1,"database",[]]}  
 ```
-You will receive a database API id in this format:
+You will receive a database API identifier in this format:
 ```
 {"id":888,"result":2}
 ```
-So in this case the database API id is `2` but it might be different in your case. You need to use this id, by replacing the `DATABASE_API_ID` placeholder, when you run the following API calls:
+So in this case our Database API identifier is eqaul `2` but it might be different in your case. You need to use this identifier, by replacing the `DATABASE_API_ID` placeholder, when you run the following API calls:
 ```
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_config",[]]}  
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_chain_id",[]]}  
 {"id":888,"method":"call","params":[DATABASE_API_ID,"list_assets",["",10]]}  
 ```
+
