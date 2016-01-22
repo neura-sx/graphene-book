@@ -3,7 +3,7 @@
 
 We assume  you have the `witness_node` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).
 
-Apart from that you will need these tools installed:
+Apart from that, you will need these tools installed:
 
 * [Nodejs 4.2.6](https://nodejs.org/dist/v4.2.5/node-v4.2.5-x64.msi)
 > Version 5.5.x might work as well but I haven't tried using it.
