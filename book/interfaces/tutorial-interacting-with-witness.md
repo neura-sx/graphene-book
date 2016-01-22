@@ -1,4 +1,4 @@
-# Windows Build for Visual Studio 2015
+# Interacting with a witness node
 ### Prerequisites
 
 
