@@ -77,7 +77,7 @@ list_account_balances alpha
 
 We will now create another account named `alpha2` and assume that `nathan` is the account with a LTM status.
 
-Creating a new account is always done by using an existing account - we need it because someone (i.e. an registrar) has to fund the registration fee. We will use `nathan` for this purpose as it has the required LTM status.
+Creating a new account is always done by using an existing account - we need it because someone (i.e. the registrar) has to fund the registration fee. We will use `nathan` for this purpose as it has the required LTM status.
 
 First we need to get hold of the public key for the new account. We do it by using the `suggest_brain_key` command:
 ```
