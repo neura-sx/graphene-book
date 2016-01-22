@@ -79,7 +79,7 @@ You will receive a database API identifier in this format:
 ```
 {"id":888,"result":2}
 ```
-So in this case our Database API identifier is eqaul `2` but it might be different in your case. You need to use this identifier, by replacing the `DATABASE_API_ID` placeholder, when you run the following API calls:
+So in this case our Database API identifier is `2` but it might be different in your case. You will need to use this identifier, by replacing the `DATABASE_API_ID` placeholder, when you run the following API calls:
 ```
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_config",[]]}  
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_chain_id",[]]}  
