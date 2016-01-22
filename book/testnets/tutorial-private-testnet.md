@@ -6,7 +6,7 @@ We assume that you have both `witness_node` and `cli_wallet` already compliled (
 ### Folder structure
 Create a new folder (we will refer to it as `[Testnet-Home]`) in any location you like and copy `witness_node` and `cli_wallet` there.  
 The `[Testnet-Home]` folder will contain all files and folders related to the testnet.  
-Next, open a Command Prompt window and switch to the `[Testnet-Home]` directory.
+Next, open a *Command Prompt* window and switch to the `[Testnet-Home]` directory.
 
 ### Create a genesis file
 The genesis file defines the initial state of the network.  
@@ -114,7 +114,7 @@ witness_node --data-dir data
 
 ### Run the CLI
 We are now ready to connect the CLI to your testnet witness node.  
-Keep your witness node running and in another Command Prompt window run this command:
+Keep your witness node running and in another *Command Prompt* window run this command:
 ```
 cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
 ```
