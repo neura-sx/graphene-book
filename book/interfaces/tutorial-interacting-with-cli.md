@@ -73,19 +73,13 @@ list_account_balances alpha
 
 ### Create another account
 
-> If none of your accounts has a lifetime member (LTM) status, skip this step as you will not be able to create a new account in this situation. You can verify the LTM status by running the `get_account` command an checking the timestamp next to `xx`. If the value is `xx` then the account is LTM, otherwise ot is not.
+> If none of your accounts has a lifetime member (LTM) status, skip this step as you will not be able to create a new account in this situation. You can verify the LTM status of an account by running the `get_account` command and checking the timestamp next to `membership_expiration_date`. If the value is `1969-12-31T23:59:59` then the account is LTM, otherwise it is not.
 
-We will now create another account named `alpha2` and assume that `nathan` is the account with LTM status.
+We will now create another account named `alpha2` and assume that `nathan` is the account with a LTM status.
 
-Creating a new account is always done by using an existing account - we need it because someone (i.e. an registrar) has to fund the registration fee.  
-Also,  To verify if `nathan` is LTM run this command:
-```
-get_account nathan
-```
-In the response, check the value next to `membership_expiration_date`. If you see `1969-12-31T23:59:59` then `nathan` is already LTM. If you get `1970-01-01T00:00:00` then 'nathan' neeed to be upgraded.
+Creating a new account is always done by using an existing account - we need it because someone (i.e. an registrar) has to fund the registration fee. We will use `nathan` for this purpose as it has the required LTM status.
 
-
-We can now register an account by using `nathan` as registrar. But first we need to get hold of the public key for the new account. We do it by using the `suggest_brain_key` command:
+First we need to get hold of the public key for the new account. We do it by using the `suggest_brain_key` command:
 ```
 suggest_brain_key
 ```
