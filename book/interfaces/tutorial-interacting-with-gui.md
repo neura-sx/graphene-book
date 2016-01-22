@@ -20,7 +20,7 @@ C:\Program Files (x86)\BitShares2-light\BitShares2-light.exe
 Once the GUI is launched: 
 * navigate to settings 
 * add a new API connection: `ws://localhost:11011`
-* select this connection on the drop-down list
+* select this new connection on the drop-down list
 * hit `CONFIRM` to apply this new connection
 
 ![](../../images/web-wallet-ws-config.png)
