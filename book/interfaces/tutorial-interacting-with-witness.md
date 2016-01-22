@@ -69,9 +69,10 @@ All other APIs must be requested from this API so the first thing we need to do 
 
 ### Access the Database API
 
-Let's now ask the Login API to give us access to the Database API. We do it with this command:
+Let's now ask the Login API to give us access to the Database API.  
+We do it with this command:
 ```
-{"id":888,"method":"call","params":[1,"database",[]]}  
+{"id":888,"method":"call","params":[1,"database",[]]}
 ```
 You will receive a database API identifier in this format:
 ```
@@ -83,4 +84,16 @@ So in this case our Database API identifier is eqaul `2` but it might be differe
 {"id":888,"method":"call","params":[DATABASE_API_ID,"get_chain_id",[]]}  
 {"id":888,"method":"call","params":[DATABASE_API_ID,"list_assets",["",10]]}  
 ```
+
+### Access other restricted APIs
+
+You can try any of these commands:
+```
+{"id":888,"method":"call","params":[1,"network_broadcast",[]]}
+{"id":888,"method":"call","params":[1,"database",[]]}
+{"id":888,"method":"call","params":[1,"history",[]]}
+{"id":888,"method":"call","params":[1,"network_node",[]]}
+{"id":888,"method":"call","params":[1,"network_broadcast",[]]}
+```
+...and you should receive API identifiers for all of these APIs.
 
