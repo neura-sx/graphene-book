@@ -1,7 +1,7 @@
 # Interacting with a CLI
 ### Prerequisites
 * We assume that you have both `witness_node` and `cli_wallet` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).  
-* Also, we assume that you have the private keys for two existing accounts and at least one of them has some funds.
+* We assume that you have the private keys for two existing accounts and at least one of them has some funds.
 
 ### Folder structure
 Create a new folder in any location you like and copy `witness_node` and `cli_wallet` there.  
@@ -59,7 +59,7 @@ list_account_balances alpha
 ```
 
 ### Transfer funds between accounts
-As a final step, we will transfer some money from `nathan` to `alpha` (assuming there are some funds on `nathan`).
+We will now transfer some money from `nathan` to `alpha` (assuming there are some funds on `nathan`).
 For transferring funds we use the `transfer` command:
 ```
 transfer nathan alpha 20000000 BTS "here is some cash" true
