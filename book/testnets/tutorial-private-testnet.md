@@ -159,7 +159,7 @@ list_account_balances nathan
 
 We will now create another account (named `alpha`) so that we can transfer funds back and forth between `nathan` and `alpha`.
 
-Creating a new account is always done by using an existing account - we need it because someone (i.e. an registrar) has to fund the registration fee.  
+Creating a new account is always done by using an existing account - we need it because someone (i.e. the registrar) has to fund the registration fee.  
 Also, there is the requirement for the registrar account to have a lifetime member (LTM) status. Therefore we need to upgrade the account `nathan` to LTM, before we can proceed with creating other accounts.  
 To upgrade to LTM, use the `upgrade_account` command:
 ```
