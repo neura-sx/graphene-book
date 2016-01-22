@@ -6,7 +6,7 @@ We assume that you have both `witness_node` and `cli_wallet` already compliled (
 ### Folder structure
 Create a new folder (we will refer to it as `[Testnet-Home]`) in any location you like and copy `witness_node` and `cli_wallet` there.  
 The `[Testnet-Home]` folder will contain all files and folders related to the testnet.  
-Next, open a *Command Prompt* window and switch to the `[Testnet-Home]` directory.
+Next, open a *Command Prompt* window and switch the current directory to `[Testnet-Home]`.
 
 ### Create a genesis file
 The genesis file defines the initial state of the network.  
