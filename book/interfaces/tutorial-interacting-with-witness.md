@@ -32,7 +32,7 @@ wscat -n -c ws://127.0.0.1:11011
 ```
 > Make sure you use the same port as the one specified for the witness node.
 
-### Two types of RPC calls
+### Different types of RPC calls
 We have two types of witness node API calls:
 * Unrestricted API-0 calls: these are stateless calls, as API-0 is meant for stateless querying.
 
