@@ -131,7 +131,8 @@ Also, when the process is complete, you might want to manually delete the import
 ---
 > Is it possible to remove a private key from the `wallet.json` file?
 
-???
+No, it's not as all private keys are stored inside the file in one big lump of encoded data.  
+But there is always this work-around available: you can create a new `wallet.json` file and import all keys from the previous file except the ones you wanted to remove.
 
 ---
 > Is it possible to connect a hosted wallet GUI (e.g. `https://bitshares.openledger.info`) to a private witness node run locally?
