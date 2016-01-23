@@ -141,3 +141,10 @@ Any GUI can be connected to a local witness node only if you use either of these
 - a hosted wallet GUI running in a web browser, provided it is not using a secure domain (i.e. only works with plain `http`, not `https`)
 
 Thus the OpenLedger GUI cannot be connected to a private witness node, as this GUI uses the `https` protocol.
+
+---
+> How can I retrieve private keys from the GUI?
+
+Choose one of your accounts and then: 
+* Navigate to `Permissions` and select `Active Permissions` or `Owner permissions`, depending what type of keys you want to retrieve.
+* When you click on an icon symbolizing a key located next to the public key, a new pop-up window will show up and you'll be presented with the option `show` which will allow you to view and copy your private key.
