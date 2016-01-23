@@ -1,4 +1,4 @@
-# Interacting with a GUI
+# Interacting with a Graphical User Interface
 ### Prerequisites
 * We assume  you have the `witness_node` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).
 
