@@ -44,7 +44,7 @@ Below is an example of an unrestricted API call :
 ```
 {"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
 ```
-> The number `888` is a request identifier which can have whatever value you want, as opposed to the value `0` (i.e. the first item in `params`) which specifies the API identifier.
+> The value `888` is a request identifier which can have whatever value you want. Whereas the value `0` (the first item in `params`) is the API identifier indicating that this is an unrestricted API call.
 
 ### Run restricted API calls
 As for the restricted API-1 calls, for security reasons, the witness node distinguishes five different APIs:
@@ -66,7 +66,7 @@ So the first thing we need to do is log in:
 ```
 ...which gives a positive confirmation about your log-in attempt.
 
-> You may be required to put your username and pasword into the quotes. In our case we have used empty values in the form of `""`. Also, note the value `1` (i.e. the first item in `params`) which specifies the API identifier of the Login API.
+> You may be required to put your username and pasword into the quotes. In our case we have used empty values in the form of `""`. Also, note the API identifier of the Login API - its value is always `1` (the first item in `params`).
 
 ### Access the Database API
 
