@@ -221,4 +221,3 @@ And now you can verify that `alpha` has indeed received the money:
 ```
 list_account_balances alpha
 ```
-At this stage you have a private testnet with access to two accounts defined in it and the ability to transfer BTS funds between them.
