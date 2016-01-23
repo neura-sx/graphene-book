@@ -4,10 +4,6 @@
 
 * We assume that you have active private keys for two existing accounts and at least one of them has some funds. Please refer to [FAQs](FAQs.md) if you are not sure how to retrieve private keys from the GUI.
 
-### Folder structure
-Create a new folder in any location you like and copy `witness_node` and `cli_wallet` there.  
-Next, open a *Command Prompt* window and switch the current directory to your newly created folder.
-
 ### Run the witness node
 To run the witness node use this command:
 ```
