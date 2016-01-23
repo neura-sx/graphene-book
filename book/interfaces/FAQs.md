@@ -145,6 +145,6 @@ Thus the OpenLedger GUI cannot be connected to a private witness node, as this G
 ---
 > How can I retrieve private keys from the GUI?
 
-Choose one of your accounts and then: 
-* Navigate to `Permissions` and select `Active Permissions` or `Owner permissions`, depending what type of keys you want to retrieve.
-* When you click on an icon symbolizing a key located next to the public key, a new pop-up window will show up and you'll be presented with the option `show` which will allow you to view and copy your private key.
+In the GUI, choose one of your accounts and then: 
+* Navigate to the `Permissions` section and select `Active Permissions` or `Owner permissions`, depending what type of keys you want to retrieve.
+* When you click on an icon symbolizing a key located next to the public key, a new pop-up window will appear and you'll be presented with the option `show` which will allow you to view and copy your private key.
