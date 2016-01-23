@@ -12,7 +12,7 @@ Apart from that, you will need these tools installed:
 > Make sure it's Python 2.7.x not 3.5.x.  
 Also, use the custom installation and allow to add python to your system path.
 
-### Install wscat
+* And we'll need the WebSocket client `wscat`.  
 Open a *Command Prompt* window and install `wscat`:
 ```
 npm install -g wscat
