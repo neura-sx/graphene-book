@@ -7,7 +7,7 @@
 * [Interfacing with Graphene](book/interfaces/README.md)
     * [Interfacing with a GUI](book/interfaces/tutorial-interfacing-with-gui.md)
     * [Interfacing with a CLI](book/interfaces/tutorial-interfacing-with-cli.md)
-    * [Interfacing with a WS client](book/interfaces/tutorial-interfacing-with-witness.md)
+    * [Interfacing with a WS client](book/interfaces/tutorial-interfacing-with-ws.md)
     * [FAQs](book/interfaces/FAQs.md)
 * [Setting up testnets](book/testnets/README.md)
     * [Private testnet](book/testnets/tutorial-private-testnet.md)
