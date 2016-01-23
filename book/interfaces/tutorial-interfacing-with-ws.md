@@ -44,7 +44,7 @@ Below is an example of an unrestricted API call :
 ```
 {"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
 ```
-> The value `888` is a request identifier which can have whatever value you want. Whereas the value `0` (the first item in `params`) is the API identifier indicating that this is an unrestricted API call.
+> The value `888` is a request identifier which can have whatever value you want. Whereas the value `0` (the first item in `params`) is the API identifier which indicates that this is an unrestricted API call.
 
 ### Run restricted API calls
 As for the restricted API-1 calls, for security reasons, the witness node distinguishes five different APIs:
