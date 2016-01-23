@@ -1,4 +1,4 @@
-# Interacting with a witness node
+# Interacting with a WebSocket client
 ### Prerequisites
 
 We assume  you have the `witness_node` already compliled (or downloaded from [the offical respository](https://github.com/bitshares/bitshares-2/releases/latest)).
