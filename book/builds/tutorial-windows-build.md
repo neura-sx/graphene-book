@@ -68,7 +68,7 @@ As a result, you should end up with these folders inside `[Graphene-Aux]`:
 * `openssl-1.0.1q-vs2015`
     * `bin`, `bin32`, `include`, `include32`, `lib`, `lib32`, ...
 
-### System path variable
+### System
 Add `[Graphene-Aux]\openssl-1.0.1q-vs2015\bin` to your system path variable.  
 To do this, open the Control Panel and navigate to `System and Security -> System\Advanced System Settings -> Environment Variables` and edit the system path variable named `Path`.
 
