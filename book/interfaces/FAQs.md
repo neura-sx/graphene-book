@@ -144,7 +144,7 @@ Any GUI can be connected to a local witness node only if you use either of these
 
 Thus the OpenLedger GUI cannot be connected to a private witness node, as this GUI uses the `https` protocol.
 
-## Retreiving private keys from the GUI
+## Retrieving private keys from the GUI
 > How can I retrieve private keys from the GUI?
 
 In the GUI, choose one of your accounts and then: 
