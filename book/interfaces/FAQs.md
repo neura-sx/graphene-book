@@ -1,5 +1,6 @@
 # FAQs - Interfacing with Graphene
 
+## CLI won't start
 > Why does the CLI client crash immediately when I try to run it for the first time?
 
 The CLI client is unable to run on its own, i.e. without being connected to the witness node (via a web socket connection).  
@@ -31,7 +32,7 @@ Underlying Transport Error
     th_a  websocket.cpp:621 fc::http::websocket_client::connect
 ```
 
----
+## Witness node gets stuck
 > Sometimes when I start a witness node it gets stuck just after displaying the blockchian id.
 
 If the witness node is running properly, it should produce messages about the creation of new blocks every few seconds (unless you've delibaretly switched off this messaging).  
@@ -44,24 +45,24 @@ If it doesn't behave like this, it means it's got stuck and needs to be forecefu
 98.1323%   2786000 of 2839025
 ```
 
----
+## Witness node status
 > How do I check whether the witness node is already synced?
 
 Run the `info` command in the CLI client and check the `head_block_age` value.
 
----
+## Syncing the witness node
 > I have problems with syncing the witness node - it seems to be unable to sync beyond a certain date.
 
 You should always make sure you use the newest build available [here](https://github.com/bitshares/bitshares-2/releases/latest) as earlier releases might get stuck due to hard-forks.
 
----
+## Interaction with the witness node
 > What is the best way to interact with the witness node? There seems to be no way to control it, apart from opening & closing it.
 
 The only way you can interact with the witness node is through the CLI client by using its API.  
 You can also use the GUI (i.e. the light client). In the GUI, change `Settings -> API connection`, add `ws://127.0.0.1:8090/ws` (according to settings of your witness node) and select it.
 
----
-> In the pre-compiled version, in the config file for the wintess node there is some private key enclosed. Whose private key is this and what's its purpose?
+## The private key in the config file 
+> The config file for the wintess node contains a private key. Whose private key is this and what's its purpose?
 
 Indeed, the `config.ini` file contains a hard-coded private key:  
 ```
@@ -70,8 +71,8 @@ private-key = ["BTS6MRyAjQq8u...","5KQwrPbwdL6PhXu..."]
 ```
 It's a shared key for some special purpose. If I remember BM or someone else has ever explained it in the forum, but I can't find the post right now.
 
----
-> What is the meaning of all those different text colors in the witness node console?
+## Colors in witness node output window
+> What is the meaning of all those different text colors in the witness node output window?
 
 * `green` - debug  
 * `white` - info/default  
@@ -81,28 +82,28 @@ It's a shared key for some special purpose. If I remember BM or someone else has
 
 Related source files are in `libraries/fc/include/fc/log/` and `libraries/fc/src/log/`.
 
----
+## Closing the witness node
 > How can I close the witness node in a clean way?
 
 Use `ctrl-c`.
 
----
+## Closing the CLI
 > How can I close the CLI client in a clean way? There seems to be no command for that. I would expect something like `exit` or `quit`.
 
 On Linux and Mac `ctrl-d` does the job.  
 On Windows you can try `ctrl-d` which stops the process but it still produces a nasty exception.
 
----
+## Log files deletion
 > Is it safe to delete the log files of the witness node?
 
 Yes, it's safe to delete `witness_node_data_dir\logs\p2p` but they're rotated automatically after 24 hours anyway. If you don't use them you should probably modify `config.ini` so they aren't written to disk in the first place.
 
----
+## Importing a GUI backup to the CLI
 > How can I import to my CLI client a wallet originally created in the web GUI? I would expect something like `restore_backup`command that would accept a GUI backup file.
 
 CLI and WEB wallet are two separate applications. They use different ways to represent backups. I think you can currently only manually import keys from the GUI into the CLI.
 
----
+## Paying for account registration
 > I'd like to create and register a new account in my CLI wallet and pay for the registration from an existing account in the web GUI. How do I do this?
 
 It doesn't work that way with the current implementation.  
@@ -128,13 +129,13 @@ create_account_with_brain_key <brain_key> <new_acc_name> <imp_acc_name> <imp_acc
 The brain-key can be used to regenerate the newly created account (even in the GUI wallet) so you might want to make a backup of this brain-key somewhere.  
 Also, when the process is complete, you might want to manually delete the imported active private key from your wallet (i.e. from the `wallet.json` file).
 
----
+## Private key removal
 > Is it possible to remove a private key from the `wallet.json` file?
 
 No, it's not, as all private keys are stored inside the file in one big lump of encoded data.  
 But there is always this work-around available: you can create a new `wallet.json` file and import all keys from the previous file except the ones you wanted to remove.
 
----
+## Connecting a hosted GUI to the witness node
 > Is it possible to connect a hosted wallet GUI (e.g. `https://bitshares.openledger.info`) to a private witness node run locally?
 
 Any GUI can be connected to a local witness node only if you use either of these:
@@ -143,7 +144,7 @@ Any GUI can be connected to a local witness node only if you use either of these
 
 Thus the OpenLedger GUI cannot be connected to a private witness node, as this GUI uses the `https` protocol.
 
----
+## Retreiving private keys from the GUI
 > How can I retrieve private keys from the GUI?
 
 In the GUI, choose one of your accounts and then: 
