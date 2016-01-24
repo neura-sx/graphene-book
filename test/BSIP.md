@@ -24,7 +24,7 @@ There are two important objectives this proposal aims to achieve:
 
 * to allow referrers to earn extra income associated with bigger transfers (while taking away from them the current income associated with smaller transfers).
 
-Apart from that, 
+Apart from that, ...
 
 
 # Rational
@@ -62,11 +62,12 @@ What happens when the issuer attempts to artificially lower transfer fees on his
 #### How is this issue solved?
 By keeping CER artificially low the issuer will effectively discourage users from using his own asset because transfer fees will only be low when paid in BTS, so the process of transferring the asset will be dependent on users having BTS in their wallets to cover the fees. Furthermore, if the issuer distorts CER too much, he'll not be able to benefit from it himself as users will start avoiding paying the fees in BAX. Also, it will be bad PR for the issuer to value his own asset below the market rate. At least in case of SmartCoins (both public & private) issuers are not likely to be wiling to sabotage their own assets in this way.
 
+#### Additional abuse prevention mechanism
 However, if it turns out that a large number of issuers try to game the system, in the future we can introduce the following mechanism aimed at preventing abuse on the part of issuers:
 * To enable percentage-based transfer fees, the issuer will be obliged to keep an open ask order on the BTS:BAX market and thus allow anybody to buy BAX at e.g. 120% of CER. As a result, if CER is out of sync with the market rate by more than 20%, the issuer will incur a significant loss.
 * If the issuer is not willing to comply with the above requirement, the default flat transfer fee structure will be applied.
 
-Please note that this additional prevention mechanism will not be implemented at the initial stage. If necessary, we will consider it as a separate worker proposal. 
+Please note that this additional abuse prevention mechanism will not be implemented with this worker proposal. If there will be a need for it in the future, we will consider it as a separate worker proposal.
 
 
 #### This is an opt-in feature
