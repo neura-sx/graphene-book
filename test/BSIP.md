@@ -67,7 +67,7 @@ However, if it turns out that a large number of issuers try to game the system, 
 * To enable percentage-based transfer fees, the issuer will be obliged to keep an open ask order on the BTS:BAX market and thus allow anybody to buy BAX at e.g. 120% of CER. As a result, if CER is out of sync with the market rate by more than 20%, the issuer will incur a significant loss.
 * If the issuer is not willing to comply with the above requirement, the default flat transfer fee structure will be applied.
 
-Please note that this additional abuse prevention mechanism will not be implemented with this worker proposal. If there will be a need for it in the future, we will consider it as a separate worker proposal.
+Please note that this additional abuse prevention mechanism will not be implemented with this worker proposal. If there is a need for it in the future, we will consider it as a separate worker proposal.
 
 
 #### This is an opt-in feature
