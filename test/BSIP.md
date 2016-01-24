@@ -10,11 +10,11 @@
 # Abstract
 This is a worker proposal aiming to introduce a percentage-based transfer fee solution as an alternative to the current flat rate. The main goal is to make BitShares viable for transferring smaller amounts - the current flat transfer rate restrains that.
 
-Any a percentage-based transfer fee needs some kind of basis for deriving the actual BTS value of the amount being transferred. The core idea of this approach is to derive this value from the **Core Exchange Rate** (CER) which is defined by the asset's issuer.  A complementary modification in the referral system is also needed in order to prevent abuse on the part of referrers.
+Any percentage-based transfer fee scheme needs some kind of basis for deriving the actual BTS value of the amount being transferred. The core idea of this approach is to derive this value from the **Core Exchange Rate** (CER) which is defined by the asset's issuer.  A complementary modification in the referral system is also needed in order to prevent abuse on the part of referrers.
 
-The only stakeholders affected by this proposal are referral businesses as their revenue stream will be negatively affected for smaller transfers but instead positively affected for larger ones. As for shareholders in general, the change will be positive because BitShares will become more competitive in terms of transfer fees when compared to other systems. 
+The only stakeholders actually affected by this proposal are referral businesses, as their revenue stream will be negatively affected for smaller transfers but instead positively affected for larger ones. Issuers will not be affected, as for them this an opt-in feature. As for shareholders in general, the change will be positive because BitShares will become more competitive in terms of transfer fees when compared to other systems. 
 
-The financial effect for the blockchain itself will be neutral as all profits (or losses) will be absorbed by the referrers. However, an overall increase in the network's revenue is expected as it is safe to assume that when small transfers are cheaper, there will be more of them and each of them will contribute to the network's revenue. As we have it know, most blocks are empty, which from a business perspective is a clear waste of company's resources.
+The financial effect for the blockchain itself will be neutral as all profits (or losses) will be absorbed by the referrers. However, an overall increase in the network's revenue is expected, as it is safe to assume that once small transfers get significantly cheaper, there will be more of them and each of them will contribute to the network's revenue. As we have it know, most blocks are empty, which from a business perspective is a clear waste of company's resources.
 
 # Motivation
 Having a flat transfer fee of 30 BTS for non-LTM users, currently BitShares cannot be regarded as a competitive payment solution for transfers between the equivalent of $1 and $5. The current fee in this range is above 2%, which is way more than any legacy system wants to charge its customers.
@@ -23,6 +23,9 @@ There are two important objectives this proposal aims to achieve:
 * to allow users to pay lower transfer fees for smaller transfers (while charging them more on bigger transfers)
 
 * to allow referrers to earn extra income associated with bigger transfers (while taking away from them the current income associated with smaller transfers).
+
+Apart from that, 
+
 
 # Rational
 The simplest way to solve the "high transfer fee" problem would be to lower transfer fees for all assets. However this would effectively negatively affect the referral program. On the other hand, a simple percentage-based transfer fee system is not doable as for most assets we do not have a viable way to determine their exact value at any given time. This is mainly due to the fact that most markets are very illiquid but also due to the difficulty of establishing an asset's price in a manner which is deterministic enough to reliably prevent unintended hard-forks.
