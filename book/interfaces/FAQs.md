@@ -50,18 +50,18 @@ If it doesn't behave like this, it means it's got stuck and needs to be forecefu
 
 Run the `info` command in the CLI client and check the `head_block_age` value.
 
-## Syncing the witness node
+## Syncing the witness
 > I have problems with syncing the witness node - it seems to be unable to sync beyond a certain date.
 
 You should always make sure you use the newest build available [here](https://github.com/bitshares/bitshares-2/releases/latest) as earlier releases might get stuck due to hard-forks.
 
-## Interaction with the witness node
+## Controlling the witness
 > What is the best way to interact with the witness node? There seems to be no way to control it, apart from opening & closing it.
 
 The only way you can interact with the witness node is through the CLI client by using its API.  
 You can also use the GUI (i.e. the light client). In the GUI, change `Settings -> API connection`, add `ws://127.0.0.1:8090/ws` (according to settings of your witness node) and select it.
 
-## The private key in the config file 
+## Config private key
 > The config file for the wintess node contains a private key. Whose private key is this and what's its purpose?
 
 Indeed, the `config.ini` file contains a hard-coded private key:  
@@ -71,7 +71,7 @@ private-key = ["BTS6MRyAjQq8u...","5KQwrPbwdL6PhXu..."]
 ```
 It's a shared key for some special purpose. If I remember BM or someone else has ever explained it in the forum, but I can't find the post right now.
 
-## Colors in the witness node output window
+## Meaning of colors
 > What is the meaning of all those different text colors in the witness node output window?
 
 * `green` - debug  
@@ -82,7 +82,7 @@ It's a shared key for some special purpose. If I remember BM or someone else has
 
 Related source files are in `libraries/fc/include/fc/log/` and `libraries/fc/src/log/`.
 
-## Closing the witness node
+## Closing the witness
 > How can I close the witness node in a clean way?
 
 Use `ctrl-c`.
@@ -98,7 +98,7 @@ On Windows you can try `ctrl-d` which stops the process but it still produces a 
 
 Yes, it's safe to delete `witness_node_data_dir\logs\p2p` but they're rotated automatically after 24 hours anyway. If you don't use them you should probably modify `config.ini` so they aren't written to disk in the first place.
 
-## Retrieving private keys from the GUI
+## Retrieving private keys
 > How can I retrieve private keys from the GUI?
 
 In the GUI, choose one of your accounts and then: 
@@ -107,12 +107,12 @@ In the GUI, choose one of your accounts and then:
 ![](../../images/key-icon.png)  
 ... a new pop-up window will appear and you'll be presented with the option `show` which will allow you to view and copy your private key.
 
-## Importing a GUI backup to the CLI
+## Importing a backup
 > How can I import to my CLI client a wallet originally created in the web GUI? I would expect something like `restore_backup`command that would accept a GUI backup file.
 
 CLI and WEB wallet are two separate applications. They use different ways to represent backups. I think you can currently only manually import keys from the GUI into the CLI.
 
-## Paying for account registration
+## Paying for registration
 > I'd like to create and register a new account in my CLI wallet and pay for the registration from an existing account in the web GUI. How do I do this?
 
 It doesn't work that way with the current implementation.  
@@ -144,7 +144,7 @@ Also, when the process is complete, you might want to manually delete the import
 No, it's not, as all private keys are stored inside the file in one big lump of encoded data.  
 But there is always this work-around available: you can create a new `wallet.json` file and import all keys from the previous file except the ones you wanted to remove.
 
-## Connecting a hosted GUI to the witness node
+## Connecting the GUI
 > Is it possible to connect a hosted wallet GUI (e.g. `https://bitshares.openledger.info`) to a private witness node run locally?
 
 Any GUI can be connected to a local witness node only if you use either of these:
