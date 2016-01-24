@@ -4,5 +4,5 @@ Some text goes here.
 
 ---
 
-#### [Windows Build for Visual Studio 2015](tutorial-windows-build.md#Expected-result)
+#### [Windows Build for Visual Studio 2015](tutorial-windows-build.md)
 #### [FAQs](FAQs.md)
