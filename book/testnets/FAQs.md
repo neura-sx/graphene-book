@@ -1,6 +1,6 @@
 # FAQs - Setting up testnets
 
-## Public and private testnet
+## Types of testnet
 > What is the difference between public and private testnet?
 
 Not much. The biggest difference is that public testnets are intended for wider audience so that they are are constructed in such a way as to enable third-party witness modes to join in. Therefore setting up a public network is a bit more complex than setting up a local private one.
