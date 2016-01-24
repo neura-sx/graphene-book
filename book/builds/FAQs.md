@@ -1,5 +1,6 @@
 # FAQs - Building from sources
 
+## OpenSLL in the system path
 > Why do I need to amend the system path variable to include OpenSLL?
 
 For two reasons:
