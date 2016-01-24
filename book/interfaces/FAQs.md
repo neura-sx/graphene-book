@@ -71,7 +71,7 @@ private-key = ["BTS6MRyAjQq8u...","5KQwrPbwdL6PhXu..."]
 ```
 It's a shared key for some special purpose. If I remember BM or someone else has ever explained it in the forum, but I can't find the post right now.
 
-## Colors in witness node output window
+## Colors in the witness node output window
 > What is the meaning of all those different text colors in the witness node output window?
 
 * `green` - debug  
@@ -97,6 +97,15 @@ On Windows you can try `ctrl-d` which stops the process but it still produces a 
 > Is it safe to delete the log files of the witness node?
 
 Yes, it's safe to delete `witness_node_data_dir\logs\p2p` but they're rotated automatically after 24 hours anyway. If you don't use them you should probably modify `config.ini` so they aren't written to disk in the first place.
+
+## Retrieving private keys from the GUI
+> How can I retrieve private keys from the GUI?
+
+In the GUI, choose one of your accounts and then: 
+* Navigate to the `Permissions` section and select `Active Permissions` or `Owner permissions`, depending on what type of keys you want to retrieve.
+* When you click on an icon symbolizing a key:  
+![](../../images/key-icon.png)  
+... a new pop-up window will appear and you'll be presented with the option `show` which will allow you to view and copy your private key.
 
 ## Importing a GUI backup to the CLI
 > How can I import to my CLI client a wallet originally created in the web GUI? I would expect something like `restore_backup`command that would accept a GUI backup file.
@@ -143,12 +152,3 @@ Any GUI can be connected to a local witness node only if you use either of these
 - a hosted wallet GUI running in a web browser, provided it is not using a secure domain (i.e. only works with plain `http`, not `https`)
 
 Thus the OpenLedger GUI cannot be connected to a private witness node, as this GUI uses the `https` protocol.
-
-## Retrieving private keys from the GUI
-> How can I retrieve private keys from the GUI?
-
-In the GUI, choose one of your accounts and then: 
-* Navigate to the `Permissions` section and select `Active Permissions` or `Owner permissions`, depending on what type of keys you want to retrieve.
-* When you click on an icon symbolizing a key:  
-![](../../images/key-icon.png)  
-... a new pop-up window will appear and you'll be presented with the option `show` which will allow you to view and copy your private key.
