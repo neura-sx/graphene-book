@@ -75,7 +75,6 @@ However, if it turns out that a large number of issuers try to game the system, 
 
 Please note that this additional abuse prevention mechanism will not be implemented with this worker proposal. If there is a need for it in the future, we will consider it as a separate worker proposal.
 
-
 #### This is an opt-in feature
 As the issuer is the only entity that actually controls CER, the percentage-based transfer fee is meant to be an opt-in feature decided by the issuer. It is safe to assume that most issuers will find it beneficial for their assets because:
 * assets which are worth something will benefit from having a reasonable pricing structure for transfers
