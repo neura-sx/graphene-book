@@ -8,26 +8,32 @@
     Worker: t.b.d.
 
 # Abstract
-This is a worker proposal aiming to introduce a percentage-based transfer fee solution as an alternative to the current flat rate. The main goal is to make BitShares viable for transferring smaller amounts - the current flat transfer rate restrains that.
+This is a worker proposal aiming to introduce a percentage-based transfer fee solution as an alternative to the current flat rate. The main goal is to make BitShares viable for transferring smaller amounts - the current flat transfer rate restrains this as the flat fee makes up a significant part of the ammount being sent.
 
 Any percentage-based transfer fee scheme needs some kind of basis for deriving the actual BTS value of the amount being transferred. The core idea of this approach is to derive this value from the **Core Exchange Rate** (CER) which is defined by the asset's issuer.  A complementary modification in the referral system is also needed in order to prevent abuse on the part of referrers.
 
-The only stakeholders actually affected by this proposal are referral businesses, as their revenue stream will be negatively affected for smaller transfers but instead positively affected for larger ones. Issuers will not be affected, as for them this an opt-in feature. As for shareholders in general, the change will be positive because BitShares will become more competitive in terms of transfer fees when compared to other systems. 
+The only actors actually affected by this proposal are referral businesses, as their revenue stream will be negatively affected for smaller transfers but instead positively affected for larger ones. The effect for issuers will only be positive or none at all, as for them this an opt-in feature. As for shareholders in general, the change will be positive because BitShares will become more competitive in terms of transfer fees when compared to other systems. 
 
-The financial effect for the blockchain itself will be neutral as all profits (or losses) will be absorbed by the referrers. However, an overall increase in the network's revenue is expected, as it is safe to assume that once small transfers get significantly cheaper, there will be more of them and each of them will contribute to the network's revenue. As we have it know, most blocks are empty, which from a business perspective is a clear waste of company's resources.
+If we keep the minimum fee at around 6 BTS, the financial effect for the blockchain itself will be neutral, as all profits (or losses) will be absorbed by the referrers. However, an overall increase in the network's revenue is expected, as it is safe to assume that, once small transfers get significantly cheaper, there will be more of them and each of them will contribute to the network's revenue. As we have it know, most of the blockchain's blocks are empty, which from a business perspective is a clear waste of company's resources.
 
 # Motivation
-Having a flat transfer fee of 30 BTS for non-LTM users, currently BitShares cannot be regarded as a competitive payment solution for transfers between the equivalent of $1 and $5. The current fee in this range is above 2%, which is way more than any legacy system wants to charge its customers.
+Having a flat transfer fee of 30 BTS for non-LTM users, currently BitShares cannot be regarded as a competitive payment solution for transfers below the equivalent of $5. The current fee in this case is above 2%, which is way more than any legacy system wants to charge its customers.
 
 There are two important objectives this proposal aims to achieve:
 * to allow users to pay lower transfer fees for smaller transfers (while charging them more on bigger transfers)
 
 * to allow referrers to earn extra income associated with bigger transfers (while taking away from them the current income associated with smaller transfers).
 
-Apart from that, ...
+Apart from that, we would like to make detailed documention an important part of this proposal, thus offering an important benefit for the whole ecosystem: a step-by-step description how to implement new features without relying on CNX so that other coders & entrepreneurs can follow our example. The documention will entail:
+* programming context: a breif overview of Graphene's architecture
+* what changes have been made in the code and their rationale
+* how unit testing and testnet verification has been approuched
+* how the whole implemention has been deployed
+
+This documention will hopefully become the foundation of a larger tutorial for Graphene developers. The work on this material has already started and a brief preview can be accessed [here](https://neura-sx.gitbooks.io/graphene-book/content/).
 
 
-# Rational
+# Rationale
 The simplest way to solve the "high transfer fee" problem would be to lower transfer fees for all assets. However this would effectively negatively affect the referral program. On the other hand, a simple percentage-based transfer fee system is not doable as for most assets we do not have a viable way to determine their exact value at any given time. This is mainly due to the fact that most markets are very illiquid but also due to the difficulty of establishing an asset's price in a manner which is deterministic enough to reliably prevent unintended hard-forks.
 
 Also, a percentage-based transfer fee system, if introduced without any modifications to the referral program, would open up the possibility for referrers to game the system by transferring small amounts back and forth between their own accounts just to collect the referral award at the expense of issuers. Therefore, for assets enjoying a percentage-based transfer fee system, referrers' revenue structure has to be percentage-based as well.
