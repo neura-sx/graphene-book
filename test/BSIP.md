@@ -85,8 +85,8 @@ However, if an issuer for some reasons does not find the above features benefici
 #### The inteded workflow
 
 Action | Result
---- | --- | ---
-An issuer sets his asset to percentage-based transfer fee mode. | fees for all transfers of that asset will be calculated with new algorithm.
+--- | ---
+An issuer sets his asset to percentage-based transfer fee mode. | After the change, fees for all transfers of that asset will be calculated with new algorithm.
 An issuer sets his asset to flat transfer fee mode. | After the change, fees for all transfers of that asset will be flat.
 The Committee adjust fee parameters. | After the change, for transfers on all assets which have applied percentage-based transfer fee mode, fees will be calculated with new parameters.
 The Committee sets percentage based fee mode for a SmartCoin. | After the change, fees for all transfers on that asset will be calculated with the new algorithm.
