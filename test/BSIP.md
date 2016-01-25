@@ -12,7 +12,7 @@ This worker proposal aims to introduce a percentage-based transfer fee solution 
 
 The aim of this proposal is to make use of the fact that users generally are more willing to pay higher transfer fees when they send bigger amounts (and this is the situation when we make profit) whereas they will not accept relatively big transfer fees for smaller amounts (and this is the situation when we need to forgo profit). An overall increase in the network's revenue and liquidity is expected, as lower fees should open up BitShares to micro-transactions.  
 
-This proposal is also important for another reason: it paves the way for adding new features to Graphene without the direct involvement of its core developers.
+This proposal is also important for another reason: it paves the way for adding new features to Graphene without the direct involvement of its core developers. The documentation produced as a result of this work will help other developers to join the ecosystem.
 
 # Abstract
 Any percentage-based transfer fee scheme needs some kind of basis for deriving the actual BTS value of the amount being transferred. The core idea of this approach is to derive this value from the **Core Exchange Rate** (CER) which is defined by the asset's issuer.  A complementary modification in the referral system is also needed in order to prevent abuse on the part of referrers.
