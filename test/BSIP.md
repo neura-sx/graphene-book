@@ -82,6 +82,19 @@ As the issuer is the only entity that actually controls CER, the percentage-base
 * assets which are worth nothing or almost nothing (i.e. most UIAs) will be able to be transferred almost for free (for 6 BTS instead of the current 30 BTS).
 However, if an issuer for some reasons does not find the above features beneficial, he will be able to keep the existing flat fee structure.
 
+#### The inteded workflow
+
+Action | Result
+--- | --- | ---
+An issuer sets his asset to percentage-based transfer fee mode. | fees for all transfers of that asset will be calculated with new algorithm.
+An issuer sets his asset to flat transfer fee mode. | After the change, fees for all transfers of that asset will be flat.
+The Committee adjust fee parameters. | After the change, for transfers on all assets which have applied percentage-based transfer fee mode, fees will be calculated with new parameters.
+The Committee sets percentage based fee mode for a SmartCoin. | After the change, fees for all transfers on that asset will be calculated with the new algorithm.
+The Committee sets flat fee mode for a SmartCoin. | After the change, fees for all transfers on that asset will be flat.
+A user makes a transfer on an asset with the flat fee mode.  | The user will be charged flat fee, 20% of the fee goes to network, 80% of the fee goes to referral program and is split among the parties inside the referral program (registrar, referrer and etc).
+A user makes a transfer on an asset with the percentage based fee mode. | The user will be charged a percentage fee, the minimum fee goes to network, the rest (if there is anything left) goes to the referral program and is split among the parties inside the referral program.
+
+
 # Discussion
 Being voluntary for issuers, the above proposal is actually targeted to the referral businesses: do they perceive it as a beneficial change for the ecosystem and a fair deal for them? If we stick to the values used above, they will need to forgo the referral income on transfers below the equivalent of $2 but will substantially increase their income on transfers above the equivalent of $10. In the range between $2 and $10 they will get on average half of the income they have now. Nevertheless, the main benefit will be indirect: it's much easier to sell a reasonably priced product.
 
