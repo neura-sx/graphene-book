@@ -10,9 +10,9 @@
 # Summary for Shareholders
 This worker proposal aims to introduce a percentage-based transfer fee solution as an alternative to the current flat rate. The main goal is to make BitShares viable for transferring smaller amounts - the current flat transfer rate restrains this, as for smaller transfers the flat fee makes up a significant part of the amount being sent. As we have it know, most of the blockchain's blocks are empty, which from a business perspective is a clear waste of company's resources.
 
-The aim of this proposal is to make use of the fact that users gerenally are more willing to pay higher transfer fees when they send bigger amounts (and this is the situation when we make profit) whereas they will not accept releatively big transfer fees for smaller amounts (and this is the situation when we need to forgo profit). An overall increase in the network's revenue and liquidity is expected as lower fees should open up BitSahres to micro-transactions.  
+The aim of this proposal is to make use of the fact that users generally are more willing to pay higher transfer fees when they send bigger amounts (and this is the situation when we make profit) whereas they will not accept relatively big transfer fees for smaller amounts (and this is the situation when we need to forgo profit). An overall increase in the network's revenue and liquidity is expected, as lower fees should open up BitShares to micro-transactions.  
 
-This propsal is also imporant for another reason: it paves the way for adding new features to Graphene without the direct involment of its core developers.
+This proposal is also important for another reason: it paves the way for adding new features to Graphene without the direct involvement of its core developers.
 
 # Abstract
 Any percentage-based transfer fee scheme needs some kind of basis for deriving the actual BTS value of the amount being transferred. The core idea of this approach is to derive this value from the **Core Exchange Rate** (CER) which is defined by the asset's issuer.  A complementary modification in the referral system is also needed in order to prevent abuse on the part of referrers.
@@ -29,13 +29,13 @@ There are two important objectives this proposal aims to achieve:
 
 * to allow referrers to earn extra income associated with bigger transfers (while taking away from them the current income associated with smaller transfers).
 
-Apart from that, we would like to make detailed documention an important part of this proposal, thus offering an important benefit for the whole ecosystem: a step-by-step description how to implement new features without relying on CNX so that other coders & entrepreneurs can follow our example. The documention will entail:
-* programming context: a breif overview of Graphene's architecture
+Apart from that, we would like to make detailed documentation an important part of this proposal, thus offering an important benefit for the whole ecosystem: a step-by-step description how to implement new features without relying on CNX so that other coders & entrepreneurs can follow our example. The documentation will entail:
+* programming context: a brief overview of Graphene's architecture
 * what changes have been made in the code and their rationale
-* how unit testing and testnet verification has been approuched
-* how the whole implemention has been deployed
+* how unit testing and testnet verification has been approached
+* how the whole implementation has been deployed
 
-This documention will hopefully become the foundation of a larger tutorial for Graphene developers. The work on this material has already started and a brief preview can be accessed [here](https://neura-sx.gitbooks.io/graphene-book/content/).
+This documentation will hopefully become the foundation of a larger tutorial for Graphene developers. The work on this material has already been started and a brief preview can be accessed [here](https://neura-sx.gitbooks.io/graphene-book/content/).
 
 
 # Rationale
@@ -86,7 +86,7 @@ As the issuer is the only entity that actually controls CER, the percentage-base
 * assets which are worth nothing or almost nothing (i.e. most UIAs) will be able to be transferred almost for free (for 6 BTS instead of the current 30 BTS).
 However, if an issuer for some reasons does not find the above features beneficial, he will be able to keep the existing flat fee structure.
 
-#### The inteded workflow
+#### The intended workflow
 
 Action | Result
 --- | ---
@@ -104,7 +104,7 @@ Being voluntary for issuers, the above proposal is actually targeted to the refe
 As for the BitShares network itself, the overall impact of this proposal will be positive, as the network's resources will be better utilized. With the current flat fees, most of the blocks are empty. Percentage-based fees will not fix this waste immediately, but will be a step in the right direction and a foundation for businesses based on small tips and micro-payments.
 
 # Areas covered
-This proposal covers the entitre implenetation of percentage-based fees.  
+This proposal covers the entire implementation of percentage-based fees.  
 In particular, the following aspects will be covered:
 * coding
 * code review by CNX
