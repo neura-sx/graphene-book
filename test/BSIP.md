@@ -93,11 +93,21 @@ The Committee sets flat fee mode for a SmartCoin. | After the change, fees for a
 A user makes a transfer on an asset with the flat fee mode.  | The user will be charged flat fee, 20% of the fee goes to network, 80% of the fee goes to referral program and is split among the parties inside the referral program (registrar, referrer and etc).
 A user makes a transfer on an asset with the percentage based fee mode. | The user will be charged a percentage fee, the minimum fee goes to network, the rest (if there is anything left) goes to the referral program and is split among the parties inside the referral program.
 
-
 # Discussion
 Being voluntary for issuers, the above proposal is actually targeted to the referral businesses: do they perceive it as a beneficial change for the ecosystem and a fair deal for them? If we stick to the values used above, they will need to forgo the referral income on transfers below the equivalent of $2 but will substantially increase their income on transfers above the equivalent of $10. In the range between $2 and $10 they will get on average half of the income they have now. Nevertheless, the main benefit will be indirect: it's much easier to sell a reasonably priced product.
 
 As for the BitShares network itself, the overall impact of this proposal will be positive, as the network's resources will be better utilized. With the current flat fees, most of the blocks are empty. Percentage-based fees will not fix this waste immediately, but will be a step in the right direction and a foundation for businesses based on small tips and micro-payments.
-  
+
+# Areas covered
+This proposal covers the entitre implenetation of percentage-based fees.
+In particular, the following aspects will be covered:
+* coding
+* code review by CNX
+* unit testing and testnet testing
+* deployment
+* full documentation & guidelines for similar projects
+* GUI support
+
+
 # Copyright
 This document is placed in the public domain.
