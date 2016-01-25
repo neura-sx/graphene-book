@@ -6,15 +6,20 @@
     Created: 2015-12-27
     Discussion: https://bitsharestalk.org/index.php/topic,20789.0.html
     Worker: t.b.d.
+    
+# Summary for Shareholders
+This worker proposal aims to introduce a percentage-based transfer fee solution as an alternative to the current flat rate. The main goal is to make BitShares viable for transferring smaller amounts - the current flat transfer rate restrains this, as for smaller transfers the flat fee makes up a significant part of the amount being sent. As we have it know, most of the blockchain's blocks are empty, which from a business perspective is a clear waste of company's resources.
+
+The aim of this proposal is to make use of the fact that users gerenally are more willing to pay higher transfer fees when they send bigger amounts (and this is the situation when we make profit) whereas they will not accept releatively big transfer fees for smaller amounts (and this is the situation when we need to forgo profit). An overall increase in the network's revenue and liquidity is expected as lower fees should open up BitSahres to micro-transactions.  
+
+This propsal is also imporant for another reason: it paves the way for adding new features to Graphene without the direct involment of its core developers.
 
 # Abstract
-This is a worker proposal aiming to introduce a percentage-based transfer fee solution as an alternative to the current flat rate. The main goal is to make BitShares viable for transferring smaller amounts - the current flat transfer rate restrains this as the flat fee makes up a significant part of the ammount being sent.
-
 Any percentage-based transfer fee scheme needs some kind of basis for deriving the actual BTS value of the amount being transferred. The core idea of this approach is to derive this value from the **Core Exchange Rate** (CER) which is defined by the asset's issuer.  A complementary modification in the referral system is also needed in order to prevent abuse on the part of referrers.
 
 The only actors actually affected by this proposal are referral businesses, as their revenue stream will be negatively affected for smaller transfers but instead positively affected for larger ones. The effect for issuers will only be positive or none at all, as for them this an opt-in feature. As for shareholders in general, the change will be positive because BitShares will become more competitive in terms of transfer fees when compared to other systems. 
 
-If we keep the minimum fee at around 6 BTS, the financial effect for the blockchain itself will be neutral, as all profits (or losses) will be absorbed by the referrers. However, an overall increase in the network's revenue is expected, as it is safe to assume that, once small transfers get significantly cheaper, there will be more of them and each of them will contribute to the network's revenue. As we have it know, most of the blockchain's blocks are empty, which from a business perspective is a clear waste of company's resources.
+If we keep the minimum fee at around 6 BTS, the financial effect for the blockchain itself will be neutral, as all profits (or losses) will be absorbed by the referrers. However, an overall increase in the network's revenue is expected, as it is safe to assume that, once small transfers get significantly cheaper, there will be more of them and each of them will contribute to the network's revenue.
 
 # Motivation
 Having a flat transfer fee of 30 BTS for non-LTM users, currently BitShares cannot be regarded as a competitive payment solution for transfers below the equivalent of $5. The current fee in this case is above 2%, which is way more than any legacy system wants to charge its customers.
@@ -99,7 +104,7 @@ Being voluntary for issuers, the above proposal is actually targeted to the refe
 As for the BitShares network itself, the overall impact of this proposal will be positive, as the network's resources will be better utilized. With the current flat fees, most of the blocks are empty. Percentage-based fees will not fix this waste immediately, but will be a step in the right direction and a foundation for businesses based on small tips and micro-payments.
 
 # Areas covered
-This proposal covers the entitre implenetation of percentage-based fees.
+This proposal covers the entitre implenetation of percentage-based fees.  
 In particular, the following aspects will be covered:
 * coding
 * code review by CNX
