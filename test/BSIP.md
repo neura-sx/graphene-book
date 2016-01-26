@@ -1,7 +1,7 @@
     BSIP: 0010
     Title: Percentage-based transfer fee solution based on CER
     Authors: Jakub Zarembinski <jakub.zarembinski@neura.sx>
-    Status: Draft
+    Status: Final
     Type: Protocol
     Created: 2015-12-27
     Discussion: https://bitsharestalk.org/index.php/topic,20789.0.html
