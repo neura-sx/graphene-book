@@ -40,9 +40,12 @@ We have two types of witness node API calls:
 
 ### Run unrestricted API calls
 Unrestricted API-0 calls have an API identifier equal to `0`.  
-Below is an example of an unrestricted API call :
+Below are examples of unrestricted API calls :
 ```
-{"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}  
+{"id":888, "method":"call", "params":[0,"get_chain_id",[]]}
+{"id":888, "method":"call", "params":[0,"get_global_properties",[]]}
+{"id":888, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}
+{"id":888, "method":"call", "params":[0,"get_assets",[["1.3.0"]]]}
 ```
 > The value `888` is a request identifier which can have whatever value you want. Whereas the value `0` (the first item in `params`) is the API identifier which indicates that this is an unrestricted API call.
 
