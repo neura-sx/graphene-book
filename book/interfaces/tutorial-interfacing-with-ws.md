@@ -91,7 +91,7 @@ So in this case our Database API identifier is `2` but it might be different in 
 
 ### Access the Network Node APIs
 
-You need to explicitly enable access to Network Node API when starting a witness node. The reason for this is security: no one unauthorized should be able to see your connected peers (otherwise this could be used to located your machine, or even worse - locate a witness the node was supposed to hide as proxy).
+You need to explicitly enable access to Network Node API when starting a witness node. The reason for this is security: no one unauthorized should be able to see your connected peers (otherwise this could be used to locate your machine, or even worse - locate a witness the node was supposed to hide as proxy).
 
 Add (or uncomment) this line in the `config.ini` file:
 ```
@@ -114,16 +114,18 @@ And then create a new file named `api-access.json` in the same location where yo
 }
 ```
 
-After restrting the witness node, you run this command against the Login API:
+After restrting the witness node, run this command against the Login API:
 ```
 {"id":888,"method":"call","params":[1,"network_node",[]]}
 ```
 ...to receive the API identifier for the Network Node API.
-Once you have the API identifier, you can try these commands against the Network Node API (make sure you replace `NETWORK_NODE_API_ID` with your value):
+
+Once you have the API identifier, you can try these commands against the Network Node API:
 ```
 {"id":888,"method":"call","params":[NETWORK_NODE_API_ID,"get_info",[]]} 
 {"id":888,"method":"call","params":[NETWORK_NODE_API_ID,"get_connected_peers",[]]} 
 ```
+> Make sure to  replace `NETWORK_NODE_API_ID` with the appropriate value of your Network Node API identifier.
 
 ### Access other restricted APIs
 
