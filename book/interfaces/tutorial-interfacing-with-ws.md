@@ -89,14 +89,47 @@ So in this case our Database API identifier is `2` but it might be different in 
 {"id":888,"method":"call","params":[DATABASE_API_ID,"list_assets",["",10]]}  
 ```
 
+### Access the Network Node APIs
+
+You need to explicitly enable access to Network Node API when starting a witness node. The reason for this is security: no one unauthorized should be able to see your connected peers (otherwise this could be used to located your machine, or even worse - locate a witness the node was supposed to hide as proxy).
+
+Add (or uncomment) this line in the `config.ini` file:
+```
+api-access = "api-access.json"
+```
+And then create a new file named `api-access.json` in the same location where your `witness_node` file is, and place this content there:
+```
+{
+   "permission_map" :
+   [
+      [
+         "*",
+         {
+            "password_hash_b64" : "*",
+            "password_salt_b64" : "*",
+            "allowed_apis" : ["database_api", "network_broadcast_api", "history_api", "network_node_api"]
+         }
+      ]
+   ]
+}
+```
+
+After restrting the witness node, you run this command against the Login API:
+```
+{"id":888,"method":"call","params":[1,"network_node",[]]}
+```
+...to receive the API identifier for the Network Node API.
+Once you have the API identifier, you can try these commands against the Network Node API (make sure you replace `NETWORK_NODE_API_ID` with your value):
+```
+{"id":888,"method":"call","params":[NETWORK_NODE_API_ID,"get_info",[]]} 
+{"id":888,"method":"call","params":[NETWORK_NODE_API_ID,"get_connected_peers",[]]} 
+```
+
 ### Access other restricted APIs
 
-You can try any of these commands against the Login API:
+You can try these commands against the Login API:
 ```
 {"id":888,"method":"call","params":[1,"network_broadcast",[]]}
-{"id":888,"method":"call","params":[1,"database",[]]}
 {"id":888,"method":"call","params":[1,"history",[]]}
-{"id":888,"method":"call","params":[1,"network_node",[]]} <-- This one does not work. Why?
 ```
-...to receive API identifiers for all of these APIs.
-
+...to receive API identifiers for the Network Broadcast API and the History API.
