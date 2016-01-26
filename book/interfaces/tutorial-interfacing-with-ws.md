@@ -91,7 +91,7 @@ So in this case our Database API identifier is `2` but it might be different in 
 
 ### Access the Network Node APIs
 
-You need to explicitly enable access to the Network Node API when starting a witness node. The reason for this is security: no one unauthorized should be able to see your connected peers (otherwise this could be used to locate your machine, or even worse - locate a witness the node was supposed to hide as proxy).
+You need to explicitly enable access to the Network Node API when starting a witness node. The reason for this is security: no one unauthorized should be able to see your connected peers, as otherwise this could be used to locate your machine, or even worse - locate a witness the node was supposed to hide as proxy.
 
 Add (or uncomment) this line in the `config.ini` file:
 ```
@@ -114,7 +114,7 @@ And then create a new file named `api-access.json` in the same location where yo
 }
 ```
 
-After restrting the witness node, run this command against the Login API:
+After restarting the witness node, run this command against the Login API:
 ```
 {"id":888,"method":"call","params":[1,"network_node",[]]}
 ```
@@ -134,4 +134,4 @@ You can try these commands against the Login API:
 {"id":888,"method":"call","params":[1,"network_broadcast",[]]}
 {"id":888,"method":"call","params":[1,"history",[]]}
 ```
-...to receive API identifiers for the Network Broadcast API and the History API.
+...to receive API identifiers for the two remaining APIs: the Network Broadcast API and the History API.
