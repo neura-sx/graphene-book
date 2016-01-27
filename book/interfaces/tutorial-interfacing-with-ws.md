@@ -5,8 +5,8 @@ We assume  you have the `witness_node` already compliled (or downloaded from [th
 
 Apart from that, you will need these tools installed:
 
-* [Nodejs 4.2.6](https://nodejs.org/dist/v4.2.5/node-v4.2.5-x64.msi)
-> Version 5.5.x might work as well but I haven't tried using it.
+* [Nodejs 5.5.0](https://nodejs.org/dist/v5.5.0/node-v5.5.0-x64.msi)
+> The older version [4.2.6 ](https://nodejs.org/dist/v4.2.5/node-v4.2.5-x64.msi) works fine as well.
 
 * [Python 2.7.11](https://www.python.org/ftp/python/2.7.11/python-2.7.11.msi)
 > Make sure it's Python 2.7.x not 3.5.x.  
