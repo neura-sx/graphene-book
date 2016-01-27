@@ -101,7 +101,7 @@ A user makes a transfer on an asset assigned to the percentage based fee mode. |
 # Discussion
 Being voluntary for issuers, the above proposal is actually targeted to the referral businesses: do they perceive it as a beneficial change for the ecosystem and a fair deal for them? If we stick to the parameter values used above, they will need to forgo the referral income on transfers below the equivalent of $2 but will substantially increase their income on transfers above the equivalent of $10. In the range between $2 and $10 they will get on average half of the income they have now. Nevertheless, the main benefit will be indirect: it's much easier to sell a reasonably priced product.
 
-As for the BitShares network itself, the overall impact of this proposal will be positive, as the network's resources will be better utilized. With the current flat fees, most of the blocks are empty. Percentage-based fees will not fix this waste immediately, but will be a step in the right direction and a real oppotinuty for businesses based on small tips and micro-payments.
+As for the BitShares network itself, the overall impact of this proposal will be positive, as the network's resources will be better utilized. With the current flat fees, most of the blocks are empty. Percentage-based fees will not fix this waste immediately, but will be a step in the right direction and a real opportunity for businesses based on small tips and micro-payments.
 
 # Areas covered
 This proposal covers the entire implementation of percentage-based fees.  
