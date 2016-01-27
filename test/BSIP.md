@@ -15,7 +15,7 @@ The aim of this proposal is to make use of the fact that users generally are mor
 This proposal is also important for another reason: it paves the way for adding new features to Graphene without the direct involvement of its core developers. The documentation produced as a result of this work will help other developers to join the ecosystem and offer proposals for further features.
 
 # Abstract
-Any percentage-based transfer fee scheme needs some kind of basis for deriving the actual BTS value of the amount being transferred. The core idea of this approach is to derive this value from the **Core Exchange Rate** (CER) which is defined by the asset's issuer.  A complementary modification in the referral system is also needed in order to prevent abuse on the part of referrers.
+Any percentage-based transfer fee scheme needs some kind of basis for deriving the actual BTS value of the amount being transferred. The core idea of this approach is to derive this value from the *Core Exchange Rate* (CER) which is defined by the asset's issuer.  A complementary modification in the referral system is also needed in order to prevent abuse on the part of referrers.
 
 If the minimum transfer fee is kept at a reasonable level (i.e. around 6 BTS), the only actors actually affected by this proposal are referral businesses, as their revenue stream will be negatively affected for smaller transfers but in exchange positively affected for larger ones. The effect for issuers will only be positive or none at all, as for them this an opt-in feature. As for shareholders in general, the change will be positive because BitShares will become more competitive in terms of transfer fees when compared to other systems. 
 
