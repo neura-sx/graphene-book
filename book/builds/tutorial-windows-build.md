@@ -94,7 +94,11 @@ There are two little hacks needed to make CMake pre-processing work on Windows.
 Line 35:  
 `list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )`  
 needs to be commented out, i.e. changed to this:  
-`# list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )`
+`# list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )`  
+Also, line 40:  
+`LIST(APPEND BOOST_COMPONENTS thread`  
+needs to be changed to this:  
+`LIST(APPEND BOOST_COMPONENTS thread iostreams`
 
 * Edit file:  
 `[Graphene-Main]\bitshares-2\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake`  
