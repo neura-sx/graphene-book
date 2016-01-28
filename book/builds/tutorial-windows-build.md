@@ -90,24 +90,26 @@ You can close the powershell console now.
 ### CMake amendmends
 There are two little hacks needed to make CMake pre-processing work on Windows.  
 * Edit file:  
-`[Graphene-Main]\bitshares-2\CMakeLists.txt`  
-Line 35:  
-`list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )`  
-needs to be commented out, i.e. changed to this:  
-`# list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )`  
-Also, line 40:  
-`LIST(APPEND BOOST_COMPONENTS thread`  
-needs to be changed to this:  
-`LIST(APPEND BOOST_COMPONENTS thread iostreams`
+`[Graphene-Main]\bitshares-2\CMakeLists.txt`
+    * Line 35:  
+    `list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )`  
+    needs to be commented out, i.e. changed to this:  
+    `# list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )`
+    * Line 40:  
+    `LIST(APPEND BOOST_COMPONENTS thread`  
+    needs to be changed to this:  
+    `LIST(APPEND BOOST_COMPONENTS thread iostreams`
+
 
 * Edit file:  
-`[Graphene-Main]\bitshares-2\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake`  
-Line 133:  
-`set(${_var} "GIT-NOTFOUND" PARENT_SCOPE)` (i.e. within the `get_git_unix_timestamp` function)  
-needs to be changed to something like this:  
-`set(${_var} "888" PARENT_SCOPE)`  
-> The value `888` is just a random number, it could  be anything e.g. `123` - it just needs to be a number (enclosed by double inverted commas), not text.  
-Make sure you don't confuse line 133 with line 89 which looks the same but it's within the `git_describe` function.
+`[Graphene-Main]\bitshares-2\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake` 
+    * Line 133:  
+    `set(${_var} "GIT-NOTFOUND" PARENT_SCOPE)` (i.e. within the `get_git_unix_timestamp` function)  
+    needs to be changed to something like this:  
+    `set(${_var} "888" PARENT_SCOPE)`
+    > The value `888` is just a random number, it could  be anything e.g. `123` - it just needs to be a number (enclosed by double inverted commas), not text.  
+    Make sure you don't confuse line 133 with line 89 which looks the same but it's within the `git_describe` function.
+    
 
 ### Run CMake
 The purpose of CMake is to create a Visual Studio solution for the BitShares source code.
