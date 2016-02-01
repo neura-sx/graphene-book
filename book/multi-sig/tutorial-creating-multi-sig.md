@@ -96,3 +96,30 @@ To complete the process and sign and broadcast the above transactions, run this 
 sign_builder_transaction 0 true
 ```
 Your new multi-sig account is now created.
+
+### Import the multi-sig account
+To import the newly created multi-sig account into your wallet, run this command:
+```
+import_key <muliti-sig-account-name> <muliti-sig-account-private-key>
+```
+In our case the above commmand will look like this:
+```
+import_key nathan-multi-sig 5HqjT9ZeDPNGmnAEfc7SPM9QKtP32PnWtS2st6XrWLHep7b69pi
+```
+
+### Try it out
+Transfer some funds to the new multi-sig account:
+```
+transfer <base-account-name> <muliti-sig-account-name> 10000000 BTS "here is some cash" true
+```
+Now try to pay out some funds from the multi-sig account:
+```
+transfer <muliti-sig-account-name> <base-account-name> 300000 BTS "paying back" true
+```
+...and you should get an error indicating that funds cannot be paid out as there is not enough active authority:
+```
+0 exception: unspecified
+3030001 tx_missing_active_auth: missing required active authority
+Missing Active Authority 1.2.132
+```
+As this is a multi-sig account, to pay out any funds from it, approval from `approving-account-1` and `approving-account-2` is required.
