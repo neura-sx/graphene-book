@@ -13,4 +13,8 @@
     * [Private testnet](book/testnets/tutorial-private-testnet.md)
     * [Public testnet](book/testnets/tutorial-public-testnet.md)
     * [FAQs](book/testnets/FAQs.md)
+* [Multi-sig accounts](book/multi-sig/README.md)
+    * [Private testnet](book/testnets/tutorial-private-testnet.md)
+    * [Public testnet](book/testnets/tutorial-public-testnet.md)
+    * [FAQs](book/testnets/FAQs.md)
 
