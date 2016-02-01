@@ -14,7 +14,7 @@
     * [Public testnet](book/testnets/tutorial-public-testnet.md)
     * [FAQs](book/testnets/FAQs.md)
 * [Multi-sig accounts](book/multi-sig/README.md)
-    * [Private testnet](book/testnets/tutorial-private-testnet.md)
-    * [Public testnet](book/testnets/tutorial-public-testnet.md)
-    * [FAQs](book/testnets/FAQs.md)
-
+    * [Creating a multi-sig account](book/multi-sig/tutorial-creating-multi-sig.md)
+    * [Creating a proposed transaction](book/multi-sig/tutorial-creating-proposed-trxn.md)
+    * [Approving a proposed transaction](book/multi-sig/tutorial-approving-proposed-trxn.md)
+    * [FAQs](book/multi-sig/FAQs.md)
