@@ -13,16 +13,16 @@ The easiest way to find out the proposed transaction ID, is to browse the histor
 ```
 get_account_history <your-base-account-name> <limit>
 ```
-> As `<limit>` put a number like 10 or 100, depending how many transactions you expect to have made after creating the proposed transfer. If not sure, make the number bigger.
+> As `<limit>` put a number like 10 or 100, depending how many transactions you expect to have made **after** creating the proposed transfer. If you're not sure, make the number bigger.
 
-As i result, in the list of transactions making up the account history, you should be able to locate the proposed transfer:
+As a result, in the list of transactions making up the account history, you should be able to locate the proposed transfer, which should look similar to this example:
 ```
-> 2016-01-31T00:23:30 proposal_create_operation neura-sx fee: 20 TEST   result: 1.10.14
+> 2016-01-31T00:23:30 proposal_create_operation neura-sx fee: 20 BST result: 1.10.14
 ```
 In this particular case the proposed transfer ID is `1.10.14` but yours will obviously be different.
 
 ### Approve the proposed transfer
-We will use `your-base-account` as the account which pays the transaction fees for the approvals. We could used any other funded account whose private keys you control.
+We will use `your-base-account` as the account, which will pay the transaction fees for the approvals. We could used any other funded account whose private keys you control.
 ```
 approve_proposal <your-base-account-name> <proposed-transfer-ID> \
 {"active_approvals_to_add" : ["<approving-account-1-name>"]} true
@@ -32,7 +32,7 @@ approve_proposal <your-base-account-name> <proposed-transfer-ID> \
 ```
 > Make sure the above approvals are performed **before** the expiry timestamp of the proposed transfer.
 
-If you recieve no error, it means you the approvals have gone through successfully, and as a result the proposed transfer has been executed.
+If you recieve no error, it means the approvals have gone through successfully, and as a result the proposed transfer has been executed on the blockchain.
 
 ### Verify the result
 You can comfirm the proposed transfer execution by checking the account history of the multi-sig account:
