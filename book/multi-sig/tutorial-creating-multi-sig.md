@@ -56,15 +56,15 @@ As a response, you'll recieve an ID of the builder process - let's call it `<bui
 
 ### Define the multi-sig account
 We will now define the multi-sig account we aim to create. Our variables are as follows:  
-* `<your-base-account-ID>` - the ID of `your-base-account`, e.g. `1.2.41`  
-* `<muliti-sig-account-name>` - the name of the multi-sig account to be created, choose any name you want  
-* `<muliti-sig-account-public-key>` - the public key of the multi-sig account to be created, e.g. * `BTS74pa6mL6...bWQaJga` (use the public key obtained with the `suggest_brain_key` command above)  
-* `<approving-account-1-ID>` - the ID of the first approving account, e.g. `1.2.129`  
-* `<approving-account-2-ID>` - the ID of the second approving account, e.g. `1.2.130`  
+* `<your-base-account-ID>` - the ID of `your-base-account`, e.g. `1.2.41`,  
+* `<muliti-sig-account-name>` - the name of the multi-sig account to be created, choose any name you want,  
+* `<muliti-sig-account-public-key>` - the public key of the multi-sig account to be created (use the public key obtained with the `suggest_brain_key` command described above),  
+* `<approving-account-1-ID>` - the ID of the first approving account, e.g. `1.2.129`,  
+* `<approving-account-2-ID>` - the ID of the second approving account, e.g. `1.2.130`.  
 
-Let's assume you want the multi-sig account to be controlled by two approving accounts, each of them has a 50% control, and the vote thershold required to access funds in this account is set to 100%. Obviously, you could choose a different configuration.
+Let's assume you want the multi-sig account to be controlled by two approving accounts, each of them having a 50% control, and you want the vote thershold required to access the funds in this account to be set to 100%. Obviously, you could choose a different configuration.
 
-Run this command to define the new multi-sig account:
+Run the `add_operation_to_builder_transaction` command to define the new multi-sig account:
 ```
 add_operation_to_builder_transaction <builder-handle-ID> [ 5, { \
 "registrar": "<your-base-account-ID>", \
@@ -88,13 +88,13 @@ add_operation_to_builder_transaction <builder-handle-ID> [ 5, { \
 ```
 
 ### Pay the transaction fee
-To create the required transaction fee associated with creating the multi-sig account, run this command: 
+To create the required transaction fee, associated with creating the multi-sig account, run this command: 
 ```
 set_fees_on_builder_transaction <builder-handle-ID> BTS
 ```
 
 ### Sign the builder transaction
-To complete the process, i.e. sign and broadcast the above transactions, run this command:
+To complete the process, i.e. sign and broadcast the above builder transactions, run this command:
 ```
 sign_builder_transaction <builder-handle-ID> true
 ```
@@ -105,14 +105,14 @@ To import the newly created multi-sig account into your wallet, run this command
 ```
 import_key <muliti-sig-account-name> <muliti-sig-account-private-key>
 ```
-> Note that the private key to be used here comes from the `suggest_brain_key` command executed in one of preceding steps. In our case it was `5HqjT9Ze...LHep7b69pi`, but naturally yours will be different.
+> Note that the private key to be used here comes from the `suggest_brain_key` command described above.
 
 ### Try it out
 Transfer some funds to the new multi-sig account:
 ```
 transfer <your-base-account-name> <muliti-sig-account-name> 10000000 BTS "here is some cash" true
 ```
-Now try to pay out some funds from the multi-sig account (make sure it's less than the amount received to be able to cover the transfer fee):
+Now try to pay out some funds from the multi-sig account (make sure it's less than the amount received, so there are funds left to cover the transfer fee):
 ```
 transfer <muliti-sig-account-name> <your-base-account-name> 300000 BTS "paying back" true
 ```
