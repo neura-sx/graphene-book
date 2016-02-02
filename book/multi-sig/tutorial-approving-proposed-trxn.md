@@ -1,2 +1,2 @@
-# Approving a proposed transaction
+# Approving a proposed transfer
 
