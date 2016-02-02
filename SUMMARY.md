@@ -15,6 +15,6 @@
     * [FAQs](book/testnets/FAQs.md)
 * [Multi-sig accounts](book/multi-sig/README.md)
     * [Creating a multi-sig account](book/multi-sig/tutorial-creating-multi-sig.md)
-    * [Creating a proposed transaction](book/multi-sig/tutorial-creating-proposed-trxn.md)
-    * [Approving a proposed transaction](book/multi-sig/tutorial-approving-proposed-trxn.md)
+    * [Creating a proposed transfer](book/multi-sig/tutorial-creating-proposed-trxn.md)
+    * [Approving a proposed transfer](book/multi-sig/tutorial-approving-proposed-trxn.md)
     * [FAQs](book/multi-sig/FAQs.md)
