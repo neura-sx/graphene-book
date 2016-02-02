@@ -37,7 +37,7 @@ We will now define the account update operation we want to execute. Our variable
 
 Run the `add_operation_to_builder_transaction` command to define the account update:
 ```
-add_operation_to_builder_transaction 0 [ 6, \
+add_operation_to_builder_transaction <builder-handle-ID> [ 6, \
 {"account": "<future-multi-sig-account-ID>", "active": \
 {"weight_threshold": <multi-sig-threshold>, \
 "account_auths": [["<approving-account-1-ID>",<approving-account-1-power>],\
