@@ -89,7 +89,7 @@ add_operation_to_builder_transaction <builder-handle-ID> [ 5, { \
 "num_witness": 0, "num_committee": 0, \
 "votes": [], "extensions": [] }, "extensions": []} ]
 ```
-> Note that the value `5`, used in the first line, is specific for the `account_create_operation`, which we are using for this purpose.
+> Note that the value `5`, used in the first line, is specific for the `account_create_operation`, which we need for this purpose.
 
 ### Pay the transaction fee
 To create the required transaction fee, associated with creating the multi-sig account, run this command: 
@@ -120,10 +120,10 @@ Now try to pay out some funds from the multi-sig account (make sure it's less th
 ```
 transfer <muliti-sig-account-name> <your-base-account-name> 300000 BTS "paying back" true
 ```
-As a result, you should get an error indicating that funds cannot be paid out, as there is not enough active authority:
+As a result, you should get an error indicating that funds cannot be moved:
 ```
 0 exception: unspecified
 3030001 tx_missing_active_auth: missing required active authority
 Missing Active Authority 1.2.132
 ```
-This is the expected outcome, as we are dealing with a multi-sig account. In order to pay out any funds from it, we need to propose a transfer and have it approved by `approving-account-1` and / or `approving-account-2`.
+This is the expected outcome, as we are dealing with a multi-sig account. In order to pay out any funds from it, we need to propose a transfer instead, and have it approved by `approving-account-1` and / or `approving-account-2`.
