@@ -1,0 +1,78 @@
+chain id
+fa14a05a9986f937bc138365a0945ccaf208db07287d34c8701dd14a6c2e1313
+cli_wallet --wallet-file my-wallet.json --chain-id fa14a05a9986f937bc138365a0945ccaf208db07287d34c8701dd14a6c2e1313 --server-rpc-endpoint ws://127.0.0.1:11011
+
+chain id
+39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447
+cli_wallet --wallet-file test-wallet.json --chain-id 39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447 --server-rpc-endpoint ws://testnet.bitshares.eu:11011
+
+import_key neura-sx 5KT6jHMPWHu5LF5SpRfQWWNs4m89SNALbzakTaUEmqifSmNVzU7
+import_key neura-sx 5JMVW3catu7r2pza1yhDpVmocbJckL8jUdzpsy8THSuW6sFh3XS
+
+5KT6jHMPWHu5LF5SpRfQWWNs4m89SNALbzakTaUEmqifSmNVzU7
+5JMVW3catu7r2pza1yhDpVmocbJckL8jUdzpsy8THSuW6sFh3XS
+
+
+register_account sx1974 BTS5CbYyjdnhqNRkVpGYB5J87ExWzkULHcQtxStHgxGzCbzVZ3jfx BTS5CbYyjdnhqNRkVpGYB5J87ExWzkULHcQtxStHgxGzCbzVZ3jfx jakub jakub 0 true
+register_account alpha2 BTS7GTRvkxrHnxJPRgFa3eCTX8JWPfDBtbqqLMpG3ZGpRCQBSGpjv BTS7GTRvkxrHnxJPRgFa3eCTX8JWPfDBtbqqLMpG3ZGpRCQBSGpjv alpha alpha 0 true
+register_account zajac TEST652Ynn6QAP518Po2GM7t8Ws5gJGTyFYBsfyvNr9KjzH2pgJZaT TEST652Ynn6QAP518Po2GM7t8Ws5gJGTyFYBsfyvNr9KjzH2pgJZaT neura-sx neura-sx 0 true
+
+suggest_brain_key
+{
+  "brain_priv_key": "SURNAP CEROMA BERGLET CAMAIL UITSPAN QUANTUM ETHENOL GUAN TROMBE TENABLE ZYMOME MUSCLED OPALISH ZYMOTIC OWLING MINHAH",
+  "wif_priv_key": "5KhwAxm2jTgbZmSCbX6dFcjYkbH1xyW2MXm7dJmxRv1cbxb1hik",
+  "pub_key": "BTS5BDpqGPm3BFvKrZt8FMkBm2qqEctgokaNb8H9GcqVNL2pFD4F1"
+}
+
+create_account_with_brain_key "SURNAP CEROMA BERGLET CAMAIL UITSPAN QUANTUM ETHENOL GUAN TROMBE TENABLE ZYMOME MUSCLED OPALISH ZYMOTIC OWLING MINHAH" alpha nathan nathan true
+create_account_with_brain_key "CYANIDE PAROECY PUB PURGING BUZZIES PANAMA UNWELL STAMNOS WELS UHLAN RAMED CODDING CORDAGE OKRA CYCLAR EELPOUT" zajac neura-sx neura-sx true
+
+transfer nathan alpha 5000000000 BTS "here is the cash" true
+
+
+list_account_balances alpha
+get_account_history alpha 10
+
+upgrade_account alpha true
+
+list_my_accounts
+
+list_assets "X" 10
+list_accounts "x" 10
+
+import_key sx1974 5Jgbzhp2cSDtSto83DoVqTCDnBNkJDyA4oAxAcDQf8GSXsotKhJ
+
+
+5000000000
+10,000.00000
+
+10,000,000,000.00000
+
+
+suggest_brain_key
+{
+  "brain_priv_key": "WEST OARFISH HOWLET SMIDGEN ISMATIC CHOWRY SLEATHY GUACIN SNORKEL WIREMAN PAGEDOM ARCHING SNUDGE ANGILI VALLARY ABORD",
+  "wif_priv_key": "5J84T78J8DU1WaxH4eRtuxaNFz5CWncfMp3oYWGNtYNvCJNvPuE",
+  "pub_key": "BTS78HfSzvBHaYaCXTLGfMxYcuFC9ZmAn8Ndr8dTmZAnZT75HS566"
+}
+
+
+
+
+
+PRIVATE TESTNET
+D:\Program Files\BitShares 2\genesis>..\bin\witness_node.exe --data-dir data/my-blockprod --enable-stale-production
+D:\Program Files\BitShares 2\genesis>..\bin\cli_wallet --wallet-file=my-wallet.json --chain-id fa14a05a9986f937bc138365a0945ccaf208db07287d34c8701dd14a6c2e1313 --server-rpc-endpoint=ws://127.0.0.1:11011
+
+
+
+PUBLIC TESTNET
+D:\Program Files\BitShares 2\bin64>cli_wallet --wallet-file=testnet-wallet.json --chain-id 39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447 --server-rpc-endpoint=ws://testnet.bitshares.eu:11011
+
+create_worker "neura-sx" "2016-01-28T00:00:00" "2016-01-31T00:00:00" 33300000 "Description goes here" "http://neura.sx" {"type" : "vesting", "pay_vesting_period_days" : 10} false
+
+{
+  "brain_priv_key": "CYANIDE PAROECY PUB PURGING BUZZIES PANAMA UNWELL STAMNOS WELS UHLAN RAMED CODDING CORDAGE OKRA CYCLAR EELPOUT",
+  "wif_priv_key": "5JWJvu6i7ZcSDUDbGbwMvWZQDVFuedX74hrjU5vfKqQvUajFxRV",
+  "pub_key": "TEST652Ynn6QAP518Po2GM7t8Ws5gJGTyFYBsfyvNr9KjzH2pgJZaT"
+}
