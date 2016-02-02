@@ -47,7 +47,7 @@ add_operation_to_builder_transaction 0 [ 6, \
 > Note that the value `6`, used in the first line, is specific for the `account_update_operation`, which we need for this purpose.
 
 ### Pay the transaction fee
-To create the required transaction fee, associated with the proposed transfer, run this command: 
+To create the required transaction fee, associated with the account update, run this command: 
 ```
 set_fees_on_builder_transaction <builder-handle-ID> BTS
 ```
