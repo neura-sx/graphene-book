@@ -33,7 +33,7 @@ approve_proposal <your-base-account-name> <proposed-transfer-ID> \
 ```
 > Make sure the above approvals are performed **before** the expiry timestamp of the proposed transfer (the time-zone used there is UTC).
 
-If you receive no error, it means the approvals have gone through successfully, and as a result the proposed transfer has been immediately executed on the blockchain.
+If you receive no error, it means the approvals have gone through successfully, and as a result, the proposed transfer has been immediately executed on the blockchain.
 
 ### Verify the result
 You can confirm the proposed transfer execution by checking the account history of the multi-sig account:
