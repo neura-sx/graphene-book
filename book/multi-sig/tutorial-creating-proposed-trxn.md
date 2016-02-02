@@ -16,6 +16,7 @@ To get the account IDs of `muliti-sig-account` and `destination-account`, run th
 get_account <muliti-sig-account-name>
 get_account <destination-account-name>
 ```
+We will need those IDs in subsequent steps.
 
 ### Initialize transaction builder
 We start by initializing the transaction builder with this command:
@@ -57,7 +58,8 @@ Run the `propose_builder_transaction2` command to define the proposal:
 propose_builder_transaction2 <builder-handle-ID> <your-base-account-name> \
 "<expiry-timestamp>" 0 false
 ```
-> You need to have access to `propose_builder_transaction2` command in your CLI. As of now, using the default command (i.e. `propose_builder_transaction` without `2` at the end) will not succeed due to unresolved bugs.
+> You need to have access to `propose_builder_transaction2` command in your CLI. As of now, using the default command (i.e. `propose_builder_transaction` without `2` at the end) will not succeed due to unresolved bugs.  
+Also, it's important not to broadcast the transaction at this stage, so make sure the broadcast flag (i.e. the last parameter) is set to `false`.
 
 ### Pay the transaction fee
 To create the required transaction fee, associated with creating the proposed itself, run this command: 
