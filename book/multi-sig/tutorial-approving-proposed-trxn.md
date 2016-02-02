@@ -9,7 +9,7 @@
 * We assume you have imported to your CLI the private keys for `approving-account-1` and `approving-account-2`. 
  
 ### Get the proposed transfer ID
-The easiest way to find out the proposed transaction ID, is to browse the history of the accoount that has created the proposal:
+The easiest way to find out the proposed transaction ID, is to browse the history of the account that has created the proposal:
 ```
 get_account_history <your-base-account-name> <limit>
 ```
