@@ -8,7 +8,7 @@
 
 
 ### Get account IDs
-Run this command:
+To get the ID of `your-base-account`, run this command:
 ```
 get_account <your-base-account-name>
 ```
