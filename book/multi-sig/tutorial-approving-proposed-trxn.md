@@ -23,7 +23,7 @@ As a result, in the list of transactions making up the account history, you shou
 In this particular case the proposed transfer ID is `1.10.14` but yours will obviously be different.
 
 ### Approve the proposed transfer
-We will use `your-base-account` as the account, which will pay the transaction fees for the approvals. We could used any other funded account whose private key you control.
+We will use `your-base-account` as the account, which will pay the transaction fees for the approvals. We could've used any other funded account, whose private key you control.
 ```
 approve_proposal <your-base-account-name> <proposed-transfer-ID> \
 {"active_approvals_to_add" : ["<approving-account-1-name>"]} true
