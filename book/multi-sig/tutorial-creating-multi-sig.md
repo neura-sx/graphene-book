@@ -63,11 +63,11 @@ We will now define the multi-sig account we aim to create. Our variables are as 
 * `<approving-account-2-ID>` - the ID of the second approving account, e.g. `1.2.130`,
 * `<approving-account-1-power>` - the approval power of the first approving account, e.g. `50`,
 * `<approving-account-2-power>` - the approval power of the second approving account, e.g. `30`,
-* `<muliti-sig-threshold>` - threshold required to access the funds, e.g. `75`.
+* `<multi-sig-threshold>` - threshold required to access the funds, e.g. `75`.
 
-> Note that the sum of `<approving-account-1-power>` and `<approving-account-2-power>` has to be equal or greater than `<muliti-sig-threshold>`.
+> Note that the sum of `<approving-account-1-power>` and `<approving-account-2-power>` has to be equal or greater than `<multi-sig-threshold>`.
 
-Run the `add_operation_to_builder_transaction` command to define the new multi-sig account:
+Run the `add_operation_to_builder_transaction` command to define our new multi-sig account:
 ```
 add_operation_to_builder_transaction <builder-handle-ID> [ 5, { \
 "registrar": "<your-base-account-ID>", \
@@ -78,7 +78,7 @@ add_operation_to_builder_transaction <builder-handle-ID> [ 5, { \
 "account_auths": [], \
 "key_auths": [["<muliti-sig-account-public-key>", 1]], \
 "address_auths": [] }, \
-"active": {"weight_threshold": <muliti-sig-threshold>, \
+"active": {"weight_threshold": <multi-sig-threshold>, \
 "account_auths": \
 [["<approving-account-1-ID>",<approving-account-1-power>], \
 ["<approving-account-2-ID>",<approving-account-2-power>]], \
