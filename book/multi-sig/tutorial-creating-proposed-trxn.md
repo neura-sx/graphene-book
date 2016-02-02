@@ -24,8 +24,8 @@ begin_builder_transaction
 ```
 As a response, you'll recieve an ID of the builder process - let's call it `<builder-handle-ID>`. This ID will be used in all subsequent commands involving the transaction builder.
 
-### Add operation to the builder
-We will now define the proposed transfer we aim to create. Our variables are as follows:  
+### Add transfer to the builder
+We will now define the transfer we aim to execute. Our variables are as follows:  
 * `<muliti-sig-account-ID>` - the ID of `muliti-sig-account`, e.g. `1.2.127`,
 * `<destination-account-ID>` - the ID of `destination-account`, e.g. `1.2.128`,
 * `<transfer-amount>` - the amount (in satoshi) to be sent, e.g. if you want to send BTS 14.00 use `1400000`,    
@@ -33,16 +33,34 @@ We will now define the proposed transfer we aim to create. Our variables are as 
 
 Run the `add_operation_to_builder_transaction` command to define the transfer:
 ```
-add_operation_to_builder_transaction 0 [0, \
+add_operation_to_builder_transaction <builder-handle-ID> [0, \
 {"from": "<muliti-sig-account-ID>", \
 "to": "<destination-account-ID>", \
 "amount": {"amount": <transfer-amount>, \
 "asset_id": "<transfer-asset-id>"}}]
 ```
-> Note that the value `5`, used in the first line, is specific for the `account_create_operation`, which we need for this purpose.
+> Note that the value `0`, used in the first line, is specific for the `transfer_operation`, which we need for this purpose.
 
 ### Pay the transaction fee
-To create the required transaction fee, associated with creating the multi-sig account, run this command: 
+To create the required transaction fee, associated with the proposed transfer, run this command: 
+```
+set_fees_on_builder_transaction <builder-handle-ID> BTS
+```
+
+### Propose the transfer
+We will now define the transfer proposal itself. Our variables are as follows:  
+* `<your-base-account-name>` - the name of `your-base-account` (this account will pay the fee for setting up the proposal),
+* `<expiry-timestamp>` - the timestamp (in UTC) defining when the proposal expires, e.g. `2016-02-02T00:30:00`.
+
+Run the `propose_builder_transaction2` command to define the proposal:
+```
+propose_builder_transaction2 <builder-handle-ID> <your-base-account-name> \
+"<expiry-timestamp>" 0 false
+```
+> You need to have access to `propose_builder_transaction2` command in your CLI. As of now, using the default command (i.e. `propose_builder_transaction`) will not succeed due to unresolved bugs.
+
+### Pay the transaction fee
+To create the required transaction fee, associated with creating the proposed itself, run this command: 
 ```
 set_fees_on_builder_transaction <builder-handle-ID> BTS
 ```
@@ -52,28 +70,4 @@ To complete the process, i.e. sign and broadcast the above builder transactions,
 ```
 sign_builder_transaction <builder-handle-ID> true
 ```
-If you recieve no error, it means your new multi-sig account has been successfully created.
-
-### Import the multi-sig account
-To import the newly created multi-sig account into your wallet, run this command:
-```
-import_key <muliti-sig-account-name> <muliti-sig-account-private-key>
-```
-> Note that the private key to be used here comes from the `suggest_brain_key` command described above.
-
-### Try it out
-Transfer some funds to the new multi-sig account:
-```
-transfer <your-base-account-name> <muliti-sig-account-name> 10000000 BTS "here is some cash" true
-```
-Now try to pay out some funds from the multi-sig account (make sure it's less than the amount received, so there are funds left to cover the transfer fee):
-```
-transfer <muliti-sig-account-name> <your-base-account-name> 300000 BTS "paying back" true
-```
-As a result, you should get an error indicating that funds cannot be moved:
-```
-0 exception: unspecified
-3030001 tx_missing_active_auth: missing required active authority
-Missing Active Authority 1.2.132
-```
-This is the expected outcome, as we are dealing with a multi-sig account. In order to pay out any funds from it, we need to propose a transfer instead, and have it approved by `approving-account-1` and / or `approving-account-2`.
+If you recieve no error, it means your proposed transaction has been successfully created and broadcast, and it's waiting approval.
