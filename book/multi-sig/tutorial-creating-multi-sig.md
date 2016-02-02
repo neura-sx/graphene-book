@@ -125,4 +125,4 @@ As a result, you should get an error indicating that funds cannot be paid out, a
 3030001 tx_missing_active_auth: missing required active authority
 Missing Active Authority 1.2.132
 ```
-This is the expected outcome, as we are dealing with a multi-sig account. In order to pay out any funds from it, approval from `approving-account-1` and / or `approving-account-2` is required.
+This is the expected outcome, as we are dealing with a multi-sig account. In order to pay out any funds from it, we need to propose a transfer and have it approved by `approving-account-1` and / or `approving-account-2`.
