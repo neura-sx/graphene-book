@@ -72,4 +72,4 @@ To complete the process, i.e. sign and broadcast the above builder transactions,
 ```
 sign_builder_transaction <builder-handle-ID> true
 ```
-If you recieve no error, it means your proposed transfer has been successfully created and broadcast, and it's waiting approval.
+If you recieve no error, it means your proposed transfer has been successfully created and broadcast, and it's awaiting approval.
