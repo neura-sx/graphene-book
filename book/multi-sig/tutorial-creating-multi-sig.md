@@ -60,11 +60,14 @@ We will now define the multi-sig account we aim to create. Our variables are as 
 * `<muliti-sig-account-name>` - the name of the multi-sig account to be created, choose any name you want,  
 * `<muliti-sig-account-public-key>` - the public key of the multi-sig account to be created (use the public key obtained with the `suggest_brain_key` command described above),  
 * `<approving-account-1-ID>` - the ID of the first approving account, e.g. `1.2.129`,  
-* `<approving-account-2-ID>` - the ID of the second approving account, e.g. `1.2.130`.  
+* `<approving-account-2-ID>` - the ID of the second approving account, e.g. `1.2.130`,
+* `<approving-account-1-power>` - the approval power of the first approving account, e.g. `50`,
+* `<approving-account-2-power>` - the approval power of the second approving account, e.g. `30`,
+* `<muliti-sig-threshold>` - threshold required to access the funds, e.g. `75`.
 
-Let's assume you want the multi-sig account to be controlled by two approving accounts, each of them having a 50% control, and you want the vote threshold required to access the funds in this account to be set to 100%. Obviously, you could choose a different configuration.
+> Note that the sum of `<approving-account-1-power>` and `<approving-account-2-power>` has to be equal or greater than `<muliti-sig-threshold>`.
 
-Run the `add_operation_to_builder_transaction` command to define the multi-sig account to be created:
+Run the `add_operation_to_builder_transaction` command to define the new multi-sig account:
 ```
 add_operation_to_builder_transaction <builder-handle-ID> [ 5, { \
 "registrar": "<your-base-account-ID>", \
@@ -75,10 +78,10 @@ add_operation_to_builder_transaction <builder-handle-ID> [ 5, { \
 "account_auths": [], \
 "key_auths": [["<muliti-sig-account-public-key>", 1]], \
 "address_auths": [] }, \
-"active": {"weight_threshold": 100, \
+"active": {"weight_threshold": <muliti-sig-threshold>, \
 "account_auths": \
-[["<approving-account-1-ID>",50], \
-["<approving-account-2-ID>",50]], \
+[["<approving-account-1-ID>",<approving-account-1-power>], \
+["<approving-account-2-ID>",<approving-account-2-power>]], \
 "key_auths": [], "address_auths": [] }, \
 "options": { "memo_key": \
 "<muliti-sig-account-public-key>", \
@@ -122,4 +125,4 @@ As a result, you should get an error indicating that funds cannot be paid out, a
 3030001 tx_missing_active_auth: missing required active authority
 Missing Active Authority 1.2.132
 ```
-This is the expected response, as it is a multi-sig account. In order to pay out any funds from it, approval from `approving-account-1` and `approving-account-2` is required.
+This is the expected outcome, as we are dealing with a multi-sig account. In order to pay out any funds from it, approval from `approving-account-1` and / or `approving-account-2` is required.
