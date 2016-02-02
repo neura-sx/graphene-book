@@ -5,15 +5,15 @@
 
 * We assume that you have set up a wallet in the CLI and imported the active private key of an account with some BTS funds in it. We will refer to this account as `your-base-account`.
 
-* We assume that you have already created and registered a multi-sig account with some BTS funds in it. We will refer to this account as `muliti-sig-account`.
+* We assume that you have already created and registered a multi-sig account with some BTS funds in it. We will refer to this account as `multi-sig-account`.
 
 * We assume that you have already created and registered an account which is meant be the recipient of the proposed transfer. We will refer to this account as `destination-account`.
 
 
 ### Get account IDs
-To get the account IDs of `muliti-sig-account` and `destination-account`, run these commands:
+To get the account IDs of `multi-sig-account` and `destination-account`, run these commands:
 ```
-get_account <muliti-sig-account-name>
+get_account <multi-sig-account-name>
 get_account <destination-account-name>
 ```
 We will need those IDs in subsequent steps.
@@ -23,11 +23,11 @@ We start by initializing the transaction builder with this command:
 ```
 begin_builder_transaction
 ```
-As a response, you'll recieve an ID of the builder process - let's call it `<builder-handle-ID>`. This ID will be used in all subsequent commands involving the transaction builder.
+As a response, you'll receive an ID of the builder process - let's call it `<builder-handle-ID>`. This ID will be used in all subsequent commands involving the transaction builder.
 
 ### Add transfer to the builder
 We will now define the transfer we want to propose. Our variables are as follows:  
-* `<muliti-sig-account-ID>` - the ID of `muliti-sig-account`, e.g. `1.2.127`,
+* `<multi-sig-account-ID>` - the ID of `multi-sig-account`, e.g. `1.2.127`,
 * `<destination-account-ID>` - the ID of `destination-account`, e.g. `1.2.128`,
 * `<transfer-amount>` - the amount (in satoshi) to be sent, e.g. if you want to send BTS 14.00 use `1400000`,    
 * `<transfer-asset-id>` - the ID of the asset in which the transfer will be denominated, e.g. for BTS use `1.3.0`.
@@ -35,7 +35,7 @@ We will now define the transfer we want to propose. Our variables are as follows
 Run the `add_operation_to_builder_transaction` command to define the proposed transfer:
 ```
 add_operation_to_builder_transaction <builder-handle-ID> [0, \
-{"from": "<muliti-sig-account-ID>", \
+{"from": "<multi-sig-account-ID>", \
 "to": "<destination-account-ID>", \
 "amount": {"amount": <transfer-amount>, \
 "asset_id": "<transfer-asset-id>"}}]
@@ -72,4 +72,4 @@ To complete the process, i.e. sign and broadcast the above builder transactions,
 ```
 sign_builder_transaction <builder-handle-ID> true
 ```
-If you recieve no error, it means your proposed transfer has been successfully created and broadcast, and it's awaiting approval.
+If you receive no error, it means your proposed transfer has been successfully created and broadcast, and it's awaiting approval.
