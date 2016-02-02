@@ -52,6 +52,13 @@ To create the required transaction fee, associated with the proposed transfer, r
 set_fees_on_builder_transaction <builder-handle-ID> BTS
 ```
 
+### Sign the builder transaction
+To complete the process, i.e. sign and broadcast the above builder transactions, run this command:
+```
+sign_builder_transaction <builder-handle-ID> true
+```
+If you recieve no error, it means `future-multi-sig-account` has been successfully updated to a multi-sig account, controlled by `<approving-account-1>` and `<approving-account-2>`.
+
 
  
 
