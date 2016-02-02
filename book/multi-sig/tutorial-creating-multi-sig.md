@@ -4,7 +4,7 @@
 
 * We assume that you have set up a wallet in the CLI and imported a private key of a LTM account with some BTS funds in it. We will refer to this account as `your-base-account`.
 
-* We assume that you have already created two other accounts which will act as the milti-sig approving accounts. We will refer to these accounts as `approving-account-1` and `approving-account-2`.
+* We assume that you have already created two other accounts, which will act as the milti-sig approving accounts. We will refer to these accounts as `approving-account-1` and `approving-account-2`.
 
 
 ### Get account IDs
@@ -22,7 +22,7 @@ The response should be similar to this:
 ```
 Thus in this case `your-base-account`'s ID is `1.2.41`. Naturally, yours will be different.
 
-> Make sure `membership_expiration_date` is `1969-12-31T23:59:59`, which should be the case if `your-base-account` is LTM.
+> Make sure `membership_expiration_date` is `1969-12-31T23:59:59`, which should be the case, if `your-base-account` is LTM.
 
 Similarly, find out the account IDs of the two approving accounts:
 ```
@@ -45,7 +45,7 @@ The response should look similar to this:
   "pub_key": "BTS74pa6mL6a4FZpLrnU66KBz2nb8Cfio9qT3uLZCM1zxvbWQaJga"
 }
 ```
-Thus in this case, the public key is `BTS74pa6mL6...bWQaJga` and the private key is `5HqjT9Ze...LHep7b69pi`. Naturally, yours will be different. This key pair will be used in the next step when you define the multi-sig account.
+Thus in this case, the public key is `BTS74pa6mL6...bWQaJga` and the private key is `5HqjT9Ze...LHep7b69pi`. Naturally, yours will be different. This key pair will be used in the next steps when you define the multi-sig account and then import it to your wallet.
 
 ### Initialize transaction builder
 We start by initializing the transaction builder with this command:
@@ -62,9 +62,9 @@ We will now define the multi-sig account we aim to create. Our variables are as 
 * `<approving-account-1-ID>` - the ID of the first approving account, e.g. `1.2.129`,  
 * `<approving-account-2-ID>` - the ID of the second approving account, e.g. `1.2.130`.  
 
-Let's assume you want the multi-sig account to be controlled by two approving accounts, each of them having a 50% control, and you want the vote thershold required to access the funds in this account to be set to 100%. Obviously, you could choose a different configuration.
+Let's assume you want the multi-sig account to be controlled by two approving accounts, each of them having a 50% control, and you want the vote threshold required to access the funds in this account to be set to 100%. Obviously, you could choose a different configuration.
 
-Run the `add_operation_to_builder_transaction` command to define the new multi-sig account:
+Run the `add_operation_to_builder_transaction` command to define the multi-sig account to be created:
 ```
 add_operation_to_builder_transaction <builder-handle-ID> [ 5, { \
 "registrar": "<your-base-account-ID>", \
@@ -98,7 +98,7 @@ To complete the process, i.e. sign and broadcast the above builder transactions,
 ```
 sign_builder_transaction <builder-handle-ID> true
 ```
-If you recieve no error, it means your new multi-sig account has been created.
+If you recieve no error, it means your new multi-sig account has been successfully created.
 
 ### Import the multi-sig account
 To import the newly created multi-sig account into your wallet, run this command:
@@ -122,4 +122,4 @@ As a result, you should get an error indicating that funds cannot be paid out, a
 3030001 tx_missing_active_auth: missing required active authority
 Missing Active Authority 1.2.132
 ```
-This is the correct response, as it is a multi-sig account. In order to pay out any funds from it, approval from `approving-account-1` and `approving-account-2` is required.
+This is the expected response, as it is a multi-sig account. In order to pay out any funds from it, approval from `approving-account-1` and `approving-account-2` is required.
