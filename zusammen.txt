@@ -1,0 +1,62 @@
+mail
+jakub.zarembinski@neura.sx
+COMue582A1qR3
+
+
+Webmail Access
+====================
+
+We have a web based email client so that you can access your email
+from anywhere with Internet access. Just browse to:
+
+Website:  https://mail.neura.sx
+Username: jakub.zarembinski@neura.sx
+
+Log in with the password above.
+
+
+Sending Email / SMTP Access
+==============================
+
+To send email from your mail client such as Outlook or Thunderbird,
+please configure it with the following settings:
+
+SMTP Server:  mail.neura.sx
+SMTP Port:    465
+SSL/TLS:      SSL
+Username:    jakub.zarembinski@neura.sx
+
+Log in with the password above.
+
+
+Receiving Email via IMAP
+==============================
+
+To receive email from your mail client such as Outlook
+or Thunderbird using IMAP, please configure it with the
+following settings:
+
+IMAP Server:  gpo.neura.sx
+IMAP Port:    993
+SSL/TLS:      SSL
+Username:    jakub.zarembinski@neura.sx
+
+Log in with the password above.
+
+
+
+Receiving Email via POP3
+==============================
+
+To receive email from your mail client such as Outlook
+or Thunderbird using POP3, please configure it with the
+following settings:
+
+POP3 Server:  gpo.neura.sx
+POP3 Port:    995
+SSL/TLS:      SSL
+Username:    jakub.zarembinski@neura.sx
+
+Log in with the password above.
+
+
