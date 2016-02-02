@@ -26,19 +26,23 @@ As a response, you'll recieve an ID of the builder process - let's call it `<bui
 
 ### Add update to the builder
 We will now define the account update operation we want to execute. Our variables are as follows:  
-* `<muliti-sig-account-ID>` - the ID of `muliti-sig-account`, e.g. `1.2.127`,
-* `<destination-account-ID>` - the ID of `destination-account`, e.g. `1.2.128`,
-* `<transfer-amount>` - the amount (in satoshi) to be sent, e.g. if you want to send BTS 14.00 use `1400000`,    
-* `<transfer-asset-id>` - the ID of the asset in which the transfer will be denominated, e.g. for BTS use `1.3.0`.
+* `<future-multi-sig-account-ID>` - the ID of `future-multi-sig-account` ,  
+* `<approving-account-1-ID>` - the ID of the first approving account, e.g. `1.2.129`,  
+* `<approving-account-2-ID>` - the ID of the second approving account, e.g. `1.2.130`,
+* `<approving-account-1-power>` - the approval power of the first approving account, e.g. `50`,
+* `<approving-account-2-power>` - the approval power of the second approving account, e.g. `30`,
+* `<multi-sig-threshold>` - threshold required to access the funds, e.g. `75`.
 
 Run the `add_operation_to_builder_transaction` command to define the proposed transfer:
 ```
-add_operation_to_builder_transaction 0 [ 6,{"account": "1.2.128", "active": \
-{"weight_threshold": 100, \
-"account_auths": [["1.2.129",56],["1.2.130",44]], \
+add_operation_to_builder_transaction 0 [ 6, \
+{"account": "<future-multi-sig-account-ID>", "active": \
+{"weight_threshold": <multi-sig-threshold>, \
+"account_auths": [["<approving-account-1-ID>",<approving-account-1-power>],\
+["<approving-account-2-ID>",<approving-account-2-power>]], \
 "key_auths": [], "address_auths": [] }, "extensions": []} ]
 ```
-> Note that the value `0`, used in the first line, is specific for the `transfer_operation`, which we need for this purpose.
+> Note that the value `6`, used in the first line, is specific for the `account_update_operation`, which we need for this purpose.
 
 ### Pay the transaction fee
 To create the required transaction fee, associated with the proposed transfer, run this command: 
