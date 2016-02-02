@@ -4,7 +4,7 @@
 
 * We assume that you have set up a wallet in the CLI and imported the active private key of a LTM account with some BTS funds in it. We will refer to this account as `your-base-account`.
 
-* We assume that you have already created and registered two other accounts, which will act as the milti-sig approving accounts. We will refer to these accounts as `approving-account-1` and `approving-account-2`.
+* We assume that you have already created and registered two other accounts, which will act as the multi-sig approving accounts. We will refer to these accounts as `approving-account-1` and `approving-account-2`.
 
 
 ### Get account IDs
@@ -52,13 +52,13 @@ We start by initializing the transaction builder with this command:
 ```
 begin_builder_transaction
 ```
-As a response, you'll recieve an ID of the builder process - let's call it `<builder-handle-ID>`. This ID will be used in all subsequent commands involving the transaction builder.
+As a response, you'll receive an ID of the builder process - let's call it `<builder-handle-ID>`. This ID will be used in all subsequent commands involving the transaction builder.
 
 ### Define the multi-sig account
 We will now define the multi-sig account we aim to create. Our variables are as follows:  
 * `<your-base-account-ID>` - the ID of `your-base-account`, e.g. `1.2.41`,  
-* `<muliti-sig-account-name>` - the name of the multi-sig account to be created, choose any name you want,  
-* `<muliti-sig-account-public-key>` - the public key of the multi-sig account to be created (use the public key obtained with the `suggest_brain_key` command described above),  
+* `<multi-sig-account-name>` - the name of the multi-sig account to be created, choose any name you want,  
+* `<multi-sig-account-public-key>` - the public key of the multi-sig account to be created (use the public key obtained with the `suggest_brain_key` command described above),  
 * `<approving-account-1-ID>` - the ID of the first approving account, e.g. `1.2.129`,  
 * `<approving-account-2-ID>` - the ID of the second approving account, e.g. `1.2.130`,
 * `<approving-account-1-power>` - the approval power of the first approving account, e.g. `50`,
@@ -102,23 +102,23 @@ To complete the process, i.e. sign and broadcast the above builder transactions,
 ```
 sign_builder_transaction <builder-handle-ID> true
 ```
-If you recieve no error, it means your new multi-sig account has been successfully created.
+If you receive no error, it means your new multi-sig account has been successfully created.
 
 ### Import the multi-sig account
 To import the newly created multi-sig account into your wallet, run this command:
 ```
-import_key <muliti-sig-account-name> <muliti-sig-account-private-key>
+import_key <multi-sig-account-name> <multi-sig-account-private-key>
 ```
 > Note that the private key to be used here comes from the `suggest_brain_key` command described above.
 
 ### Try it out
 Transfer some funds to the new multi-sig account:
 ```
-transfer <your-base-account-name> <muliti-sig-account-name> 10000000 BTS "here is some cash" true
+transfer <your-base-account-name> <multi-sig-account-name> 10000000 BTS "here is some cash" true
 ```
 Now let's try to pay out some funds from the multi-sig account (make sure it's less than the amount received, so there are funds left to cover the transfer fee):
 ```
-transfer <muliti-sig-account-name> <your-base-account-name> 300000 BTS "paying back" true
+transfer <multi-sig-account-name> <your-base-account-name> 300000 BTS "paying back" true
 ```
 As a result, you should get an error indicating that funds cannot be moved:
 ```
