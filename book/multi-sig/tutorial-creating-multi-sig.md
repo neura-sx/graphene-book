@@ -89,6 +89,7 @@ add_operation_to_builder_transaction <builder-handle-ID> [ 5, { \
 "num_witness": 0, "num_committee": 0, \
 "votes": [], "extensions": [] }, "extensions": []} ]
 ```
+> Note that the value `5`, used in the first line, is specific for the `account_create_operation`, which we are using for this purpose.
 
 ### Pay the transaction fee
 To create the required transaction fee, associated with creating the multi-sig account, run this command: 
