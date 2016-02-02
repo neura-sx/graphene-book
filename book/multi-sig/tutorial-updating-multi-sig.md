@@ -74,7 +74,7 @@ As a result, you should get an error indicating that funds cannot be moved:
 3030001 tx_missing_active_auth: missing required active authority
 Missing Active Authority 1.2.132
 ```
-This is the expected outcome, as we are dealing with a multi-sig account. In order to pay out any funds from it, we need to propose a transfer instead, and have it approved by `approving-account-1` and / or `approving-account-2`.
+This is the expected outcome, as we are now dealing with a multi-sig account. In order to pay out any funds from it, we need to propose a transfer instead, and have it approved by `approving-account-1` and / or `approving-account-2`.
 
 
  
