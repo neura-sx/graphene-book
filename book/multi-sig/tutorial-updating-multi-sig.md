@@ -6,7 +6,7 @@
 
 * We assume that you have already imported the active private key of an account, which you want to turn into a multi-sig account. We will refer to this account as `future-multi-sig-account`. Also, we'll need some BTS funds on this account to cover transaction fees.
 
-* We assume that you have already created and registered two other accounts, which will act as the milti-sig approving accounts. We will refer to these accounts as `approving-account-1` and `approving-account-2`.
+* We assume that you have already created and registered two other accounts, which will act as the multi-sig approving accounts. We will refer to these accounts as `approving-account-1` and `approving-account-2`.
 
 ### Get account IDs
 To get the account IDs of `future-multi-sig-account`, `approving-account-1` and `approving-account-2`, run these commands:
@@ -22,7 +22,7 @@ We start by initializing the transaction builder with this command:
 ```
 begin_builder_transaction
 ```
-As a response, you'll recieve an ID of the builder process - let's call it `<builder-handle-ID>`. This ID will be used in all subsequent commands involving the transaction builder.
+As a response, you'll receive an ID of the builder process - let's call it `<builder-handle-ID>`. This ID will be used in all subsequent commands involving the transaction builder.
 
 ### Add update to the builder
 We will now define the account update operation we want to execute. Our variables are as follows:  
@@ -57,7 +57,7 @@ To complete the process, i.e. sign and broadcast the above builder transactions,
 ```
 sign_builder_transaction <builder-handle-ID> true
 ```
-If you recieve no error, it means `future-multi-sig-account` has been successfully updated to a multi-sig account, controlled by `<approving-account-1>` and `<approving-account-2>`.
+If you receive no error, it means `future-multi-sig-account` has been successfully updated to a multi-sig account, controlled by `<approving-account-1>` and `<approving-account-2>`.
 
 ### Try it out
 Transfer some funds to the new multi-sig account:
@@ -75,8 +75,3 @@ As a result, you should get an error indicating that funds cannot be moved:
 Missing Active Authority 1.2.132
 ```
 This is the expected outcome, as we are now dealing with a multi-sig account. In order to pay out any funds from it, we need to propose a transfer instead, and have it approved by `approving-account-1` and / or `approving-account-2`.
-
-
- 
-
-
