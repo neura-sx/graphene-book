@@ -17,7 +17,14 @@ get_account <approving-account-2-name>
 ```
 We will need those IDs in subsequent steps.
 
-### 
+### Initialize transaction builder
+We start by initializing the transaction builder with this command:
+```
+begin_builder_transaction
+```
+As a response, you'll recieve an ID of the builder process - let's call it `<builder-handle-ID>`. This ID will be used in all subsequent commands involving the transaction builder.
+
+
  
 
 
