@@ -1,4 +1,5 @@
 # Creating a multi-sig account
+
 ### Prerequisites
 * We assume that you have `cli_wallet` running and connected to an exiting witness node.
 
