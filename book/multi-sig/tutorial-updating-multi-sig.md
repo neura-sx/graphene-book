@@ -33,7 +33,7 @@ We will now define the account update operation we want to execute. Our variable
 * `<approving-account-2-power>` - the approval power of the second approving account, e.g. `30`,
 * `<multi-sig-threshold>` - threshold required to access the funds, e.g. `75`.
 
-Run the `add_operation_to_builder_transaction` command to define the proposed transfer:
+Run the `add_operation_to_builder_transaction` command to define the account update:
 ```
 add_operation_to_builder_transaction 0 [ 6, \
 {"account": "<future-multi-sig-account-ID>", "active": \
