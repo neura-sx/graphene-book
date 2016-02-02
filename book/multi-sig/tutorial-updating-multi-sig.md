@@ -59,6 +59,23 @@ sign_builder_transaction <builder-handle-ID> true
 ```
 If you recieve no error, it means `future-multi-sig-account` has been successfully updated to a multi-sig account, controlled by `<approving-account-1>` and `<approving-account-2>`.
 
+### Try it out
+Transfer some funds to the new multi-sig account:
+```
+transfer <your-base-account-name> <future-multi-sig-account-name> 10000000 BTS "here is some cash" true
+```
+Now try to pay out some funds from the multi-sig account (make sure it's less than the amount received, so there are funds left to cover the transfer fee):
+```
+transfer <future-multi-sig-account-name> <your-base-account-name> 300000 BTS "paying back" true
+```
+As a result, you should get an error indicating that funds cannot be moved:
+```
+0 exception: unspecified
+3030001 tx_missing_active_auth: missing required active authority
+Missing Active Authority 1.2.132
+```
+This is the expected outcome, as we are dealing with a multi-sig account. In order to pay out any funds from it, we need to propose a transfer instead, and have it approved by `approving-account-1` and / or `approving-account-2`.
+
 
  
 
