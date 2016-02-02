@@ -42,7 +42,8 @@ add_operation_to_builder_transaction 0 [ 6, \
 ["<approving-account-2-ID>",<approving-account-2-power>]], \
 "key_auths": [], "address_auths": [] }, "extensions": []} ]
 ```
-> Note that the value `6`, used in the first line, is specific for the `account_update_operation`, which we need for this purpose.
+> Note that the value `6`, used in the first line, is specific for the `account_update_operation`, which we need for this purpose.  
+Also, note that the sum of `<approving-account-1-power>` and `<approving-account-2-power>` has to be equal or greater than `<multi-sig-threshold>`.
 
 ### Pay the transaction fee
 To create the required transaction fee, associated with the proposed transfer, run this command: 
