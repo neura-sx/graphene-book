@@ -32,4 +32,11 @@ approve_proposal <your-base-account-name> <proposed-transfer-ID> \
 ```
 > Make sure the above approvals are performed **before** the expiry timestamp of the proposed transfer.
 
+If you recieve no error, it means you the approvals have gone through successfully, and as a result the proposed transfer has been executed.
+
+You can comfirm this by checking the account history of the multi-sig account:
+```
+get_account_history <your-base-account-name> <limit>
+```
+
 
