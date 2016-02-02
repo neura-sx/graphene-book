@@ -116,7 +116,7 @@ Transfer some funds to the new multi-sig account:
 ```
 transfer <your-base-account-name> <muliti-sig-account-name> 10000000 BTS "here is some cash" true
 ```
-Now try to pay out some funds from the multi-sig account (make sure it's less than the amount received, so there are funds left to cover the transfer fee):
+Now let's try to pay out some funds from the multi-sig account (make sure it's less than the amount received, so there are funds left to cover the transfer fee):
 ```
 transfer <muliti-sig-account-name> <your-base-account-name> 300000 BTS "paying back" true
 ```
