@@ -1,4 +1,5 @@
 # Updating an account to multi-sig
+
 ### Prerequisites
 * We assume that you have `cli_wallet` running and connected to an exiting witness node.
 
