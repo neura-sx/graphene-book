@@ -4,7 +4,7 @@
 
 * We assume that you have set up a wallet in the CLI and imported the active private key of an account with some BTS funds in it. We will refer to this account as `your-base-account`.
 
-* We assume that you have already imported the active private key of a account, which you want to turn into a multi-sig account. We will refer to this account as `future-multi-sig-account`. Also, we'll need some BTS funds on this account to cover transaction fees.
+* We assume that you have already imported the active private key of an account, which you want to turn into a multi-sig account. We will refer to this account as `future-multi-sig-account`. Also, we'll need some BTS funds on this account to cover transaction fees.
 
 * We assume that you have already created and registered two other accounts, which will act as the milti-sig approving accounts. We will refer to these accounts as `approving-account-1` and `approving-account-2`.
 
@@ -64,7 +64,7 @@ Transfer some funds to the new multi-sig account:
 ```
 transfer <your-base-account-name> <future-multi-sig-account-name> 10000000 BTS "here is some cash" true
 ```
-Now try to pay out some funds from the multi-sig account (make sure it's less than the amount received, so there are funds left to cover the transfer fee):
+Now let's try to pay out some funds from the multi-sig account (make sure it's less than the amount received, so there are funds left to cover the transfer fee):
 ```
 transfer <future-multi-sig-account-name> <your-base-account-name> 300000 BTS "paying back" true
 ```
