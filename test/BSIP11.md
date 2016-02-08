@@ -4,7 +4,7 @@
     Status: Draft
     Type: Protocol
     Created: 2016-02-08
-    Discussion: t.b.d.
+    Discussion: https://bitsharestalk.org/index.php/topic,21366.0.html
     Worker: t.b.d.
     
     
