@@ -43,7 +43,7 @@ To align the network's interests with the registrar's interests, we propose to m
 * There is no vesting on cash-backs related to AM sales.
 
 # Discussion
-This is the most crucial question: if the price of AM has no lower limit, how can make sure the network's income is preserved? Will there be lost revenue for the network as a result of this proposal?
+This is the most crucial question: if the price of AM has no lower limit, how can we make sure the network's income is preserved? Will there be lost revenue for the network as a result of this proposal?
 
 We must all agree, that a revenue can be considered as lost *only* when a user ends up paying less than s/he was willing to pay. Otherwise no revenue is actually lost, because no sale would have happened anyway. 
 
