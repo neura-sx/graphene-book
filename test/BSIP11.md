@@ -12,21 +12,21 @@
 # Abstract
 Currently the Annual Membership (AM) price is set globally by the committee and there is a 20% cut reserved for the network. The remaining 80% goes to the registrar and the referrer (the split between them is defined by the registrar).
 
-This arrangement is not flexible. A registrar, operating on a market which requires very low transfer fees, is limited by the minimum price required by the network. The purpose of this proposal is to remove this limitation and allow a registrar (i.e. hosted wallet service) to offer very low transfer fees by selling AM at a price the customers are willing to pay on a given regional market (including the price of zero).
+This arrangement is not flexible. A registrar, operating on a market which requires very low transfer fees, is limited by the minimum price required by the network. The purpose of this proposal is to remove this limitation and allow a registrar (i.e. hosted wallet service) to offer very low transfer fees by selling AM at a price the customers are willing to pay (including the price of zero).
 
-What is proposed here, is a very simple change: the price of AM to be determined not globally by the committee but locally by the regional registrars (i.e. hosted wallet services). This way, in regions requiring low fees, AM can be given away for free (or almost for free), which translates into extremely low transfer fees, as an AM means 80% discount on those fees for its holder.
+What is proposed here, is a very simple change: the price of AM to be determined not globally by the committee but locally by the regional registrars (i.e. hosted wallet services). This way, in regions requiring low fees, AM can be given away for free (or almost for free), which translates into access to extremely low transfer fees, as an AM means 80% discount on those fees for its holder.
 
 # Motivation
 The primary motivation of this proposal is to allow BitShares to become competitive on markets which might require very low transfer fees, while taking care of those two important aspects:
-* preserving the default transfer fee at the current level, which is high enough to support the referral program, as it was initially announced in June 2014,
+* preserving the default transfer fee at the current level (i.e. around $0.10), which is high enough to support the referral program, as it was initially announced in June 2014,
 
-* preserving the network's income at the current level.
+* preserving the network's income stream at the current level.
 
 
 # Rationale
-By allowing the AM to be flexibly determined locally be the registrar, effective transfer fee can be easily slashed by 80% by selling AM at a very low price or giving it away for free to all newly registered accounts.
+By allowing the AM price to be determined locally be the registrar, effective transfer fee can be easily slashed by 80% by selling AM at a very low price or giving it away for free to all newly registered accounts.
 
-To align the network's interests with the registrar's interests, the network's income is proportional to the registrar's income from AM sales (the network gets a 20% cut).
+To align the network's interests with the registrar's interests, we propose to make the network's income proportional to the registrar's income from AM sales (the network gets a 20% cut).
 
 
 
