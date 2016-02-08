@@ -24,9 +24,9 @@ The primary motivation of this proposal is to allow BitShares to become competit
 
 
 # Rationale
-By allowing the AM to be flexibly determined locally be a registrar, effective transfer fee can be easily slashed by 80% by selling AM at a very low price or giving it away for free to all newly registered accounts.
+By allowing the AM to be flexibly determined locally be the registrar, effective transfer fee can be easily slashed by 80% by selling AM at a very low price or giving it away for free to all newly registered accounts.
 
-To allign the network's interests with the registrar's intrestes, the network's income is proportional to the registrar's income from AM sales (the network gets a 20% cut).
+To align the network's interests with the registrar's interests, the network's income is proportional to the registrar's income from AM sales (the network gets a 20% cut).
 
 
 
@@ -35,20 +35,20 @@ To allign the network's interests with the registrar's intrestes, the network's 
 
 * 20% of registrar's income from AM sale is allocated to the network. The remaining 80% goes to the registrar and the referrer (the split between them is defined by the registrar), as we have it now.
 
-* There is a minimum price limit for AM deteremined by the committee. To achieve the economic effect described in this proposal, this limit will have to be set to zero or almost zero by the committee. There will no upper price limit for AM.
+* There is a minimum price limit for AM determined by the committee. To achieve the economic effect described in this proposal, this limit will have to be set to zero or almost zero by the committee. There will no upper price limit for AM.
 
 * There is no vesting on cash-backs related to AM sales.
 
 # Discussion
-This is the most crucial question: if the price of AM has no lower limit, how can the network's income be preserved? Will there be lost revenue for the network as a result of this proposal.
+This is the most crucial question: if the price of AM has no lower limit, how can make sure the network's income is preserved? Will there be lost revenue for the network as a result of this proposal.
 
 We must all agree, that a revenue can be considered as lost *only* when a user ends up paying less than s/he was willing to pay. Otherwise no revenue is actually lost, because no sale would have happened anyway. 
 
-If there was a perfect competition between hosted wallet services (or generally all registrars) the issue of lost revenue could have some ground, as the price of AM would be constantly undermined by market participants. However, it will take a long time for the BitShares ecosystem to reach this state and when this state is reached there will be no need to for the referral program anyway.
+If there was a perfect competition between hosted wallet services (or generally all registrars) the issue of lost revenue could have some ground, as the price of AM would be constantly undermined by market participants. However, it will take a long time for the BitShares ecosystem to reach this state and when this state is eventually reached, the mission of the referral program would be complete anyway.
 
-The main assumption we make is that a registrar is a business oriented entity wanting to maximize its profits. Thus it will utilize the opportunity of selling AM very cheaply or for free, only if it operates on a market where an average user is not willing to pay a better price. This way the price of AM is naturally adjusted to the average price acceptable by customers on a given market. On some markets it can mean something close to zero, but most of those who get AM for zero would not have bought it for any other price, so no income is lost.
+The main assumption we make is that a registrar is a business-oriented entity aiming to maximize its profits. Thus it will utilize the opportunity of selling AM very cheaply or for free, *only* if it operates on a market where an average user is not willing to pay a better price. This way the price of AM is naturally adjusted to the average price acceptable by customers on a given market. On some markets it can mean something close to zero, but most of those customers, who will acquire AM for zero, would not have bought this subscription for any other price, so no income is actually lost.
 
-The other assumption we make is that if a registrar offers a reasonable price for AM (e.g. $5), most customers are not going to bother to hunt for a better bargain and then attempt to migrate their accounts. For most customers, money saved this way is not worth the effort.
+The other assumption we make is that if a registrar offers a reasonable price for AM (e.g. $5), most customers are not going to bother to hunt for a better bargain and then attempt to migrate their accounts. For most customers, money saved this way is not worth the effort. This is especially true for shorter subscriptions.
 
 
 # Copyright
