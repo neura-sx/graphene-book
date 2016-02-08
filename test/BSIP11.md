@@ -54,7 +54,7 @@ If there was a perfect competition between hosted wallet services, the issue of 
 
 The main assumption we make is that a registrar is a business-oriented entity aiming to maximize its profits. Thus it will utilize the opportunity of selling AM very cheaply or for free, *only* if it operates on a market where an average user is not willing to pay a better price. This way the price of AM is naturally adjusted to the average price acceptable by customers on a given market. On some markets this value can be close to zero, but most of those customers, who will acquire AM for zero, would not have bought this subscription for any other price, so no income is actually lost.
 
-The other assumption we make is that if a registrar offers a reasonable price for AM (e.g. $5), most customers are not going to bother to hunt for a better bargain and then attempt to migrate their accounts. For most customers, money saved this way is not worth the effort. This is especially true for shorter subscriptions.
+The other assumption we make is that if a registrar offers a reasonable price for AM (e.g. $5), most customers are not going to be bothered to hunt for a better bargain and then attempt to migrate their accounts. For most customers, money saved this way is not worth the effort. This is especially true for shorter subscriptions.
 
 
 # Copyright
