@@ -23,7 +23,6 @@ The primary motivation of this proposal is to reconcile two opposing interests:
 
 2. And at the same time preserve those two important aspects:
     * preserve the default transfer fee at the current level (i.e. around $0.10), which is high enough to support the referral program, as it was initially announced in June 2014,
-
     * preserve the network's income stream at the current level.
 
 
@@ -44,11 +43,11 @@ To align the network's interests with the registrar's interests, we propose to m
 * There is no vesting on cash-backs related to AM sales.
 
 # Discussion
-This is the most crucial question: if the price of AM has no lower limit, how can make sure the network's income is preserved? Will there be lost revenue for the network as a result of this proposal.
+This is the most crucial question: if the price of AM has no lower limit, how can make sure the network's income is preserved? Will there be lost revenue for the network as a result of this proposal?
 
 We must all agree, that a revenue can be considered as lost *only* when a user ends up paying less than s/he was willing to pay. Otherwise no revenue is actually lost, because no sale would have happened anyway. 
 
-If there was a perfect competition between hosted wallet services (or generally all registrars) the issue of lost revenue could have some ground, as the price of AM would be constantly undermined by market participants. However, it will take a long time for the BitShares ecosystem to reach this state and when this state is eventually reached, the mission of the referral program would be complete anyway.
+If there was a perfect competition between hosted wallet services, the issue of lost revenue could have some ground, as the price of AM would be constantly undermined by the market participants. However, it will take a long time for the BitShares ecosystem to reach this state and by the time this state is eventually reached, the referral program will be redundant anyway and this mechanism will no longer be needed.
 
 The main assumption we make is that a registrar is a business-oriented entity aiming to maximize its profits. Thus it will utilize the opportunity of selling AM very cheaply or for free, *only* if it operates on a market where an average user is not willing to pay a better price. This way the price of AM is naturally adjusted to the average price acceptable by customers on a given market. On some markets it can mean something close to zero, but most of those customers, who will acquire AM for zero, would not have bought this subscription for any other price, so no income is actually lost.
 
