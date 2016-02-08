@@ -1,5 +1,5 @@
     BSIP: 0011
-    Title: Registrar  Annual Membership
+    Title: Annual Membership price deteremined by the registrar
     Authors: Jakub Zarembinski <jakub.zarembinski@neura.sx>
     Status: Draft
     Type: Protocol
@@ -17,10 +17,14 @@ This arrangement is not flexible. A registrar, operating on a market which requi
 What is proposed here, is a very simple change: the price of AM to be determined not globally by the committee but locally by the regional registrars (i.e. hosted wallet services). This way, in regions requiring low fees, AM can be given away for free (or almost for free), which translates into access to extremely low transfer fees, as an AM means 80% discount on those fees for its holder.
 
 # Motivation
-The primary motivation of this proposal is to allow BitShares to become competitive on markets which might require very low transfer fees, while taking care of those two important aspects:
-* preserving the default transfer fee at the current level (i.e. around $0.10), which is high enough to support the referral program, as it was initially announced in June 2014,
+The primary motivation of this proposal is to reconcile two opposing interests:
 
-* preserving the network's income stream at the current level.
+1. Allow BitShares to become competitive on markets which might require very low transfer fees.
+
+2. And at the same time preserve those two important aspects:
+    * preserve the default transfer fee at the current level (i.e. around $0.10), which is high enough to support the referral program, as it was initially announced in June 2014,
+
+    * preserve the network's income stream at the current level.
 
 
 # Rationale
