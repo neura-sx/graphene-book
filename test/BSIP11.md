@@ -4,10 +4,12 @@
     Status: Draft
     Type: Protocol
     Created: 2016-02-08
-    Discussion: https://bitsharestalk.org/index.php/topic,21314.0.html
+    Discussion: 
     Worker: t.b.d.
-
+    
+    
 > The subject of this proposal is Annual Membership (AM). However, if a shorter membership (e.g. monthly) was introduced, this proposal could easily be extended to cover shorter subscriptions.
+
 
 # Abstract
 Currently the Annual Membership (AM) price is set globally by the committee and there is a 20% cut reserved for the network. The remaining 80% goes to the registrar and the referrer (the split between them is defined by the registrar).
@@ -15,6 +17,7 @@ Currently the Annual Membership (AM) price is set globally by the committee and 
 This arrangement is not flexible. A registrar, operating on a market which requires very low transfer fees, is limited by the minimum price required by the network. The purpose of this proposal is to remove this limitation and allow a registrar (i.e. hosted wallet service) to offer very low transfer fees by selling AM at a price the customers are willing to pay (including the price of zero).
 
 What is proposed here, is a very simple change: the price of AM to be determined not globally by the committee but locally by the regional registrars (i.e. hosted wallet services). This way, in regions requiring low fees, AM can be given away for free (or almost for free), which translates into access to extremely low transfer fees, as an AM means 80% discount on those fees for its holder.
+
 
 # Motivation
 The primary motivation of this proposal is to reconcile two opposing interests:
@@ -32,7 +35,6 @@ By allowing the AM price to be determined locally be the registrar, effective tr
 To align the network's interests with the registrar's interests, we propose to make the network's income proportional to the registrar's income from AM sales (the network gets a 20% cut).
 
 
-
 # Specifications
 * The price of AM is determined by the registrar who has originally registered a given account.
 
@@ -41,6 +43,7 @@ To align the network's interests with the registrar's interests, we propose to m
 * There is a minimum price limit for AM determined by the committee. To achieve the economic effect described in this proposal, this limit will have to be set to zero or almost zero by the committee. There will no upper price limit for AM.
 
 * There is no vesting on cash-backs related to AM sales.
+
 
 # Discussion
 This is the most crucial question: if the price of AM has no lower limit, how can we make sure the network's income is preserved? Will there be lost revenue for the network as a result of this proposal?
