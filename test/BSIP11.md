@@ -1,5 +1,5 @@
     BSIP: 0011
-    Title: Annual Membership price deteremined by the registrar
+    Title: Annual Membership price determined by the registrar
     Authors: Jakub Zarembinski <jakub.zarembinski@neura.sx>
     Status: Draft
     Type: Protocol
