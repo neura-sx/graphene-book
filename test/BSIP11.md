@@ -24,16 +24,16 @@ The primary motivation of this proposal is to allow BitShares to become competit
 
 
 # Rationale
-By allowing the AM to be flexibly determined locally be a registrar, effective transfer fee can be reduced by 80% by selling AM at a very low price or giving it away for free to all newly registered accounts.
+By allowing the AM to be flexibly determined locally be a registrar, effective transfer fee can be easily slashed by 80% by selling AM at a very low price or giving it away for free to all newly registered accounts.
 
-The all
+To allign the network's interests with the registrar's intrestes, the network's income is proportional to the registrar's income from AM sales (the network gets a 20% cut).
 
 
 
 # Specifications
 * The price of AM is determined by the registrar who has originally registered a given account.
 
-* To allign the network's interests with the registrar's intrestes, 20% of registrar's income from AM sale is allocated to the network. The remaining 80% goes to the registrar and the referrer (the split between them is defined by the registrar), as we have it now.
+* 20% of registrar's income from AM sale is allocated to the network. The remaining 80% goes to the registrar and the referrer (the split between them is defined by the registrar), as we have it now.
 
 * There is a minimum price limit for AM deteremined by the committee. To achieve the economic effect described in this proposal, this limit will have to be set to zero or almost zero by the committee. There will no upper price limit for AM.
 
