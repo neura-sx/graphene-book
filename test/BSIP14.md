@@ -14,7 +14,7 @@
 # Abstract
 Currently the Annual Membership (AM) price is set globally by the committee and there is a 20% cut reserved for the network. The remaining 80% goes to the registrar and the referrer (the split between them is defined by the registrar).
 
-This arrangement is not flexible. A registrar, operating on a market which requires very low transfer fees, is limited by the minimum price required by the network. The purpose of this proposal is to remove this limitation and allow a registrar (i.e. hosted wallet service) to offer very low transfer fees by selling AM at a price the customers are willing to pay (including the price of zero).
+This arrangement is not flexible. A registrar, operating on a market which requires lower transfer fees, is limited by the minimum price required by the network. The purpose of this proposal is to remove this limitation and allow a registrar (i.e. hosted wallet service) to offer very low transfer fees by selling AM at any price the customers are willing to pay (including the price of zero).
 
 What is proposed here, is a very simple change: the price of AM to be determined not globally by the committee but locally by the regional registrars (i.e. hosted wallet services). This way, in regions requiring low fees, AM can be given away for free (or almost for free), which translates into access to extremely low transfer fees, as an AM means 80% discount on those fees for its holder.
 
@@ -32,18 +32,41 @@ The primary motivation of this proposal is to reconcile two opposing interests:
 # Rationale
 By allowing the AM price to be determined locally be the registrar, effective transfer fee can be easily slashed by 80% by selling AM at a very low price or giving it away for free to all newly registered accounts.
 
-To align the network's interests with the registrar's interests, we propose to make the network's income proportional to the registrar's income from AM sales (the network gets a 20% cut).
+To align the network's interests with the registrar's interests, we propose to make the network's income proportional to the registrar's income from AM sales.
 
 
 # Specifications
-* The price of AM is determined by the registrar who has originally registered a given account.
+* The committee sets two values:  
+(a) Maximum Income (MI) - it's the maximum income the network *wants* to recieve from each AM sold ,  
+(b) Network's Share (NS) - it's the network's share in the registrar's income from AM sales (e.g. 50%).  
+The registrar is obliged to share with the network NS of its income but not more than MI. In other words, the network gets the smaller value of these two: [MI] and [NS * AM price].
 
-* 20% of registrar's income from AM sale is allocated to the network. The remaining 80% goes to the registrar and the referrer (the split between them is defined by the registrar), as we have it now.
+* The price of AM is determined by the registrar who has originally registered a given account. When registering a new account, the registrar sets the price of AM in terms of percentage of MI.
 
-* There is a minimum price limit for AM determined by the committee. To achieve the economic effect described in this proposal, this limit will have to be set to zero or almost zero by the committee. There will no upper price limit for AM.
+* The split between the registrar and the referrer is defined by the registrar, as we have it now.
 
 * There is no vesting on cash-backs related to AM sales.
+ 
+Let's consider two examples to illustrute how it works:  
+### Exmaple I
+* MI = $4.00
+* NS = 50%
+* AM price = 300%
+* referrer share = 60%
 
+AM price for the customer is $12.00 [= 300% * $4.00]. 
+* the network gets $4.00 [= min($4.00, 50% * $12.00)]
+* the business gets $8.00: the registrar gets $3.20 and the referrer gets $4.80
+
+### Exmaple II
+* MI = $4.00
+* NS = 50%
+* AM price = 20%
+* referrer share = 80%
+
+AM price for the customer is $0.80 [= 20% * $4.00]. 
+* the network gets $0.40 [= min($4.00, 50% * $0.80)]
+* the business gets $0.40: the registrar gets $0.08 and the referrer gets $0.32
 
 # Discussion
 This is the most crucial question: if the price of AM has no lower limit, how can we make sure the network's income is preserved? Will there be lost revenue for the network as a result of this proposal?
