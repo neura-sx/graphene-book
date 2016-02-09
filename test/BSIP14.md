@@ -37,9 +37,9 @@ To align the network's interests with the registrar's interests, we propose to m
 
 # Specifications
 * The committee sets two values:  
-(a) Maximum Income `MI` - it's the maximum income the network *wants* to receive from each AM sold,  
+(a) Maximum Income `MI` - it's the maximum income the network *would like* to receive from each AM sold,  
 (b) Network's Share `NS` - it's the network's share in the registrar's income from AM sales.  
-The registrar is obliged to share with the network `NS` of its income but not more than `MI`. In other words, the network gets the smaller value of these two: `MI` and `NS` * AM price.
+The registrar is obliged to share with the network `NS` of its income but not more than `MI`. In other words, the network gets the smaller value of these two: `MI` and `NS` * AM price. Thus it's not guaranteed to receive `MI`, but this mechanism will attempt this, if the AM price is high enough.
 
 * The price of AM is determined by the registrar who has originally registered a given account. When registering a new account, the registrar sets the future price of AM in terms of percentage of `MI`.
 
