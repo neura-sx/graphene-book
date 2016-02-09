@@ -44,8 +44,6 @@ The registrar is obliged to share with the network `NS` of its income but not mo
 * The price of AM is determined by the registrar who has originally registered a given account. When registering a new account, the registrar sets the future price of AM in terms of percentage of `MI`.
 
 * The split between the registrar and the referrer is defined by the registrar, as we have it now.
-
-* There is no vesting on cash-backs related to AM sales.
  
 Let's consider two examples to illustrate how it works:  
 ### Example I
