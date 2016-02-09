@@ -20,5 +20,5 @@
    * [Approving a proposed transfer](book/multi-sig/tutorial-approving-proposed-trxn.md)
    * [FAQs](book/multi-sig/faqs.md)
 * [BSIP10](test/BSIP10.md)
-* [BSIP11](test/BSIP11.md)
+* [BSIP14](test/BSIP14.md)
 
