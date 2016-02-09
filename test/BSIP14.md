@@ -37,20 +37,20 @@ To align the network's interests with the registrar's interests, we propose to m
 
 # Specifications
 * The committee sets two values:  
-(a) Maximum Income (MI) - it's the maximum income the network *wants* to recieve from each AM sold ,  
-(b) Network's Share (NS) - it's the network's share in the registrar's income from AM sales (e.g. 50%).  
-The registrar is obliged to share with the network NS of its income but not more than MI. In other words, the network gets the smaller value of these two: [MI] and [NS * AM price].
+(a) Maximum Income `MI` - it's the maximum income the network *wants* to receive from each AM sold,  
+(b) Network's Share `NS` - it's the network's share in the registrar's income from AM sales.  
+The registrar is obliged to share with the network `NS` of its income but not more than `MI`. In other words, the network gets the smaller value of these two: `MI` and `NS` * AM price.
 
-* The price of AM is determined by the registrar who has originally registered a given account. When registering a new account, the registrar sets the price of AM in terms of percentage of MI.
+* The price of AM is determined by the registrar who has originally registered a given account. When registering a new account, the registrar sets the future price of AM in terms of percentage of `MI`.
 
 * The split between the registrar and the referrer is defined by the registrar, as we have it now.
 
 * There is no vesting on cash-backs related to AM sales.
  
-Let's consider two examples to illustrute how it works:  
-### Exmaple I
-* MI = $4.00
-* NS = 50%
+Let's consider two examples to illustrate how it works:  
+### Example I
+* `MI` = $4.00
+* `NS` = 50%
 * AM price = 300%
 * referrer share = 60%
 
@@ -58,15 +58,16 @@ AM price for the customer is $12.00 [= 300% * $4.00].
 * the network gets $4.00 [= min($4.00, 50% * $12.00)]
 * the business gets $8.00: the registrar gets $3.20 and the referrer gets $4.80
 
-### Exmaple II
-* MI = $4.00
-* NS = 50%
+### Example II
+* `MI` = $4.00
+* `NS` = 50%
 * AM price = 20%
 * referrer share = 80%
 
 AM price for the customer is $0.80 [= 20% * $4.00]. 
 * the network gets $0.40 [= min($4.00, 50% * $0.80)]
 * the business gets $0.40: the registrar gets $0.08 and the referrer gets $0.32
+
 
 # Discussion
 This is the most crucial question: if the price of AM has no lower limit, how can we make sure the network's income is preserved? Will there be lost revenue for the network as a result of this proposal?
