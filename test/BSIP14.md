@@ -32,7 +32,7 @@ The primary motivation of this proposal is to reconcile two opposing interests:
 # Rationale
 By allowing the AM price to be determined locally be the registrar, effective transfer fee can be easily slashed by 80% by selling AM at a very low price or giving it away for free to all newly registered accounts.
 
-To align the network's interests with the registrar's interests, we propose to make the network's income proportional to the registrar's income from AM sales.
+To align the network's interests with the registrar's interests, we propose to make the network's income proportional to the registrar's income from AM sales but not bigger than certain threshold defined by the committee.
 
 
 # Specifications
