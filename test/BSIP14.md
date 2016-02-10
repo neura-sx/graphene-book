@@ -12,11 +12,11 @@
 
 
 # Abstract
-Currently the Annual Membership (AM) price is set globally by the committee and there is a 20% cut reserved for the network. The remaining 80% goes to the registrar and the referrer (the split between them is defined by the registrar).
+Currently the Annual Membership (AM) price is set globally by the committee and there is a 50% cut reserved for the network. The remaining 50% goes to the registrar and the referrer (the split between them is defined by the registrar).
 
 This arrangement is not flexible. A registrar targeting price-sensitive customers is limited by the minimum price required by the network. The purpose of this proposal is to remove this limitation and allow a registrar (i.e. hosted wallet service) to offer very low transfer fees by selling AM at any price the customers are willing to pay (including the price of zero).
 
-What is proposed here, is a very simple change: the price of AM to be determined not globally by the committee but locally by the regional registrars (i.e. hosted wallet services). This way, in regions requiring low fees, AM can be given away for free (or almost for free), which translates into access to extremely low transfer fees, as an AM means 80% discount on those fees for its holder.
+What is proposed here, is a very simple change: the price of AM to be determined not globally by the committee but locally by the regional registrars (i.e. hosted wallet services). This way, in regions requiring low fees, AM can be given away for free (or almost for free), which translates into access to extremely low transfer fees, as an AM means 50% discount on those fees for its holder.
 
 
 # Motivation
@@ -30,7 +30,7 @@ The primary motivation of this proposal is to reconcile two opposing interests:
 
 
 # Rationale
-By allowing the AM price to be determined locally be the registrar, effective transfer fee can be easily slashed by 80% by selling AM at a very low price or giving it away for free to all newly registered accounts.
+By allowing the AM price to be determined locally be the registrar, effective transfer fee can be easily slashed by 50% by selling AM at a very low price or giving it away for free to all newly registered accounts.
 
 To align the network's interests with the registrar's interests, we propose to make the network's income proportional to the registrar's income from AM sales but not bigger than certain threshold defined by the committee.
 
